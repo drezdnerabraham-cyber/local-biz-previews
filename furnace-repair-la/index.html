@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Furnace Repair | East Los Angeles, CA HVAC Specialists</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--charcoal:#1a1814;--gold:#c9a84c;--gold-lt:#e2c06a;--warm:#f5f0e8;--mid:#2c2a26;--gray:#8a8680;--border:#e8e2d9}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--charcoal);background:#fff}
+/* NAV — minimal sophisticated */
+nav{position:sticky;top:0;z-index:100;background:var(--charcoal);height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.nav-wordmark{color:#fff;font-size:1rem;font-weight:300;letter-spacing:.12em;text-transform:uppercase}
+.nav-wordmark strong{font-weight:800;color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-area{color:var(--gray);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.nav-ph a{background:var(--gold);color:var(--charcoal);font-weight:700;font-size:.9rem;padding:10px 22px;border-radius:4px;text-decoration:none;letter-spacing:.03em;transition:all .2s}
+.nav-ph a:hover{background:var(--gold-lt)}
+/* HERO — split minimal */
+.hero{display:grid;grid-template-columns:55% 45%;min-height:88vh;background:var(--charcoal)}
+.hero-left{padding:80px 5% 80px 5%;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,255,255,.08)}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.eyebrow-line{width:40px;height:1px;background:var(--gold)}
+.eyebrow-text{color:var(--gold);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);color:#fff;line-height:1.15;margin-bottom:22px;font-weight:800;letter-spacing:-.3px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-p{color:#9a9590;font-size:.98rem;line-height:1.75;margin-bottom:36px;max-width:480px}
+/* RATING — compact luxury */
+.rating-strip{display:flex;align-items:center;gap:18px;border:1px solid rgba(201,168,76,.2);border-radius:8px;padding:16px 22px;margin-bottom:36px;width:fit-content;background:rgba(201,168,76,.05)}
+.r-n{font-size:3.2rem;font-weight:900;color:var(--gold);line-height:1}
+.r-d{display:flex;flex-direction:column;gap:3px}
+.r-stars{color:var(--gold);font-size:1.2rem}
+.r-d strong{color:#fff;font-size:.88rem;font-weight:600}
+.r-d span{color:#6b6660;font-size:.78rem}
+.cta-set{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--charcoal);font-weight:800;font-size:1rem;padding:15px 30px;border-radius:4px;text-decoration:none;transition:all .2s;letter-spacing:.02em}
+.btn-gold:hover{background:var(--gold-lt);transform:translateY(-2px)}
+.btn-text{display:inline-block;color:#9a9590;font-size:.88rem;font-weight:500;padding:12px 20px;text-decoration:none;border:1px solid rgba(255,255,255,.12);border-radius:4px;transition:all .2s;letter-spacing:.02em}
+.btn-text:hover{color:var(--gold);border-color:rgba(201,168,76,.3)}
+.hero-right{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:50px 40px;gap:24px}
+.stat-col{display:flex;flex-direction:column;gap:20px;width:100%}
+.stat-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:22px 24px;position:relative;overflow:hidden}
+.stat-item::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold)}
+.stat-item .n{display:block;font-size:2.4rem;font-weight:900;color:#fff;line-height:1}
+.stat-item .l{font-size:.78rem;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;margin-top:4px;display:block}
+/* SERVICES */
+.services{padding:80px 5%;background:var(--warm)}
+.section-eye{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.section-eye span{width:28px;height:1px;background:var(--gold)}
+.section-eye em{color:var(--gold);font-size:.76rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;font-style:normal}
+.section-h{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:800;color:var(--charcoal);margin-bottom:14px;line-height:1.18;letter-spacing:-.3px}
+.section-p{color:var(--gray);font-size:.97rem;line-height:1.7;max-width:580px;margin-bottom:48px}
+.svc-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.svc{background:#fff;border-radius:8px;padding:30px;border:1px solid var(--border);transition:all .2s}
+.svc:hover{border-color:var(--gold);box-shadow:0 6px 24px rgba(201,168,76,.1)}
+.svc-mark{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:16px}
+.svc h3{font-size:1rem;font-weight:700;color:var(--charcoal);margin-bottom:8px}
+.svc p{font-size:.87rem;color:var(--gray);line-height:1.65}
+/* REVIEWS */
+.reviews{padding:80px 5%;background:var(--mid)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:40px}
+.rev{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:28px}
+.rev-top{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.rev-stars{color:var(--gold);font-size:.95rem}
+.rev-text{color:#9a9590;font-size:.9rem;line-height:1.7;margin-bottom:16px;font-style:italic}
+.rev-name{color:#e2ddd6;font-weight:600;font-size:.85rem}
+.rev-name span{color:#4b4844;font-weight:400}
+/* WHY */
+.why{padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.why-left h2{font-size:clamp(1.7rem,3vw,2.2rem);font-weight:800;color:var(--charcoal);margin-bottom:20px;line-height:1.2}
+.why-pts{display:flex;flex-direction:column;gap:18px}
+.why-pt{display:flex;gap:14px;align-items:flex-start}
+.why-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:8px;flex-shrink:0}
+.why-pt div{font-size:.92rem;color:var(--gray);line-height:1.6}
+.why-pt div strong{color:var(--charcoal);display:block;margin-bottom:3px}
+.why-cta{background:var(--charcoal);border-radius:12px;padding:40px;text-align:center}
+.why-cta h3{color:#fff;font-size:1.5rem;font-weight:800;margin-bottom:10px;line-height:1.25}
+.why-cta h3 em{font-style:italic;color:var(--gold)}
+.why-cta p{color:var(--gray);font-size:.88rem;margin-bottom:22px;line-height:1.6}
+.why-cta a{display:block;background:var(--gold);color:var(--charcoal);font-weight:800;font-size:.95rem;padding:14px 24px;border-radius:4px;text-decoration:none}
+/* CLAIM */
+.claim{background:var(--charcoal);padding:80px 5%;text-align:center;border-top:1px solid rgba(201,168,76,.2)}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.5rem);color:#fff;margin-bottom:14px;font-weight:800}
+.claim h2 em{font-style:italic;color:var(--gold)}
+.claim-p{color:var(--gray);font-size:.97rem;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price{display:inline-block;border:1px solid rgba(201,168,76,.4);color:var(--gold);font-size:2rem;font-weight:800;padding:10px 36px;border-radius:4px;margin-bottom:28px;letter-spacing:.04em}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#c8c4be;padding:6px 16px;border-radius:4px;font-size:.85rem;font-weight:500;letter-spacing:.02em}
+.btn-claim{display:inline-block;background:var(--gold);color:var(--charcoal);font-weight:800;font-size:1.1rem;padding:17px 44px;border-radius:4px;text-decoration:none;box-shadow:0 4px 24px rgba(201,168,76,.35);transition:all .2s;letter-spacing:.03em}
+.btn-claim:hover{transform:translateY(-2px);background:var(--gold-lt)}
+footer{background:#0f0e0c;padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer p{color:#3a3836;font-size:.84rem;letter-spacing:.03em}
+footer a{color:var(--gray);font-size:.84rem;text-decoration:none}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{min-height:auto;padding:60px 5%}}
+@media(max-width:768px){.why{grid-template-columns:1fr}}
+@media(max-width:480px){.cta-set{width:100%}.btn-gold,.btn-text{width:100%;text-align:center}.rating-strip{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-wordmark"><strong>Furnace</strong> Repair</div>
+  <div class="nav-right">
+    <span class="nav-area">East Los Angeles, CA</span>
+    <div class="nav-ph"><a href="tel:2137538704">(213) 753-8704</a></div>
+  </div>
+</nav>
+<div class="hero">
+  <div class="hero-left">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">East Los Angeles HVAC Specialists</span></div>
+    <h1>East LA Calls Us First<br>When the <em>Heat Goes Out</em></h1>
+    <p class="hero-p">Furnace breaks on a cold January night in East Los Angeles — we've taken that call hundreds of times. We show up fast, diagnose accurately, and fix it without the drama. 4.9 stars across 75 reviews says it better than we can.</p>
+    <div class="rating-strip">
+      <div class="r-n">4.9</div>
+      <div class="r-d">
+        <div class="r-stars">★★★★★</div>
+        <strong>75 Verified Google Reviews</strong>
+        <span>Top-Rated HVAC in East Los Angeles, CA</span>
+      </div>
+    </div>
+    <div class="cta-set">
+      <a href="tel:2137538704" class="btn-gold">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-text">Claim This Website — $497 One Time</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-col">
+      <div class="stat-item"><span class="n">4.9★</span><span class="l">Google Rating</span></div>
+      <div class="stat-item"><span class="n">75</span><span class="l">5-Star Reviews</span></div>
+      <div class="stat-item"><span class="n">Same Day</span><span class="l">Service Available</span></div>
+      <div class="stat-item"><span class="n">24/7</span><span class="l">Emergency Line</span></div>
+    </div>
+  </div>
+</div>
+<section class="services">
+  <div class="section-eye"><span></span><em>Our Services</em></div>
+  <div class="section-h">Complete Heating &amp; Cooling Service<br>for East Los Angeles</div>
+  <p class="section-p">LA's winters are mild by Midwest standards, but your furnace still needs to work. And those Santa Ana heat waves? Your AC matters more than ever. We handle both — expertly.</p>
+  <div class="svc-list">
+    <div class="svc"><div class="svc-mark">🔥</div><h3>Furnace Repair</h3><p>Gas or electric, forced air or wall furnace — we diagnose and repair all types of heating systems serving East LA and the surrounding communities.</p></div>
+    <div class="svc"><div class="svc-mark">❄️</div><h3>AC Repair &amp; Service</h3><p>When a heat wave rolls through East Los Angeles, your AC isn't optional. We respond fast and get your system cooling again — same day when possible.</p></div>
+    <div class="svc"><div class="svc-mark">🔄</div><h3>System Replacement</h3><p>When your aging furnace or AC unit is costing more to repair than it's worth, we'll help you choose a replacement that's sized right and priced fairly.</p></div>
+    <div class="svc"><div class="svc-mark">🌡️</div><h3>Thermostat &amp; Controls</h3><p>Sometimes the problem isn't the equipment — it's the controls. We install and program smart thermostats that can cut your utility bill by 20% or more.</p></div>
+    <div class="svc"><div class="svc-mark">🌬️</div><h3>Duct Repair &amp; Cleaning</h3><p>Leaky ducts in older East LA homes waste heat and money. We seal gaps, clean out years of buildup, and balance your airflow.</p></div>
+    <div class="svc"><div class="svc-mark">📋</div><h3>Annual Tune-Ups</h3><p>A $99 tune-up keeps your system running efficiently through the season. Think of it as insurance against a $900 emergency repair call.</p></div>
+  </div>
+</section>
+<section class="reviews">
+  <div class="section-eye"><span style="background:var(--gold)"></span><em style="color:var(--gold)">Customer Reviews</em></div>
+  <div class="section-h" style="color:#fff">75 East LA Customers.<br>4.9 Stars Every Time.</div>
+  <div class="rev-grid">
+    <div class="rev"><div class="rev-top"><div class="rev-stars">★★★★★</div></div><p class="rev-text">"My furnace went out on a cold night in January. I was skeptical anyone would come out quickly — but they were at my East LA home within two hours. Fixed the igniter, tested everything, and had heat running again before midnight."</p><div class="rev-name">Ana C. <span>— East Los Angeles, CA</span></div></div>
+    <div class="rev"><div class="rev-top"><div class="rev-stars">★★★★★</div></div><p class="rev-text">"Called three places during a summer heat wave. Two didn't answer. These guys picked up immediately, gave me a same-day window, showed up on time, and had my AC running in 90 minutes. Will never call anyone else."</p><div class="rev-name">Miguel S. <span>— East Los Angeles, CA</span></div></div>
+    <div class="rev"><div class="rev-top"><div class="rev-stars">★★★★★</div></div><p class="rev-text">"Needed a full furnace replacement — old unit was 22 years old and beyond repair. They gave me a fair quote, installed the new system next day, and it's been running perfectly for two seasons now. Highly recommend."</p><div class="rev-name">Grace T. <span>— East Los Angeles, CA</span></div></div>
+  </div>
+</section>
+<section class="why">
+  <div class="why-left">
+    <div class="section-eye"><span></span><em>Why Us</em></div>
+    <h2>What Makes Us East LA's<br>Most-Trusted HVAC Service</h2>
+    <div class="why-pts">
+      <div class="why-pt"><div class="why-dot"></div><div><strong>We answer the phone — always</strong>Even on evenings, weekends, and holidays. Because HVAC emergencies don't take days off.</div></div>
+      <div class="why-pt"><div class="why-dot"></div><div><strong>Transparent pricing</strong>We give you a written quote before we start. No hidden fees, no "we'll see what we find" billing.</div></div>
+      <div class="why-pt"><div class="why-dot"></div><div><strong>Licensed, bonded, insured</strong>Fully licensed in California. Your home is protected every step of the job.</div></div>
+      <div class="why-pt"><div class="why-dot"></div><div><strong>We stand behind our work</strong>If something we fixed doesn't hold, we come back. No debate, no charge.</div></div>
+    </div>
+  </div>
+  <div class="why-cta">
+    <h3>Need Heating or<br><em>Cooling Help Now?</em></h3>
+    <p>Call for a free diagnosis estimate. We pick up the phone, show up on time, and give you a fair price — every time.</p>
+    <a href="tel:2137538704">📞 (213) 753-8704</a>
+    <p style="color:#4b4844;font-size:.8rem;margin-top:12px">Emergency service available 24/7</p>
+  </div>
+</section>
+<section class="claim">
+  <h2>This Site Was Built for<br><em>Furnace Repair</em> — East LA</h2>
+  <p class="claim-p">Designed specifically for your business — your number, your rating, your neighborhood. Professional, mobile-ready, and live within 24 hours of your yes.</p>
+  <div class="price">$497 One Time</div>
+  <div class="perks">
+    <span class="perk">No monthly fees</span>
+    <span class="perk">Yours forever</span>
+    <span class="perk">Hosting included</span>
+    <span class="perk">Live in 24 hours</span>
+    <span class="perk">Mobile-optimized</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497</a>
+</section>
+<footer>
+  <p>© 2024 Furnace Repair · East Los Angeles, CA · Licensed HVAC Contractor</p>
+  <a href="tel:2137538704">(213) 753-8704</a>
+</footer>
+</body>
+</html>

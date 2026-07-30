@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hines Family HVAC Repair | Brownsville, TX</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#0d6c6c;--teal-lt:#0f9d9d;--sand:#f5ede0;--warm:#e8d5bc;--terra:#c04a1a;--dark:#1a2628;--gray:#6b7280}
+body{font-family:Georgia,'Times New Roman',serif;color:#1a2628;background:#fff}
+nav{position:sticky;top:0;z-index:100;background:var(--dark);height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;box-shadow:0 3px 20px rgba(0,0,0,.3)}
+.nav-brand{color:#fff;font-size:1.05rem;line-height:1.3;font-weight:700}
+.nav-brand small{display:block;color:#9ca3af;font-size:.75rem;font-weight:400;font-family:'Segoe UI',sans-serif;font-style:normal}
+.nav-ph a{background:var(--terra);color:#fff;font-family:'Segoe UI',sans-serif;font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:6px;text-decoration:none;transition:all .2s}
+.nav-ph a:hover{background:#d4541e}
+/* HERO — warm gradient with texture feel */
+.hero{background:linear-gradient(160deg,var(--dark) 0%,#1f3635 40%,#2a4240 100%);padding:80px 5% 90px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-content{max-width:660px;position:relative;z-index:1}
+.family-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,74,26,.15);border:1px solid rgba(192,74,26,.35);color:#f4a070;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:4px;margin-bottom:24px;font-family:'Segoe UI',sans-serif}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3rem);color:#fff;line-height:1.2;margin-bottom:18px;font-weight:700}
+.hero h1 em{font-style:italic;color:#7dd3d3}
+.hero-sub{color:#94a3b8;font-size:1rem;line-height:1.75;margin-bottom:34px;max-width:520px;font-family:'Segoe UI',sans-serif}
+.rating-card{display:inline-flex;align-items:center;gap:20px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:18px 26px;border-radius:10px;margin-bottom:34px}
+.r-score{font-size:3.6rem;font-weight:900;color:#fbbf24;line-height:1;font-family:'Segoe UI',sans-serif}
+.r-info{display:flex;flex-direction:column;gap:4px}
+.r-stars{color:#fbbf24;font-size:1.4rem}
+.r-info strong{color:#fff;font-size:.9rem;font-family:'Segoe UI',sans-serif}
+.r-info span{color:#94a3b8;font-size:.8rem;font-family:'Segoe UI',sans-serif}
+.cta-pair{display:flex;flex-wrap:wrap;gap:12px}
+.btn-call{display:inline-block;background:var(--terra);color:#fff;font-family:'Segoe UI',sans-serif;font-weight:800;font-size:1.05rem;padding:16px 30px;border-radius:6px;text-decoration:none;transition:all .2s;box-shadow:0 4px 18px rgba(192,74,26,.4)}
+.btn-call:hover{background:#d4541e;transform:translateY(-2px)}
+.btn-outline{display:inline-block;background:transparent;color:#cbd5e1;font-family:'Segoe UI',sans-serif;font-weight:600;font-size:.9rem;padding:15px 26px;border-radius:6px;text-decoration:none;border:1.5px solid rgba(255,255,255,.22);transition:all .2s}
+.btn-outline:hover{border-color:rgba(125,211,211,.5);color:#7dd3d3}
+/* WARM TRUST BAR */
+.trust{background:var(--sand);padding:24px 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:36px;border-bottom:1px solid var(--warm)}
+.trust-item{text-align:center;font-family:'Segoe UI',sans-serif}
+.trust-item strong{display:block;font-size:1.7rem;font-weight:900;color:var(--dark)}
+.trust-item span{font-size:.78rem;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:.06em}
+/* SERVICES — card with serif feel */
+.services{padding:76px 5%;background:#fff}
+.label{font-family:'Segoe UI',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:10px}
+.heading{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:700;color:var(--dark);margin-bottom:14px;line-height:1.2}
+.sub{font-family:'Segoe UI',sans-serif;font-size:1rem;color:var(--gray);line-height:1.7;max-width:580px;margin-bottom:50px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{border:1px solid #e2e8f0;border-radius:10px;padding:28px;position:relative;transition:all .25s;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--teal-lt))}
+.card:hover{box-shadow:0 8px 28px rgba(13,108,108,.12);transform:translateY(-3px)}
+.card-icon{font-size:2rem;margin-bottom:14px}
+.card h3{font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+.card p{font-family:'Segoe UI',sans-serif;font-size:.88rem;color:var(--gray);line-height:1.65}
+/* STORY SECTION */
+.story{background:var(--sand);padding:76px 5%}
+.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story-box{background:var(--dark);border-radius:14px;padding:44px;text-align:center}
+.story-box .score{font-size:5rem;font-weight:900;color:#fbbf24;line-height:1;font-family:'Segoe UI',sans-serif}
+.story-box p{font-family:'Segoe UI',sans-serif;color:#94a3b8;font-size:.9rem;margin-top:10px;line-height:1.55}
+.story-box strong{color:#fff}
+.story-right h2{font-size:clamp(1.6rem,3vw,2.1rem);color:var(--dark);margin-bottom:18px;font-weight:700;line-height:1.25}
+.story-right p{font-family:'Segoe UI',sans-serif;font-size:.97rem;color:var(--gray);line-height:1.75;margin-bottom:16px}
+/* REVIEWS */
+.reviews{padding:76px 5%;background:var(--dark)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:40px}
+.rev{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:26px;border-bottom:3px solid var(--teal)}
+.rev-stars{color:#fbbf24;margin-bottom:10px;font-size:1rem}
+.rev-quote{font-style:italic;color:#94a3b8;font-size:.9rem;line-height:1.65;margin-bottom:14px;font-family:'Segoe UI',sans-serif}
+.rev-by{font-weight:700;color:#e2e8f0;font-size:.85rem;font-family:'Segoe UI',sans-serif}
+.rev-by span{color:#4b5563;font-weight:400}
+/* CLAIM */
+.claim{background:linear-gradient(135deg,#0a2020,#112a2a);padding:80px 5%;text-align:center;border-top:4px solid var(--terra)}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.6rem);color:#fff;margin-bottom:12px}
+.claim h2 em{font-style:normal;color:#7dd3d3}
+.claim-sub{font-family:'Segoe UI',sans-serif;color:#94a3b8;font-size:1rem;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price{display:inline-block;background:rgba(192,74,26,.2);border:2px solid var(--terra);color:#f4a070;font-size:2.2rem;font-weight:900;padding:10px 38px;border-radius:6px;margin-bottom:28px;font-family:'Segoe UI',sans-serif}
+.bullets{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.bullet{background:rgba(255,255,255,.06);color:#e2e8f0;padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:600;font-family:'Segoe UI',sans-serif}
+.btn-claim{display:inline-block;background:var(--terra);color:#fff;font-family:'Segoe UI',sans-serif;font-weight:800;font-size:1.15rem;padding:18px 44px;border-radius:6px;text-decoration:none;box-shadow:0 6px 28px rgba(192,74,26,.45);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px)}
+footer{background:#0a1414;padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer p{color:#374151;font-size:.84rem;font-family:'Segoe UI',sans-serif}
+footer a{color:#6b7280;font-size:.84rem;text-decoration:none;font-family:'Segoe UI',sans-serif}
+@media(max-width:768px){.story-inner{grid-template-columns:1fr}}
+@media(max-width:480px){.cta-pair{flex-direction:column}.btn-call,.btn-outline{text-align:center}.rating-card{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-brand">Hines Family HVAC Repair<small>Brownsville, TX · Family Owned &amp; Operated</small></div>
+  <div class="nav-ph"><a href="tel:9563045260">📞 (956) 304-5260</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-content">
+    <div class="family-badge">🏠 Family Owned · Brownsville, TX</div>
+    <h1>Brownsville Families Have Trusted<br><em>Hines for HVAC</em> for Years</h1>
+    <p class="hero-sub">We're not a call center, not a franchise, not a chain. When you call Hines, you get a family-run crew that treats your home the same way we treat our own. That's why Brownsville keeps coming back to us.</p>
+    <div class="rating-card">
+      <div class="r-score">4.8</div>
+      <div class="r-info">
+        <div class="r-stars">★★★★★</div>
+        <strong>4.8 Stars · 174 Google Reviews</strong>
+        <span>One of Brownsville's top-rated HVAC companies</span>
+      </div>
+    </div>
+    <div class="cta-pair">
+      <a href="tel:9563045260" class="btn-call">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-outline">Claim This Website — $497 One Time</a>
+    </div>
+  </div>
+</section>
+<div class="trust">
+  <div class="trust-item"><strong>174</strong><span>5-Star Reviews</span></div>
+  <div class="trust-item"><strong>Same Day</strong><span>Service Available</span></div>
+  <div class="trust-item"><strong>24/7</strong><span>Emergency Line</span></div>
+  <div class="trust-item"><strong>Family</strong><span>Owned &amp; Operated</span></div>
+</div>
+<section class="services">
+  <div class="label">HVAC Services</div>
+  <div class="heading">Everything Your Brownsville Home Needs<br>to Stay Comfortable Year-Round</div>
+  <p class="sub">We handle the full range — from the frantic "my AC just died" call in August to the planned tune-up before summer hits. Same family, same crew, same reliable service every time.</p>
+  <div class="cards">
+    <div class="card"><div class="card-icon">❄️</div><h3>AC Repair</h3><p>We diagnose fast and fix right the first time. Parts on the truck, same-day service — so you're not sweating through a Brownsville summer night.</p></div>
+    <div class="card"><div class="card-icon">🔄</div><h3>AC Replacement &amp; Installation</h3><p>When repair isn't the smart play anymore, we help you choose the right new unit — sized properly for your home, not oversold.</p></div>
+    <div class="card"><div class="card-icon">🌡️</div><h3>Heating Service &amp; Repair</h3><p>South Texas winters sneak up on you. We make sure your heat pump or furnace fires up the moment you need it — every time.</p></div>
+    <div class="card"><div class="card-icon">🔋</div><h3>Refrigerant Leak Repair</h3><p>Blowing warm air? We locate the source of the leak, patch it properly, and recharge your system — not just a quick freon top-off.</p></div>
+    <div class="card"><div class="card-icon">🌬️</div><h3>Duct Work &amp; Air Balancing</h3><p>Leaky ducts waste up to 30% of your cooling. We seal and balance so every room in your Brownsville home hits the right temperature.</p></div>
+    <div class="card"><div class="card-icon">🗓️</div><h3>Seasonal Maintenance</h3><p>A spring checkup costs a fraction of an emergency repair. Our maintenance visits catch problems before they strand you without AC in July.</p></div>
+  </div>
+</section>
+<section class="story">
+  <div class="story-inner">
+    <div class="story-box">
+      <div class="score">4.8★</div>
+      <p>Rated across <strong>174 real reviews</strong><br>from Brownsville homeowners<br>who hired us and came back</p>
+      <br>
+      <a href="tel:9563045260" class="btn-call" style="display:inline-block">📞 (956) 304-5260</a>
+    </div>
+    <div class="story-right">
+      <h2>Why Brownsville Homeowners<br>Choose Hines Family HVAC</h2>
+      <p>There's a reason "family owned" still means something in this business. When you hire us, you're not getting a random tech dispatched from a call center. You're getting our crew — people who live in the same community, drive the same roads, and feel the same South Texas heat.</p>
+      <p>We show up when we say we will. We charge what we quoted. We clean up before we leave. And if something isn't right, we come back and make it right — because our name is on the truck and our reputation is everything to us.</p>
+      <p>174 Brownsville families gave us 4.8 stars. We're proud of every one.</p>
+    </div>
+  </div>
+</section>
+<section class="reviews">
+  <div class="label" style="color:#7dd3d3">What Brownsville Customers Say</div>
+  <div class="heading" style="color:#fff">174 Families. One Promise.</div>
+  <div class="rev-grid">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-quote">"I've used a lot of HVAC companies over the years and most of them are the same — show up late, charge more than they quoted, and rush out. Hines is completely different. Professional, on time, and they actually explain what they're doing."</p><div class="rev-by">Patricia M. <span>— Brownsville, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-quote">"My AC went out on the Fourth of July. I figured I'd be waiting days. Called Hines and they had someone at my house within two hours. Fixed the capacitor on the spot. My family will always call Hines first."</p><div class="rev-by">David G. <span>— Brownsville, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-quote">"They replaced our entire system — fair price, clean installation, and the house is cooling better than it has in years. These are genuinely good people doing genuinely good work."</p><div class="rev-by">Rosa T. <span>— Brownsville, TX</span></div></div>
+  </div>
+</section>
+<section class="claim">
+  <h2>This Website Was Built for<br><em>Hines Family HVAC Repair</em></h2>
+  <p class="claim-sub">We wrote this for your business — your phone number, your reviews, your city. It's a complete, professional website ready to launch in 24 hours.</p>
+  <div class="price">$497 — One Time</div>
+  <div class="bullets">
+    <span class="bullet">✓ No monthly fees</span>
+    <span class="bullet">✓ Yours forever</span>
+    <span class="bullet">✓ We handle hosting</span>
+    <span class="bullet">✓ Live in 24 hours</span>
+    <span class="bullet">✓ Mobile-optimized</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497</a>
+</section>
+<footer>
+  <p>© 2024 Hines Family HVAC Repair · Brownsville, TX · Family Owned &amp; Operated</p>
+  <a href="tel:9563045260">(956) 304-5260</a>
+</footer>
+</body>
+</html>

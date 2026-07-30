@@ -1,65 +1,180 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Eon Electric LLC. | McAllen, TX Electrical</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eon Electric LLC | Electricians in McAllen, TX</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;color:#111}a{text-decoration:none;color:inherit}
-nav{background:#fff;border-bottom:2px solid #0d9488;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
-.logo{font-weight:900;font-size:1.15rem;color:#1e3a5f}.nav-btn{background:#0d9488;color:#fff;padding:10px 24px;border-radius:6px;font-weight:700;font-size:.9rem}
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:#1e3a5f}
-.hero-left{padding:64px 48px;display:flex;flex-direction:column;justify-content:center;color:#fff}
-.hero-left .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#0d9488;margin-bottom:16px}
-.hero-left h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.1;margin-bottom:18px;letter-spacing:-.025em}
-.hero-left p{font-size:1rem;opacity:.85;line-height:1.65;max-width:420px}
-.hero-right{background:#0f2540;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 36px;gap:20px}
-.rating{background:rgba(255,255,255,.12);color:#fff;border-radius:12px;padding:14px 24px;font-size:1rem;font-weight:700;text-align:center}
-.hero-phone{font-size:1.7rem;font-weight:900;color:#0d9488;text-align:center;line-height:1.2}
-.cta-big{background:#0d9488;color:#fff;padding:18px 36px;border-radius:12px;font-size:1.1rem;font-weight:800;text-align:center;display:block;width:100%;box-shadow:0 6px 24px rgba(0,0,0,.3)}
-.trust-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.trust-pill{background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:6px 14px;font-size:.8rem;font-weight:600}
-.services{padding:72px 24px;background:#fafafa}
-.svc-header{text-align:center;margin-bottom:44px}
-.svc-label{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0d9488;margin-bottom:8px}
-.svc-title{font-size:2rem;font-weight:900;color:#1e3a5f}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:920px;margin:0 auto}
-.svc-card{background:#fff;border-radius:12px;padding:28px 22px;border-left:4px solid #0d9488;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.svc-num{font-size:2rem;font-weight:900;color:#0d9488;opacity:.3;line-height:1}
-.svc-card h3{font-size:1rem;font-weight:800;color:#1e3a5f;margin:8px 0 6px}
-.svc-card p{font-size:.87rem;color:#666;line-height:1.55}
-.cta-strip{background:#0d9488;padding:56px 24px;text-align:center}
-.cta-strip h2{font-size:2rem;font-weight:900;color:#fff;margin-bottom:16px}
-.cta-strip p{color:#fff;opacity:.9;margin-bottom:28px;font-size:1rem}
-.btn-white{background:#fff;color:#1e3a5f;padding:16px 40px;border-radius:8px;font-size:1rem;font-weight:800;display:inline-block}
-footer{background:#0f2540;color:rgba(255,255,255,.4);padding:18px;text-align:center;font-size:.82rem}
-@media(max-width:680px){.hero{grid-template-columns:1fr}.hero-left{padding:48px 24px}.hero-right{padding:36px 24px}}
-</style></head><body>
-<nav><div class="logo">Eon Electric LLC.</div><a href="tel:9562793603" class="nav-btn">📞 (956) 279-3603</a></nav>
-<section class="hero">
-  <div class="hero-left">
-    <div class="eyebrow">Electrical · McAllen, TX</div>
-    <h1>Eon Electric LLC.</h1>
-    <p>Safe, code-compliant electrical work by your trusted local electrician.</p>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0f0a;--green:#00e676;--green-dim:#00c853;--card:#141714;--card2:#1a1d1a;--gray:#9ca3af;--light:#f0fdf4}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#f0fdf4;background:var(--bg)}
+nav{position:sticky;top:0;z-index:100;background:rgba(12,15,10,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,230,118,.15);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:38px;height:38px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--bg);font-weight:900}
+.logo-text{font-weight:900;font-size:1.05rem;color:#fff;letter-spacing:-.3px}
+.logo-text span{color:var(--green)}
+.nav-ph a{border:1.5px solid var(--green);color:var(--green);font-weight:700;font-size:.92rem;padding:9px 20px;border-radius:6px;text-decoration:none;transition:all .2s}
+.nav-ph a:hover{background:rgba(0,230,118,.12)}
+/* HERO — grid overlay tech feel */
+.hero{min-height:90vh;display:flex;align-items:center;background:var(--bg);position:relative;overflow:hidden;padding:80px 5%}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(0,230,118,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,230,118,.04) 1px,transparent 1px);background-size:50px 50px;pointer-events:none}
+.hero-glow{position:absolute;top:-100px;right:-150px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,230,118,.08),transparent 65%);pointer-events:none}
+.hero-inner{max-width:700px;position:relative;z-index:1}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.25);color:var(--green);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:28px}
+.hero-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:#fff;line-height:1.07;letter-spacing:-.6px;margin-bottom:22px}
+.hero h1 .accent{color:var(--green)}
+.hero-sub{color:#94a3b8;font-size:1.05rem;line-height:1.7;margin-bottom:36px;max-width:540px}
+/* RATING */
+.rating-panel{background:var(--card);border:1px solid rgba(0,230,118,.15);border-radius:12px;padding:20px 28px;display:flex;align-items:center;gap:22px;width:fit-content;margin-bottom:38px}
+.r-big{font-size:3.8rem;font-weight:900;color:var(--green);line-height:1}
+.r-stack{display:flex;flex-direction:column;gap:4px}
+.r-stars{color:#fbbf24;font-size:1.4rem;letter-spacing:2px}
+.r-stack strong{color:#fff;font-size:.95rem}
+.r-stack span{color:var(--gray);font-size:.82rem}
+.cta-flex{display:flex;flex-wrap:wrap;gap:14px}
+.btn-green{display:inline-block;background:var(--green);color:var(--bg);font-weight:900;font-size:1.05rem;padding:15px 30px;border-radius:7px;text-decoration:none;transition:all .2s;box-shadow:0 4px 24px rgba(0,230,118,.3)}
+.btn-green:hover{background:#66ffaa;transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,230,118,.4)}
+.btn-border{display:inline-block;background:transparent;color:#9ca3af;font-weight:600;font-size:.9rem;padding:14px 26px;border-radius:7px;text-decoration:none;border:1.5px solid rgba(255,255,255,.15);transition:all .2s}
+.btn-border:hover{border-color:rgba(0,230,118,.4);color:var(--green)}
+/* METRICS ROW */
+.metrics{background:var(--card);border-top:1px solid rgba(0,230,118,.1);border-bottom:1px solid rgba(0,230,118,.1);display:flex;flex-wrap:wrap;justify-content:center}
+.metric{flex:1;min-width:140px;text-align:center;padding:22px 16px;border-right:1px solid rgba(255,255,255,.06)}
+.metric:last-child{border-right:none}
+.metric strong{display:block;font-size:2rem;font-weight:900;color:var(--green)}
+.metric span{font-size:.78rem;color:var(--gray);text-transform:uppercase;letter-spacing:.07em}
+/* SERVICES */
+.services{padding:80px 5%;background:var(--bg)}
+.section-chip{display:inline-block;background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.2);color:var(--green);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.section-h{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-.4px;line-height:1.12}
+.section-p{color:var(--gray);font-size:.98rem;line-height:1.7;max-width:580px;margin-bottom:50px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.svc{background:var(--card2);border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:28px;transition:all .25s;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;top:0;left:0;width:3px;height:100%;background:var(--green);opacity:0;transition:opacity .2s}
+.svc:hover{border-color:rgba(0,230,118,.2);transform:translateY(-3px)}
+.svc:hover::before{opacity:1}
+.svc-icon{font-size:1.9rem;margin-bottom:14px}
+.svc h3{font-size:1rem;font-weight:800;color:#fff;margin-bottom:8px}
+.svc p{font-size:.87rem;color:var(--gray);line-height:1.6}
+/* REVIEWS */
+.reviews{padding:80px 5%;background:var(--card)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px;margin-top:40px}
+.rev{background:var(--bg);border:1px solid rgba(0,230,118,.1);border-radius:10px;padding:26px}
+.rev-stars{color:#fbbf24;margin-bottom:10px;font-size:.9rem}
+.rev-text{color:var(--gray);font-size:.9rem;line-height:1.65;margin-bottom:14px;font-style:italic}
+.rev-name{font-weight:700;color:#f0fdf4;font-size:.85rem}
+.rev-name span{color:#374151;font-weight:400}
+/* CTA BLOCK */
+.cta-section{padding:70px 5%;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.cta-left h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-.3px}
+.cta-left p{color:var(--gray);font-size:.97rem;line-height:1.7;margin-bottom:24px}
+.cta-right{background:var(--card2);border:1px solid rgba(0,230,118,.15);border-radius:14px;padding:36px;text-align:center}
+.cta-right .big-num{font-size:4rem;font-weight:900;color:var(--green);line-height:1;display:block}
+.cta-right p{color:var(--gray);font-size:.88rem;margin:10px 0 22px;line-height:1.5}
+/* CLAIM */
+.claim{background:var(--card);border-top:1px solid rgba(0,230,118,.15);padding:80px 5%;text-align:center}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:12px}
+.claim h2 span{color:var(--green)}
+.claim-sub{color:var(--gray);font-size:1rem;margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price{display:inline-block;background:rgba(0,230,118,.1);border:2px solid rgba(0,230,118,.35);color:var(--green);font-size:2.2rem;font-weight:900;padding:10px 38px;border-radius:8px;margin-bottom:28px}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:#d1fae5;padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:600}
+.btn-claim{display:inline-block;background:var(--green);color:var(--bg);font-weight:900;font-size:1.15rem;padding:18px 46px;border-radius:8px;text-decoration:none;box-shadow:0 6px 30px rgba(0,230,118,.35);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px);background:#66ffaa}
+footer{background:var(--bg);border-top:1px solid rgba(255,255,255,.06);padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer p{color:#374151;font-size:.84rem}
+footer a{color:var(--gray);font-size:.84rem;text-decoration:none}
+@media(max-width:768px){.cta-section{grid-template-columns:1fr}}
+@media(max-width:480px){.cta-flex{flex-direction:column}.btn-green,.btn-border{text-align:center}.rating-panel{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <div class="logo-mark">⚡</div>
+    <div class="logo-text">Eon Electric <span>LLC</span></div>
   </div>
-  <div class="hero-right">
-    <div class="rating">⭐ 4.9 · 159 reviews</div>
-    <div class="hero-phone">📞 (956) 279-3603</div>
-    <a href="tel:9562793603" class="cta-big">Call Now — Free Estimate</a>
-    <div class="trust-row">
-      <div class="trust-pill">✅ Licensed & Insured</div>
-      <div class="trust-pill">⚡ Fast Response</div>
-      <div class="trust-pill">💯 Guaranteed</div>
+  <div class="nav-ph"><a href="tel:9562793603">(956) 279-3603</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-chip">McAllen, TX · Licensed Electricians</div>
+    <h1>McAllen's Electric Experts —<br><span class="accent">Fast. Safe.</span><br>Powered Up.</h1>
+    <p class="hero-sub">Eon Electric is McAllen's electrician of choice for homeowners and businesses who want the job done once, done right, and done without drama. 4.9 stars across 159 real reviews says it better than we can.</p>
+    <div class="rating-panel">
+      <div class="r-big">4.9</div>
+      <div class="r-stack">
+        <div class="r-stars">★★★★★</div>
+        <strong>4.9 Stars — 159 Google Reviews</strong>
+        <span>Top-Rated Electrician in McAllen, TX</span>
+      </div>
+    </div>
+    <div class="cta-flex">
+      <a href="tel:9562793603" class="btn-green">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-border">Claim This Website — $497 One Time</a>
     </div>
   </div>
 </section>
+<div class="metrics">
+  <div class="metric"><strong>4.9★</strong><span>Google Rating</span></div>
+  <div class="metric"><strong>159</strong><span>5-Star Reviews</span></div>
+  <div class="metric"><strong>Same Day</strong><span>Service</span></div>
+  <div class="metric"><strong>24/7</strong><span>Emergency</span></div>
+  <div class="metric"><strong>Licensed</strong><span>Master Electrician</span></div>
+</div>
 <section class="services">
-  <div class="svc-header"><div class="svc-label">What We Offer</div><h2 class="svc-title">Our Services</h2></div>
+  <div class="section-chip">What We Do</div>
+  <div class="section-h">Every Electrical Service McAllen<br>Homes &amp; Businesses Need</div>
+  <p class="section-p">From panel upgrades in Sharyland to EV charger installs in Mission, we cover the entire McAllen metro. Licensed, insured, and backed by 159 five-star reviews.</p>
   <div class="svc-grid">
-    <div class="svc-card"><div class="svc-num">01</div><h3>Electrical Repairs</h3><p>Available 24/7 — we respond fast when you need us most.</p></div><div class="svc-card"><div class="svc-num">02</div><h3>Panel Upgrades</h3><p>Done right the first time, backed by our guarantee.</p></div><div class="svc-card"><div class="svc-num">03</div><h3>Outlet Installation</h3><p>Upfront pricing with no hidden fees or surprises.</p></div><div class="svc-card"><div class="svc-num">04</div><h3>Safety Inspections</h3><p>Local, experienced pros who respect your property.</p></div>
+    <div class="svc"><div class="svc-icon">⚡</div><h3>Panel Upgrades</h3><p>Your home's electrical panel is the heart of the whole system. We upgrade to 200A or 400A service — safe, permitted, inspected.</p></div>
+    <div class="svc"><div class="svc-icon">🔌</div><h3>Outlets &amp; Wiring</h3><p>New circuits, additional outlets, GFCI upgrades — we run clean, code-compliant wiring so your family is protected.</p></div>
+    <div class="svc"><div class="svc-icon">🚗</div><h3>EV Charger Install</h3><p>Level 2 home charger installation from start to finish. We pull the permit, run the circuit, and handle the inspection.</p></div>
+    <div class="svc"><div class="svc-icon">💡</div><h3>Lighting &amp; Fixtures</h3><p>Recessed lighting, ceiling fans, dimmer switches, outdoor security lighting — we install everything cleanly and correctly.</p></div>
+    <div class="svc"><div class="svc-icon">🛡️</div><h3>Safety Inspections</h3><p>Whether you're buying a home in McAllen or just overdue for a checkup, we give you a full written electrical inspection report.</p></div>
+    <div class="svc"><div class="svc-icon">🏢</div><h3>Commercial Electric</h3><p>Tenant build-outs, commercial panel installs, code compliance work — we serve McAllen businesses of every size.</p></div>
   </div>
 </section>
-<section class="cta-strip">
-  <h2>Ready to Get Started?</h2>
-  <p>Call Eon Electric LLC. today — we'll give you a free estimate and get you scheduled fast.</p>
-  <a href="tel:9562793603" class="btn-white">📞 Call (956) 279-3603</a>
+<section class="reviews">
+  <div class="section-chip">Customer Reviews</div>
+  <div class="section-h" style="color:#fff;margin-bottom:10px">4.9 Stars in McAllen. Here's Why.</div>
+  <p class="section-p" style="margin-bottom:0">159 reviews from real McAllen customers who needed an electrician and called us back when they needed one again.</p>
+  <div class="rev-grid">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Eon Electric installed a 50-amp EV charger in my garage and pulled all the permits. Everything passed inspection on the first visit. Clean install, great communication throughout."</p><div class="rev-name">Hugo A. <span>— McAllen, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Had half my house lose power randomly. Called Eon and they walked me through it on the phone, then came out same day. Bad breaker — fixed fast and for a fair price. Highly recommend."</p><div class="rev-name">Liliana V. <span>— McAllen, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Did a full panel upgrade on our older McAllen home. Eon was organized, on-time, and walked us through every step. They even patched the drywall back up. Outstanding service."</p><div class="rev-name">Frank R. <span>— McAllen, TX</span></div></div>
+  </div>
 </section>
-<footer>Eon Electric LLC. · Electrical · McAllen, TX</footer>
-</body></html>
+<section class="cta-section">
+  <div class="cta-left">
+    <div class="section-chip">Ready to Get Started?</div>
+    <h2>McAllen's Most Reliable<br>Electrician Is One Call Away</h2>
+    <p>We pick up the phone, show up on time, and give you a firm price before we start. That's the Eon Electric standard — built on 159 five-star reviews and counting.</p>
+    <a href="tel:9562793603" class="btn-green" style="display:inline-block">📞 Call (956) 279-3603</a>
+  </div>
+  <div class="cta-right">
+    <span class="big-num">4.9★</span>
+    <p>Average across <strong style="color:#fff">159 verified reviews</strong><br>from McAllen homeowners<br>&amp; business owners</p>
+    <a href="tel:9562793603" class="btn-green" style="display:inline-block">Free Estimate →</a>
+  </div>
+</section>
+<section class="claim">
+  <h2>This Site Was Built for<br><span>Eon Electric LLC</span></h2>
+  <p class="claim-sub">Custom-designed and written specifically for your McAllen electrical business. Your number, your reviews, your city — ready to go live in 24 hours.</p>
+  <div class="price">$497 — One Time</div>
+  <div class="perks">
+    <span class="perk">✓ No monthly fees</span>
+    <span class="perk">✓ Yours forever</span>
+    <span class="perk">✓ We handle hosting</span>
+    <span class="perk">✓ Live in 24 hours</span>
+    <span class="perk">✓ Mobile-optimized</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497 →</a>
+</section>
+<footer>
+  <p>© 2024 Eon Electric LLC · McAllen, TX · Licensed Electrical Contractor</p>
+  <a href="tel:9562793603">(956) 279-3603</a>
+</footer>
+</body>
+</html>

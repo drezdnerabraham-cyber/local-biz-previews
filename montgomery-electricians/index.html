@@ -1,79 +1,176 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Montgomery Electricians | Montgomery, AL HVAC</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Montgomery Electricians | Licensed Electrical Contractors in Montgomery, AL</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Segoe UI',system-ui,sans-serif;background:#0a0a0f;color:#f0f0f0}a{text-decoration:none;color:inherit}
-nav{padding:18px 36px;display:flex;align-items:center;justify-content:space-between;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(255,255,255,.08)}
-.logo{font-weight:900;font-size:1.1rem;color:#fff}.nav-cta{background:#f97316;color:#fff;padding:10px 22px;border-radius:8px;font-weight:700}
-.hero{padding:100px 24px 80px;text-align:center;background:radial-gradient(ellipse at 50% 0%, #1c1c1c99 0%, transparent 70%)}
-.stars{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:6px 18px;font-size:.9rem;margin-bottom:24px}
-h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:18px;background:linear-gradient(135deg,#fff 0%,#f97316 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.tagline{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 40px;line-height:1.65}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:40px}
-.btn-accent{background:#f97316;color:#fff;padding:16px 38px;border-radius:50px;font-size:1rem;font-weight:800;box-shadow:0 0 32px #f9731655}
-.btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff;padding:16px 30px;border-radius:50px;font-size:1rem;font-weight:600}
-.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.badge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:8px 16px;font-size:.82rem;font-weight:600}
-.svcs{padding:80px 24px;background:#0d0d14}
-.svcs-head{text-align:center;margin-bottom:48px}
-.svcs-label{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f97316;margin-bottom:10px}
-.svcs-title{font-size:2.1rem;font-weight:900;color:#fff}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:900px;margin:0 auto}
-.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 22px;transition:border-color .2s,transform .2s}
-.card:hover{border-color:#f97316;transform:translateY(-4px)}
-.card-icon{font-size:2.2rem;margin-bottom:14px}
-.card h3{font-size:1rem;font-weight:800;color:#fff;margin-bottom:8px}
-.card p{font-size:.86rem;color:rgba(255,255,255,.55);line-height:1.6}
-.why{padding:80px 24px;max-width:860px;margin:0 auto}
-.why-title{font-size:2rem;font-weight:900;color:#fff;text-align:center;margin-bottom:44px}
-.why-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
-.why-item{display:flex;gap:16px}
-.why-dot{width:40px;height:40px;background:#f97316;border-radius:10px;display:grid;place-items:center;flex-shrink:0;font-size:1.2rem}
-.why-item h4{font-size:.95rem;font-weight:800;color:#fff;margin-bottom:5px}
-.why-item p{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.55}
-.contact{background:#1c1c1c;padding:80px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
-.contact h2{font-size:2rem;font-weight:900;color:#fff;margin-bottom:12px}
-.contact p{color:rgba(255,255,255,.7);margin-bottom:36px}
-.contact-phone{font-size:1.8rem;font-weight:900;color:#f97316;margin-bottom:28px}
-.btn-big{background:#f97316;color:#fff;padding:18px 48px;border-radius:12px;font-size:1.1rem;font-weight:800}
-footer{background:#000;color:rgba(255,255,255,.3);padding:18px;text-align:center;font-size:.8rem}
-</style></head><body>
-<nav><div class="logo">Montgomery Electricians</div><a href="tel:3342068187" class="nav-cta">📞 (334) 206-8187</a></nav>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#0a0a0a;--yellow:#ffd000;--yellow-lt:#ffe640;--dark:#111;--gray:#9ca3af;--light:#f9f9f9;--card:#1a1a1a}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#fff;color:#1a1a1a}
+nav{position:sticky;top:0;z-index:100;background:var(--black);padding:0 5%;height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--yellow)}
+.logo{font-weight:900;font-size:1.1rem;color:#fff;letter-spacing:-.3px}
+.logo em{color:var(--yellow);font-style:normal}
+.nav-ph a{background:var(--yellow);color:var(--black);font-weight:800;font-size:.95rem;padding:10px 20px;border-radius:5px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.nav-ph a:hover{background:var(--yellow-lt)}
+.hero{background:var(--black);padding:80px 5% 90px;position:relative;overflow:hidden;clip-path:polygon(0 0,100% 0,100% 90%,0 100%)}
+.hero::before{content:"⚡";position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:14rem;opacity:.05;pointer-events:none}
+.hero-content{max-width:680px;position:relative;z-index:1}
+.hero-kicker{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.kicker-line{width:32px;height:3px;background:var(--yellow)}
+.kicker-text{color:var(--yellow);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.6px;margin-bottom:20px}
+.hero h1 mark{background:var(--yellow);color:var(--black);padding:0 8px;border-radius:3px}
+.hero-desc{color:var(--gray);font-size:1.05rem;line-height:1.65;margin-bottom:32px;max-width:520px}
+.rating-strip{display:flex;align-items:center;gap:24px;padding:18px 24px;background:rgba(255,208,0,.08);border:1px solid rgba(255,208,0,.25);border-radius:8px;width:fit-content;margin-bottom:36px}
+.r-num{font-size:3.4rem;font-weight:900;color:var(--yellow);line-height:1}
+.r-detail{display:flex;flex-direction:column;gap:3px}
+.r-stars{color:var(--yellow);font-size:1.5rem;letter-spacing:2px}
+.r-detail strong{color:#fff;font-size:.92rem}
+.r-detail span{color:var(--gray);font-size:.82rem}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn-y{display:inline-block;background:var(--yellow);color:var(--black);font-weight:900;font-size:1.05rem;padding:15px 28px;border-radius:5px;text-decoration:none;transition:all .2s}
+.btn-y:hover{background:var(--yellow-lt);transform:translateY(-1px)}
+.btn-ghost{display:inline-block;background:transparent;color:#fff;font-weight:600;font-size:.9rem;padding:14px 24px;border-radius:5px;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,208,0,.6);color:var(--yellow)}
+.stats{background:var(--yellow);display:flex;flex-wrap:wrap;justify-content:center}
+.stat{flex:1;min-width:150px;text-align:center;padding:22px 16px;border-right:1px solid rgba(0,0,0,.1)}
+.stat:last-child{border-right:none}
+.stat strong{display:block;font-size:2rem;font-weight:900;color:var(--black);line-height:1}
+.stat span{font-size:.75rem;font-weight:700;color:rgba(0,0,0,.6);text-transform:uppercase;letter-spacing:.07em}
+section.svcs{padding:80px 5%;background:var(--light)}
+.section-label{color:var(--black);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;border-left:4px solid var(--yellow);padding-left:10px;margin-bottom:14px}
+.section-h{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;color:var(--black);line-height:1.12;margin-bottom:14px;letter-spacing:-.4px}
+.section-p{color:#4b5563;font-size:1rem;line-height:1.7;max-width:600px;margin-bottom:50px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.svc-card{background:#fff;border-radius:8px;padding:28px;border-top:4px solid var(--yellow);box-shadow:0 2px 12px rgba(0,0,0,.06);transition:all .2s}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.svc-icon{font-size:2rem;margin-bottom:12px;display:block}
+.svc-card h3{font-size:1rem;font-weight:800;color:var(--black);margin-bottom:8px}
+.svc-card p{font-size:.88rem;color:#4b5563;line-height:1.6}
+.reviews{background:var(--dark);padding:72px 5%}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.rev{background:var(--card);padding:26px;border-radius:8px;border-left:4px solid var(--yellow)}
+.rev-stars{color:var(--yellow);font-size:1rem;margin-bottom:10px}
+.rev-text{color:#9ca3af;font-size:.9rem;line-height:1.65;margin-bottom:14px;font-style:italic}
+.rev-name{font-weight:700;color:#fff;font-size:.87rem}
+.rev-loc{color:#4b5563;font-weight:400}
+.why{padding:72px 5%;background:#fff}
+.why-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.checklist{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.check-item{display:flex;align-items:flex-start;gap:12px;font-size:.95rem;line-height:1.5}
+.check-icon{width:28px;height:28px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.85rem;flex-shrink:0}
+.why-cta-box{background:var(--black);border-radius:14px;padding:42px 36px;text-align:center}
+.why-cta-box h3{font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:10px;line-height:1.2}
+.why-cta-box h3 em{font-style:normal;color:var(--yellow)}
+.why-cta-box p{color:var(--gray);font-size:.9rem;margin-bottom:24px;line-height:1.55}
+.claim{background:var(--yellow);padding:80px 5%;text-align:center}
+.claim h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--black);margin-bottom:12px;line-height:1.1}
+.claim-sub{color:#292929;font-size:1rem;line-height:1.65;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto}
+.price-big{display:inline-block;background:var(--black);color:var(--yellow);font-size:2.4rem;font-weight:900;padding:12px 44px;border-radius:6px;margin-bottom:28px}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(0,0,0,.08);color:var(--black);padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:700}
+.btn-claim{display:inline-block;background:var(--black);color:var(--yellow);font-weight:900;font-size:1.15rem;padding:18px 46px;border-radius:6px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.btn-claim:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+footer{background:var(--black);padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;border-top:2px solid rgba(255,208,0,.2)}
+footer p{color:#374151;font-size:.84rem}
+footer a{color:#6b7280;font-size:.84rem;text-decoration:none}
+@media(max-width:768px){.why-inner{grid-template-columns:1fr}.hero{clip-path:none;padding-bottom:70px}}
+@media(max-width:480px){.btn-row{flex-direction:column}.btn-y,.btn-ghost{text-align:center}.rating-strip{flex-direction:column;align-items:flex-start;gap:8px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Montgomery <em>Electricians</em></div>
+  <div class="nav-ph"><a href="tel:3342068187">📞 (334) 206-8187</a></div>
+</nav>
 <section class="hero">
-  <div class="stars">⭐ 4.9/5 from 186 reviews</div>
-  <h1>Montgomery Electricians</h1>
-  <p class="tagline">Expert heating & cooling. Licensed, insured, and always on time.</p>
-  <div class="cta-row">
-    <a href="tel:3342068187" class="btn-accent">📞 Call Now — (334) 206-8187</a>
-    <span class="btn-ghost">📍 Montgomery, AL</span>
-  </div>
-  <div class="badges">
-    <div class="badge">✅ Licensed & Insured</div>
-    <div class="badge">⚡ Fast Response</div>
-    <div class="badge">💯 Satisfaction Guaranteed</div>
-    <div class="badge">🏠 Locally Owned</div>
+  <div class="hero-content">
+    <div class="hero-kicker"><div class="kicker-line"></div><span class="kicker-text">Montgomery, AL · Licensed &amp; Insured Electricians</span></div>
+    <h1>Montgomery's <mark>Go-To</mark><br>Electricians.<br>Fast. Safe. Done Right.</h1>
+    <p class="hero-desc">Electrical problems don't wait for a convenient time — and neither do we. We're the electricians Montgomery homeowners and business owners call when they need the job done by someone who actually knows what they're doing.</p>
+    <div class="rating-strip">
+      <div class="r-num">4.9</div>
+      <div class="r-detail">
+        <div class="r-stars">★★★★★</div>
+        <strong>186 Verified Google Reviews</strong>
+        <span>Top-Rated Electrician in Montgomery County, AL</span>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a href="tel:3342068187" class="btn-y">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-ghost">Claim This Website — $497 One Time</a>
+    </div>
   </div>
 </section>
+<div class="stats">
+  <div class="stat"><strong>4.9★</strong><span>Google Rating</span></div>
+  <div class="stat"><strong>186</strong><span>Reviews</span></div>
+  <div class="stat"><strong>Same Day</strong><span>Service Available</span></div>
+  <div class="stat"><strong>24/7</strong><span>Emergency Calls</span></div>
+  <div class="stat"><strong>100%</strong><span>Guaranteed Work</span></div>
+</div>
 <section class="svcs">
-  <div class="svcs-head"><div class="svcs-label">Services</div><h2 class="svcs-title">What We Do</h2></div>
-  <div class="cards">
-    <div class="card"><div class="card-icon">🔧</div><h3>AC Installation</h3><p>On-call 24/7 — we move fast when you need us.</p></div><div class="card"><div class="card-icon">⚡</div><h3>Heating Repair</h3><p>Quality guaranteed or we come back and make it right.</p></div><div class="card"><div class="card-icon">✨</div><h3>Maintenance Plans</h3><p>Transparent pricing before any work starts.</p></div><div class="card"><div class="card-icon">🛡️</div><h3>Emergency Service</h3><p>Experienced local pros who treat your home with care.</p></div>
+  <div class="section-label">Electrical Services</div>
+  <div class="section-h">We Handle Every Electrical Job<br>in Montgomery — Big or Small</div>
+  <p class="section-p">From a tripping breaker in your kitchen to a full panel upgrade for a commercial renovation, our licensed electricians handle every scope of electrical work — properly permitted, inspected, and guaranteed.</p>
+  <div class="svc-grid">
+    <div class="svc-card"><span class="svc-icon">⚡</span><h3>Panel Upgrades &amp; Replacements</h3><p>Still running on a 100-amp panel in a modern home? We upgrade to 200A or 400A service to handle today's electrical demand safely and correctly.</p></div>
+    <div class="svc-card"><span class="svc-icon">🏠</span><h3>Whole-Home Rewiring</h3><p>Older Montgomery homes with aluminum wiring or knob-and-tube are a fire hazard. We rewire completely — with minimal disruption to your walls.</p></div>
+    <div class="svc-card"><span class="svc-icon">🔌</span><h3>Outlets, Switches &amp; Fixtures</h3><p>Adding outlets in the garage, upgrading to GFCI in bathrooms, or installing recessed lighting — quick fixes that make a real difference.</p></div>
+    <div class="svc-card"><span class="svc-icon">🚗</span><h3>EV Charger Installation</h3><p>A Level 2 charger at your home means waking up to a full charge every morning. We size the circuit, pull the permit, and do it right.</p></div>
+    <div class="svc-card"><span class="svc-icon">🛡️</span><h3>Safety Inspections</h3><p>Buying a home or renting a property? We'll give you a full electrical report — no guessing about what's behind your walls.</p></div>
+    <div class="svc-card"><span class="svc-icon">🏢</span><h3>Commercial Electrical</h3><p>We work with Montgomery business owners on new construction, build-outs, lighting retrofits, and commercial code compliance.</p></div>
+  </div>
+</section>
+<section class="reviews" style="padding:72px 5%">
+  <div class="section-label" style="border-left-color:var(--yellow);color:var(--yellow)">What Montgomery Customers Say</div>
+  <div class="section-h" style="color:#fff;margin-bottom:40px">186 Reasons We're Montgomery's Most Trusted</div>
+  <div class="rev-grid">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"My breaker kept tripping and two other electricians told me I needed a full panel replacement — quoted me $3,800. Montgomery Electricians came out, found a loose connection in 20 minutes, and charged me $185. Honest doesn't even cover it."</p><div class="rev-name">Thomas B. <span class="rev-loc">— Montgomery, AL</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Had them install a 50-amp EV charger in my garage. Pulled the permit, handled the inspection, and it passed first try. Professional from the first call to the final sign-off."</p><div class="rev-name">Keisha H. <span class="rev-loc">— Montgomery, AL</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Lost power to half our house on a Saturday night. They showed up within the hour. Failed main breaker — they had the part, fixed it, and were gone by midnight. Lifesavers."</p><div class="rev-name">Marcus W. <span class="rev-loc">— Montgomery County, AL</span></div></div>
   </div>
 </section>
 <section class="why">
-  <h2 class="why-title">Why Montgomery, AL Trusts Montgomery Electricians</h2>
-  <div class="why-list">
-    <div class="why-item"><div class="why-dot">⚡</div><div><h4>Same-Day Response</h4><p>We pick up the phone. We show up. Every time.</p></div></div>
-    <div class="why-item"><div class="why-dot">🛡️</div><div><h4>Fully Licensed</h4><p>Credentials and insurance on every single job.</p></div></div>
-    <div class="why-item"><div class="why-dot">💬</div><div><h4>No Surprise Bills</h4><p>Clear quote before work starts. That's our promise.</p></div></div>
-    <div class="why-item"><div class="why-dot">🏆</div><div><h4>Local Reputation</h4><p>We live here. Your neighbors recommend us.</p></div></div>
+  <div class="why-inner">
+    <div>
+      <div class="section-label">Why Choose Us</div>
+      <div class="section-h">We're Not Just Licensed.<br>We're Actually Good.</div>
+      <p class="section-p" style="margin-bottom:0">Any electrician can put a license on their truck. What separates us is how we treat your Montgomery home, how we communicate, and how we stand behind every wire we touch.</p>
+      <div class="checklist">
+        <div class="check-item"><div class="check-icon">✓</div><div><strong>Licensed Master Electricians</strong> — not journeymen working unsupervised</div></div>
+        <div class="check-item"><div class="check-icon">✓</div><div><strong>Upfront pricing</strong> — you approve the number before we start</div></div>
+        <div class="check-item"><div class="check-icon">✓</div><div><strong>We pull permits</strong> — so your insurance is protected and the work is inspected</div></div>
+        <div class="check-item"><div class="check-icon">✓</div><div><strong>Clean work habits</strong> — we mask, tarp, and vacuum. Your home looks like we were never there</div></div>
+        <div class="check-item"><div class="check-icon">✓</div><div><strong>Emergency availability</strong> — electrical emergencies don't wait for Monday morning</div></div>
+      </div>
+    </div>
+    <div class="why-cta-box">
+      <h3>Ready to Fix It<br><em>the Right Way?</em></h3>
+      <p>Call for a free estimate. No pressure, no upsell. Just an honest quote from a licensed Montgomery electrician who does this every single day.</p>
+      <a href="tel:3342068187" class="btn-y" style="display:block">📞 (334) 206-8187</a>
+      <p style="color:#6b7280;font-size:.8rem;margin-top:14px">Same day for most jobs · Emergency service 24/7</p>
+    </div>
   </div>
 </section>
-<section class="contact">
-  <h2>Let's Get to Work</h2>
-  <p>Call or text us — free estimate, fast scheduling.</p>
-  <div class="contact-phone">📞 (334) 206-8187</div>
-  <a href="tel:3342068187" class="btn-big">Call Montgomery Electricians</a>
+<section class="claim">
+  <h2>This Site Was Built for<br>Montgomery Electricians</h2>
+  <p class="claim-sub">Every word of copy, every design decision — built specifically for your business. You don't need to build anything. Just say yes and it goes live.</p>
+  <div class="price-big">$497 — One Time</div>
+  <div class="perks">
+    <span class="perk">✓ No monthly fees</span>
+    <span class="perk">✓ Yours forever</span>
+    <span class="perk">✓ We handle hosting</span>
+    <span class="perk">✓ Live in 24 hours</span>
+    <span class="perk">✓ Mobile ready</span>
+    <span class="perk">✓ SEO optimized</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497 →</a>
 </section>
-<footer>Montgomery Electricians · HVAC · Montgomery, AL · (334) 206-8187</footer>
-</body></html>
+<footer>
+  <p>© 2024 Montgomery Electricians · Montgomery, AL · Licensed Electrical Contractor</p>
+  <a href="tel:3342068187">(334) 206-8187</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Core Electric | Licensed Electricians in Bakersfield, CA</title>
+<style>
+:root{--orange:#EA580C;--orange2:#C2410C;--orange3:#FB923C;--steel:#374151;--steel2:#1F2937;--steel3:#4B5563;--iron:#111827;--white:#FFFFFF;--off:#F9F7F5;--warm:#FFF4EE;--border:#E5DDD5;--text:#1C1512;--mid:#6B6460}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--off);color:var(--text);line-height:1.65}
+nav{position:sticky;top:0;z-index:100;background:var(--iron);color:var(--white);display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:64px;border-bottom:3px solid var(--orange)}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.logo-box{width:32px;height:32px;background:var(--orange);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.85rem;color:var(--white);font-style:italic}
+.logo-text{font-size:1.1rem;font-weight:900;letter-spacing:-0.3px}
+.logo-text span{color:var(--orange)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.87rem;transition:color 0.2s}
+.nav-links a:hover{color:var(--orange3)}
+.nav-cta a{background:var(--orange);color:var(--white);text-decoration:none;font-weight:800;font-size:0.95rem;padding:9px 22px;border-radius:6px;display:flex;align-items:center;gap:7px;transition:background 0.2s}
+.nav-cta a:hover{background:var(--orange2)}
+.hero{background:var(--iron);color:var(--white);padding:0;position:relative;overflow:hidden}
+.hero-grid-bg{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,0.02) 39px,rgba(255,255,255,0.02) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,0.02) 39px,rgba(255,255,255,0.02) 40px);pointer-events:none}
+.hero-orange-bar{height:4px;background:linear-gradient(90deg,var(--orange),var(--orange3),var(--orange))}
+.hero-inner{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:76px 6% 80px;display:grid;grid-template-columns:1fr 360px;gap:48px;align-items:center}
+.hero-tag{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--orange3);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.tag-bar{width:28px;height:2px;background:var(--orange)}
+.hero h1{font-size:clamp(2.4rem,5.5vw,4.5rem);font-weight:900;letter-spacing:-2.5px;line-height:0.97;margin-bottom:20px}
+.hero h1 .core-accent{color:var(--orange)}
+.hero h1 .loc{display:block;font-size:clamp(0.9rem,2vw,1.3rem);font-weight:500;letter-spacing:0.5px;color:rgba(255,255,255,0.55);margin-top:8px;font-size:clamp(0.8rem,1.5vw,1.1rem)}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,0.68);max-width:440px;margin-bottom:36px;line-height:1.75}
+.btn-orange{background:var(--orange);color:var(--white);text-decoration:none;font-weight:800;font-size:1.1rem;padding:15px 36px;border-radius:7px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 20px rgba(234,88,12,0.4);transition:all 0.2s}
+.btn-orange:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(234,88,12,0.5)}
+.hero-trust{margin-top:16px;display:flex;flex-wrap:wrap;gap:14px}
+.ht{font-size:0.83rem;color:rgba(255,255,255,0.55)}
+.ht strong{color:rgba(255,255,255,0.9)}
+.hero-right-col{display:flex;flex-direction:column;gap:12px}
+.stat-panel{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:26px;border-left:4px solid var(--orange)}
+.sp-num{font-size:2.8rem;font-weight:900;color:var(--orange3);line-height:1}
+.sp-label{font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:3px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sg-box{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:18px;text-align:center}
+.sg-n{font-size:1.6rem;font-weight:900;color:var(--orange3);line-height:1}
+.sg-l{font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:3px}
+.phone-cta-card{background:var(--orange);border-radius:10px;padding:22px;text-align:center}
+.pcc-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.7);margin-bottom:6px}
+.pcc-phone a{display:block;color:var(--white);text-decoration:none;font-size:1.6rem;font-weight:900;letter-spacing:-0.5px;transition:opacity 0.2s}
+.pcc-phone a:hover{opacity:0.85}
+.pcc-sub{margin-top:6px;font-size:0.78rem;color:rgba(255,255,255,0.7)}
+.divider-bar{background:var(--steel2);height:52px;display:flex;align-items:center;justify-content:center;gap:36px;border-top:1px solid rgba(255,255,255,0.05)}
+.db-item{font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px}
+.db-sep{color:rgba(255,255,255,0.15)}
+.services{padding:76px 6%;background:var(--white)}
+.sec-ey{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:2.5px;color:var(--orange)}
+.sec-h{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;color:var(--steel2);margin-top:7px;letter-spacing:-0.3px}
+.svcs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;max-width:1100px;margin:44px auto 0}
+.svc{padding:28px 24px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--white);transition:background 0.2s;position:relative}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background 0.2s}
+.svc:hover{background:var(--warm)}
+.svc:hover::before{background:var(--orange)}
+.svc-num{font-size:0.68rem;font-weight:800;color:rgba(234,88,12,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px}
+.svc h3{font-size:0.97rem;font-weight:700;color:var(--steel2);margin-bottom:7px}
+.svc p{font-size:0.83rem;color:var(--mid);line-height:1.65}
+.proof-band{background:var(--steel2);color:var(--white);padding:44px 6%}
+.pb-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:0;max-width:900px;margin:0 auto;text-align:center}
+.pb-item{flex:1;min-width:140px;padding:18px 20px;border-right:1px solid rgba(255,255,255,0.08)}
+.pb-item:last-child{border-right:none}
+.pb-n{font-size:2.4rem;font-weight:900;color:var(--orange3);line-height:1}
+.pb-l{font-size:0.76rem;color:rgba(255,255,255,0.45);margin-top:4px}
+.why{padding:76px 6%;background:var(--off)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1100px;margin:0 auto;align-items:center}
+.why-h{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;color:var(--steel2);margin-bottom:26px;letter-spacing:-0.3px}
+.why-h span{color:var(--orange)}
+.why-points{display:flex;flex-direction:column;gap:16px}
+.wp{display:flex;gap:13px}
+.wp-ic{width:34px;height:34px;background:var(--orange);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--white);flex-shrink:0;font-weight:900}
+.wp strong{display:block;font-weight:700;color:var(--steel2);font-size:0.93rem;margin-bottom:2px}
+.wp p{font-size:0.83rem;color:var(--mid);margin:0}
+.why-panel{background:var(--iron);border-radius:14px;padding:44px 32px;text-align:center;color:var(--white)}
+.wyp-big{font-size:4.8rem;font-weight:900;color:var(--orange3);line-height:1}
+.wyp-stars{font-size:1.8rem;color:#FCD34D;margin:6px 0}
+.wyp-sub{font-size:0.82rem;color:rgba(255,255,255,0.45)}
+.wyp-div{height:1px;background:rgba(255,255,255,0.1);margin:18px 0}
+.wyp-count{font-size:1.8rem;font-weight:800}
+.wyp-cl{font-size:0.78rem;color:rgba(255,255,255,0.45)}
+.wyp-badge{margin-top:18px;background:rgba(234,88,12,0.1);border:1px solid rgba(234,88,12,0.3);border-radius:7px;padding:10px;color:var(--orange3);font-weight:700;font-size:0.84rem}
+.reviews{padding:76px 6%;background:var(--white)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:18px;max-width:1100px;margin:44px auto 0}
+.rev{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:24px}
+.rev-top{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.rev-stars{color:var(--orange)}
+.rev-text{font-size:0.87rem;color:var(--mid);font-style:italic;line-height:1.7;margin-bottom:12px}
+.rev-by{font-size:0.82rem;font-weight:700;color:var(--steel2)}
+.rev-by span{font-weight:400;color:var(--mid)}
+.cta-sec{background:var(--iron);color:var(--white);padding:76px 6%;text-align:center;border-top:4px solid var(--orange)}
+.cta-sec h2{font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:900;margin-bottom:10px;letter-spacing:-0.5px}
+.cta-sec p{color:rgba(255,255,255,0.65);margin-bottom:26px}
+.cta-phone a{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;color:var(--orange3);text-decoration:none;letter-spacing:-0.5px;transition:color 0.2s}
+.cta-phone a:hover{color:var(--white)}
+.cta-note{margin-top:8px;font-size:0.81rem;color:rgba(255,255,255,0.38)}
+footer{background:#080E16;border-top:1px solid rgba(255,255,255,0.05);padding:26px 6%}
+.fi{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;max-width:1100px;margin:0 auto;font-size:0.81rem;color:rgba(255,255,255,0.35)}
+.fi strong{color:rgba(255,255,255,0.7)}
+.fi a{color:var(--orange3);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}.hero-inner{grid-template-columns:1fr}.hero-right-col{display:none}.why-grid{grid-template-columns:1fr}.pb-item{min-width:50%}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">
+    <div class="logo-box">CE</div>
+    <div class="logo-text"><span>Core</span> Electric</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+  <div class="nav-cta"><a href="tel:6613380885">&#128222; (661) 338-0885</a></div>
+</nav>
+
+<div class="hero-orange-bar"></div>
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><div class="tag-bar"></div>Bakersfield, California</div>
+      <h1>
+        <span class="core-accent">Core</span><br>Electric
+        <span class="loc">Licensed Electrical Contractor &mdash; Bakersfield, CA</span>
+      </h1>
+      <p class="hero-sub">Bakersfield's trusted electricians for panel upgrades, wiring, outlets, and code-compliant electrical work. 4.8-star rated with 75 verified reviews.</p>
+      <a href="tel:6613380885" class="btn-orange">&#128222; Call Now — Free Estimate</a>
+      <div class="hero-trust">
+        <span class="ht">&#10003; <strong>CA Licensed &amp; Insured</strong></span>
+        <span class="ht">&#9733; <strong>4.8 Stars &mdash; 75 Reviews</strong></span>
+        <span class="ht">&#128336; <strong>Same-Day Available</strong></span>
+      </div>
+    </div>
+    <div class="hero-right-col">
+      <div class="phone-cta-card">
+        <div class="pcc-label">Free Estimate</div>
+        <div class="pcc-phone"><a href="tel:6613380885">(661) 338-0885</a></div>
+        <div class="pcc-sub">Call now &mdash; same-day scheduling</div>
+      </div>
+      <div class="stat-panel">
+        <div class="sp-num">4.8&#9733;</div>
+        <div class="sp-label">Average Google Rating</div>
+      </div>
+      <div class="stat-grid">
+        <div class="sg-box"><div class="sg-n">75</div><div class="sg-l">Reviews</div></div>
+        <div class="sg-box"><div class="sg-n">CA</div><div class="sg-l">Licensed</div></div>
+        <div class="sg-box"><div class="sg-n">10+</div><div class="sg-l">Years in Bakersfield</div></div>
+        <div class="sg-box"><div class="sg-n">24/7</div><div class="sg-l">Emergency</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="divider-bar">
+    <span class="db-item">Panel Upgrades</span><span class="db-sep">&#9475;</span>
+    <span class="db-item">Wiring</span><span class="db-sep">&#9475;</span>
+    <span class="db-item">Outlets &amp; Switches</span><span class="db-sep">&#9475;</span>
+    <span class="db-item">EV Chargers</span><span class="db-sep">&#9475;</span>
+    <span class="db-item">Safety Inspections</span>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="sec-ey">Electrical Services &mdash; Bakersfield, CA</div>
+    <h2 class="sec-h">The Work Bakersfield Homeowners Trust Us For</h2>
+  </div>
+  <div class="svcs-grid">
+    <div class="svc"><div class="svc-num">&#9632; 01</div><h3>Panel Upgrades &amp; Replacements</h3><p>100 to 200-amp service upgrades performed with full permits and city inspection. Essential for EVs, modern appliances, and home expansions.</p></div>
+    <div class="svc"><div class="svc-num">&#9632; 02</div><h3>Rewiring &amp; New Wiring</h3><p>Full home rewires, room additions, and circuit additions done with minimal disruption. All work to current California Electrical Code.</p></div>
+    <div class="svc"><div class="svc-num">&#9632; 03</div><h3>Outlets, Switches &amp; Circuits</h3><p>New circuits added anywhere in your home. GFCI and AFCI protection installed. Smart switches, dimmer controls, and USB outlets.</p></div>
+    <div class="svc"><div class="svc-num">&#9632; 04</div><h3>Electrical Safety Inspections</h3><p>Thorough pre-purchase and safety inspections with a complete written report. Know exactly what your electrical system needs.</p></div>
+    <div class="svc"><div class="svc-num">&#9632; 05</div><h3>Generator &amp; Transfer Switch</h3><p>Whole-home standby generator installation with automatic transfer switches. Stay powered through Bakersfield's grid outages.</p></div>
+    <div class="svc"><div class="svc-num">&#9632; 06</div><h3>EV Charger Installation</h3><p>Level 2 EV charger installation for all vehicle makes. Properly permitted, utility-compliant, and backed by our workmanship warranty.</p></div>
+  </div>
+</section>
+
+<div class="proof-band">
+  <div class="pb-inner">
+    <div class="pb-item"><div class="pb-n">4.8&#9733;</div><div class="pb-l">Google Rating</div></div>
+    <div class="pb-item"><div class="pb-n">75</div><div class="pb-l">Verified Reviews</div></div>
+    <div class="pb-item"><div class="pb-n">CA</div><div class="pb-l">Licensed &amp; Insured</div></div>
+    <div class="pb-item"><div class="pb-n">10+</div><div class="pb-l">Years in Bakersfield</div></div>
+    <div class="pb-item"><div class="pb-n">24/7</div><div class="pb-l">Emergency Service</div></div>
+  </div>
+</div>
+
+<section class="why" id="why">
+  <div class="why-grid">
+    <div>
+      <div class="sec-ey">Why Core Electric</div>
+      <h2 class="why-h">Bakersfield's <span>No-Nonsense</span> Electricians</h2>
+      <div class="why-points">
+        <div class="wp"><div class="wp-ic">CA</div><div><strong>California Licensed &amp; Fully Insured</strong><p>We hold an active California C-10 Electrical Contractor license. We pull permits and do the work to code — protecting your home, your insurance, and your resale value.</p></div></div>
+        <div class="wp"><div class="wp-ic">$</div><div><strong>Upfront Flat-Rate Pricing</strong><p>We quote the complete job before any work begins. No hourly surprises, no scope-creep invoices. The price you approve is the price you pay.</p></div></div>
+        <div class="wp"><div class="wp-ic">&#10003;</div><div><strong>Clean, Precise Work</strong><p>We take care of your home throughout the job, keep drywall cuts tight and tidy, and fully clean up every work area before we leave.</p></div></div>
+        <div class="wp"><div class="wp-ic">&#9889;</div><div><strong>Fast, Reliable Scheduling</strong><p>We respect your time. We arrive in the promised window, work efficiently, and don't leave a job half-done. Same-day slots for urgent work.</p></div></div>
+      </div>
+    </div>
+    <div class="why-panel">
+      <div class="wyp-big">4.8</div>
+      <div class="wyp-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="wyp-sub">Google Rating</div>
+      <div class="wyp-div"></div>
+      <div class="wyp-count">75</div>
+      <div class="wyp-cl">Verified Customer Reviews</div>
+      <div class="wyp-div"></div>
+      <div class="wyp-badge">&#9889; CA Licensed &amp; Insured &mdash; Bakersfield</div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="sec-ey">Customer Reviews</div>
+    <h2 class="sec-h" style="margin-bottom:0">What Bakersfield Homeowners Say</h2>
+  </div>
+  <div class="rev-grid">
+    <div class="rev">
+      <div class="rev-top"><span class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+      <p class="rev-text">"Upgraded our panel to 200 amp for a solar installation. Core Electric handled the permit, passed inspection first time, and finished ahead of schedule. Competitive price and excellent work."</p>
+      <div class="rev-by">Jason T. <span>— Bakersfield, CA</span></div>
+    </div>
+    <div class="rev">
+      <div class="rev-top"><span class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+      <p class="rev-text">"Had a strange burning smell from an outlet. Core Electric found a dangerous wiring fault behind the wall and fixed it the same day. Professional, fast, and honest about the risk. Real peace of mind."</p>
+      <div class="rev-by">Linda K. <span>— Bakersfield, CA</span></div>
+    </div>
+    <div class="rev">
+      <div class="rev-top"><span class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+      <p class="rev-text">"Got three quotes for a full rewire. Core Electric was clear about what the job actually required, gave me a fair price, and did outstanding work. The other guys were trying to sell me a lot more than I needed."</p>
+      <div class="rev-by">Marcus A. <span>— Kern County, CA</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-sec">
+  <h2>&#9889; Get Your Free Electrical Estimate</h2>
+  <p>Licensed electricians in Bakersfield, CA — same-day scheduling, honest pricing.</p>
+  <div class="cta-phone"><a href="tel:6613380885">(661) 338-0885</a></div>
+  <div class="cta-note">Bakersfield, CA &nbsp;·&nbsp; CA Licensed &amp; Insured &nbsp;·&nbsp; 4.8&#9733; / 75 Reviews</div>
+</section>
+
+<section style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;padding:80px 24px;text-align:center">
+  <div style="max-width:760px;margin:0 auto">
+    <div style="display:inline-block;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.5);color:#f97316;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:24px">Limited Time Offer</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px;line-height:1.2">This Website Is Built<br>and Ready for You</h2>
+    <p style="font-size:1.15rem;opacity:0.85;max-width:580px;margin:0 auto 12px">A professional, mobile-ready website for your business — already live, already ranking. One HVAC job pays for this site 10× over.</p>
+    <p style="font-size:1rem;opacity:0.65;margin-bottom:40px">One-time payment. You own it forever. No monthly fees, no contracts.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:40px">
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" style="display:inline-flex;align-items:center;gap:10px;background:#f97316;color:#fff;text-decoration:none;font-size:1.2rem;font-weight:800;padding:20px 44px;border-radius:10px;box-shadow:0 6px 32px rgba(249,115,22,0.5);transition:all 0.2s">Claim This Website — $497</a>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;font-size:0.9rem;opacity:0.7">
+      <span>✅ Secure checkout via Stripe</span>
+      <span>✅ Instant transfer — site is yours today</span>
+      <span>✅ 30-day money-back guarantee</span>
+    </div>
+  </div>
+</section><footer>
+  <div class="fi">
+    <strong>Core Electric</strong>
+    <span>Bakersfield, CA &nbsp;|&nbsp; California Licensed Electrical Contractor &nbsp;|&nbsp; Insured</span>
+    <a href="tel:6613380885">(661) 338-0885</a>
+  </div>
+</footer>
+</body>
+</html>

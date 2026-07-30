@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los Angeles Best Electrical Service | East Los Angeles, CA Electricians</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--royal:#1a3fa0;--royal-lt:#2554cc;--sky:#e8f0fe;--yellow:#f59e0b;--dark:#0f1724;--mid:#1e2a3a;--gray:#64748b;--light:#f8fafc}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#0f1724;background:#fff}
+/* NAV — authority white */
+nav{position:sticky;top:0;z-index:100;background:var(--dark);height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:3px solid var(--royal-lt)}
+.nav-left{display:flex;flex-direction:column}
+.nav-name{color:#fff;font-weight:900;font-size:1rem;letter-spacing:-.2px}
+.nav-sub{color:#64748b;font-size:.75rem;font-weight:400;margin-top:2px}
+.nav-ph a{background:var(--yellow);color:var(--dark);font-weight:800;font-size:.95rem;padding:10px 22px;border-radius:6px;text-decoration:none;white-space:nowrap;transition:all .2s}
+.nav-ph a:hover{background:#fbbf24}
+/* HERO — full-width royal blue with diagonal accent */
+.hero{background:linear-gradient(110deg,var(--dark) 0%,var(--royal) 60%,var(--royal-lt) 100%);padding:80px 5% 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:0;top:0;width:45%;height:100%;background:linear-gradient(135deg,transparent,rgba(255,255,255,.03));pointer-events:none}
+.hero::after{content:"⚡";position:absolute;right:6%;top:50%;transform:translateY(-50%);font-size:16rem;opacity:.04;pointer-events:none;user-select:none}
+.hero-inner{max-width:680px;position:relative;z-index:1}
+.hero-sup{display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.sup-dot{width:10px;height:10px;border-radius:50%;background:var(--yellow)}
+.sup-text{color:var(--yellow);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px;letter-spacing:-.4px}
+.hero h1 span{display:inline-block;border-bottom:3px solid var(--yellow);padding-bottom:2px}
+.hero-desc{color:#94a3b8;font-size:1rem;line-height:1.7;margin-bottom:34px;max-width:520px}
+/* BIG RATING */
+.rating-box{display:inline-flex;align-items:center;gap:22px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px 28px;margin-bottom:36px}
+.r-score{font-size:4rem;font-weight:900;color:#fff;line-height:1}
+.r-right{display:flex;flex-direction:column;gap:4px}
+.r-stars{color:var(--yellow);font-size:1.5rem;letter-spacing:2px}
+.r-right strong{color:#fff;font-size:.95rem}
+.r-right span{color:#64748b;font-size:.82rem}
+.cta-group{display:flex;flex-wrap:wrap;gap:14px}
+.btn-yellow{display:inline-block;background:var(--yellow);color:var(--dark);font-weight:900;font-size:1.05rem;padding:15px 30px;border-radius:7px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(245,158,11,.4)}
+.btn-yellow:hover{background:#fbbf24;transform:translateY(-2px)}
+.btn-outline{display:inline-block;background:transparent;color:#cbd5e1;font-weight:600;font-size:.9rem;padding:14px 26px;border-radius:7px;text-decoration:none;border:1.5px solid rgba(255,255,255,.22);transition:all .2s}
+.btn-outline:hover{border-color:rgba(245,158,11,.5);color:var(--yellow)}
+/* BLUE BAR */
+.bar{background:var(--royal-lt);padding:18px 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:28px}
+.bar-item{color:#fff;text-align:center}
+.bar-item strong{display:block;font-size:1.6rem;font-weight:900}
+.bar-item span{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;opacity:.85}
+/* SERVICES */
+.services{padding:78px 5%;background:var(--light)}
+.s-label{color:var(--royal);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.s-h{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:900;color:var(--dark);margin-bottom:14px;letter-spacing:-.3px;line-height:1.12}
+.s-p{color:var(--gray);font-size:.97rem;line-height:1.7;max-width:580px;margin-bottom:48px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.svc{background:#fff;border-radius:10px;padding:28px;box-shadow:0 2px 14px rgba(0,0,0,.06);border-left:4px solid var(--royal);transition:all .2s}
+.svc:hover{box-shadow:0 8px 28px rgba(26,63,160,.12);transform:translateY(-3px);border-left-color:var(--yellow)}
+.svc-i{font-size:1.9rem;margin-bottom:14px}
+.svc h3{font-size:1rem;font-weight:800;color:var(--dark);margin-bottom:8px}
+.svc p{font-size:.88rem;color:var(--gray);line-height:1.6}
+/* TRUST SECTION */
+.trust{padding:78px 5%;background:var(--mid);display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.trust-left h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:#fff;margin-bottom:20px;line-height:1.2}
+.trust-list{display:flex;flex-direction:column;gap:16px}
+.trust-row{display:flex;gap:14px;align-items:flex-start}
+.trust-icon{width:36px;height:36px;border-radius:8px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.trust-row h4{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:4px}
+.trust-row p{font-size:.85rem;color:#64748b;line-height:1.5}
+.trust-right{background:var(--royal);border-radius:14px;padding:40px;text-align:center}
+.trust-right .huge{font-size:5rem;font-weight:900;color:#fff;line-height:1;display:block}
+.trust-right .note{color:#93c5fd;font-size:.9rem;margin-top:10px;line-height:1.5}
+.trust-right a{display:inline-block;margin-top:22px;background:var(--yellow);color:var(--dark);font-weight:800;font-size:.95rem;padding:13px 28px;border-radius:6px;text-decoration:none}
+/* REVIEWS */
+.reviews{padding:78px 5%;background:var(--dark)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:38px}
+.rev{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:26px;border-bottom:3px solid var(--yellow)}
+.rev-stars{color:var(--yellow);margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#94a3b8;font-size:.9rem;line-height:1.65;margin-bottom:14px;font-style:italic}
+.rev-name{color:#f1f5f9;font-weight:700;font-size:.85rem}
+.rev-name span{color:#374151;font-weight:400}
+/* CLAIM */
+.claim{background:linear-gradient(135deg,var(--royal) 0%,var(--dark) 100%);padding:80px 5%;text-align:center;border-top:3px solid var(--yellow)}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:12px}
+.claim h2 span{color:var(--yellow)}
+.claim-sub{color:#64748b;font-size:1rem;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price{display:inline-block;background:rgba(245,158,11,.15);border:2px solid var(--yellow);color:var(--yellow);font-size:2.2rem;font-weight:900;padding:10px 38px;border-radius:7px;margin-bottom:28px}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);color:#cbd5e1;padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:600}
+.btn-claim{display:inline-block;background:var(--yellow);color:var(--dark);font-weight:900;font-size:1.15rem;padding:18px 46px;border-radius:7px;text-decoration:none;box-shadow:0 6px 28px rgba(245,158,11,.4);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px);background:#fbbf24}
+footer{background:#080d16;padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer p{color:#1e293b;font-size:.84rem}
+footer a{color:#374151;font-size:.84rem;text-decoration:none}
+@media(max-width:768px){.trust{grid-template-columns:1fr}}
+@media(max-width:480px){.cta-group{flex-direction:column}.btn-yellow,.btn-outline{text-align:center}.rating-box{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left">
+    <div class="nav-name">Los Angeles Best Electrical Service</div>
+    <div class="nav-sub">East Los Angeles, CA · Licensed Electricians</div>
+  </div>
+  <div class="nav-ph"><a href="tel:4243206182">📞 (424) 320-6182</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-sup"><div class="sup-dot"></div><span class="sup-text">East Los Angeles, CA · Electricians You Can Trust</span></div>
+    <h1>East Los Angeles Electrical<br>Service You Can <span>Actually Trust</span></h1>
+    <p class="hero-desc">We're the electrical company that East LA homeowners and business owners call when they need the work done right, priced fairly, and backed by a team that actually picks up the phone. 4.8 stars across 74 reviews. We've earned every one.</p>
+    <div class="rating-box">
+      <div class="r-score">4.8</div>
+      <div class="r-right">
+        <div class="r-stars">★★★★★</div>
+        <strong>4.8 Stars — 74 Google Reviews</strong>
+        <span>Top-Rated Electrician · East Los Angeles, CA</span>
+      </div>
+    </div>
+    <div class="cta-group">
+      <a href="tel:4243206182" class="btn-yellow">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-outline">Claim This Website — $497 One Time</a>
+    </div>
+  </div>
+</section>
+<div class="bar">
+  <div class="bar-item"><strong>4.8★</strong><span>Google Rating</span></div>
+  <div class="bar-item"><strong>74</strong><span>5-Star Reviews</span></div>
+  <div class="bar-item"><strong>Same Day</strong><span>Service</span></div>
+  <div class="bar-item"><strong>24/7</strong><span>Emergency</span></div>
+  <div class="bar-item"><strong>Licensed</strong><span>&amp; Insured</span></div>
+</div>
+<section class="services">
+  <div class="s-label">Electrical Services</div>
+  <div class="s-h">Every Electrical Job East Los Angeles<br>Homeowners &amp; Businesses Need</div>
+  <p class="s-p">Panel upgrades, new circuits, EV charger installs, commercial wiring — if it involves electricity, we do it safely, properly permitted, and backed by our workmanship guarantee.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-i">⚡</div><h3>Panel Upgrades</h3><p>East LA's older homes often run on 60–100 amp panels that can't handle modern loads. We upgrade to 200A service — safe, code-compliant, inspected.</p></div>
+    <div class="svc"><div class="svc-i">🔌</div><h3>New Circuits &amp; Outlets</h3><p>Adding a home office, upgrading a kitchen, or just need more outlets in the garage — we run clean, permitted circuits that meet code.</p></div>
+    <div class="svc"><div class="svc-i">🚗</div><h3>EV Charger Install</h3><p>Level 2 home charger installation. We pull the permit, run the dedicated circuit, mount the unit, and schedule the inspection. Done right, done once.</p></div>
+    <div class="svc"><div class="svc-i">💡</div><h3>Lighting &amp; Fixtures</h3><p>Recessed lighting, dimmer switches, outdoor security lighting, ceiling fans — we install everything with clean finishes and no shortcuts.</p></div>
+    <div class="svc"><div class="svc-i">🛡️</div><h3>Safety Inspections</h3><p>Buying a home in East LA or concerned about aging wiring? A full electrical inspection gives you a written report on every circuit and connection.</p></div>
+    <div class="svc"><div class="svc-i">🏢</div><h3>Commercial Work</h3><p>We serve East LA businesses — tenant improvements, lighting retrofits, panel upgrades, and commercial code compliance for every trade permit.</p></div>
+  </div>
+</section>
+<section class="trust">
+  <div class="trust-left">
+    <div class="s-label" style="color:var(--yellow)">Why East LA Chooses Us</div>
+    <h2>Electrical Work That Passes<br>Every Inspection. Every Time.</h2>
+    <div class="trust-list">
+      <div class="trust-row"><div class="trust-icon">📋</div><div><h4>We Pull Every Permit</h4><p>Unpermitted electrical work can void your homeowner's insurance and create problems when you sell. We do it right, every time.</p></div></div>
+      <div class="trust-row"><div class="trust-icon">💬</div><div><h4>Upfront Written Quotes</h4><p>You approve the price before we start. What we quote is what you pay — no line items that appear on the final invoice.</p></div></div>
+      <div class="trust-row"><div class="trust-icon">⚡</div><div><h4>Licensed Master Electricians</h4><p>Not subcontractors or trainees. You get licensed professionals who've been doing this work for years in East Los Angeles.</p></div></div>
+      <div class="trust-row"><div class="trust-icon">🕐</div><div><h4>On Time, Every Visit</h4><p>We give you a real arrival window — not "sometime between 8 and 5." And we call ahead when we're on the way.</p></div></div>
+    </div>
+  </div>
+  <div class="trust-right">
+    <span class="huge">4.8★</span>
+    <p class="note">Average across <strong style="color:#fff">74 verified reviews</strong><br>from East LA homeowners<br>and business owners</p>
+    <a href="tel:4243206182">📞 Free Estimate →</a>
+  </div>
+</section>
+<section class="reviews">
+  <div class="s-label" style="color:var(--yellow)">What East LA Customers Say</div>
+  <div class="s-h" style="color:#fff;margin-bottom:0">74 Reviews. 4.8 Stars. Real Customers.</div>
+  <div class="rev-grid">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Had them upgrade my panel from 100A to 200A. They got the permit, scheduled the LADWP disconnect, handled the inspection — and passed first time. No surprises, no drama. That's exactly what I needed."</p><div class="rev-name">Carlos M. <span>— East Los Angeles, CA</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"I bought an older home in East LA with sketchy wiring. These guys came out, did a full inspection, gave me a written report, and then fixed every issue they found at a fair price. I feel safe in my house now."</p><div class="rev-name">Jennifer L. <span>— East Los Angeles, CA</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Installed a 50-amp Tesla charger in my garage. Pulled the permit, showed up on time, clean installation, and passed inspection without any issues. These are real professionals."</p><div class="rev-name">Raymond K. <span>— East Los Angeles, CA</span></div></div>
+  </div>
+</section>
+<section class="claim">
+  <h2>This Site Was Built for<br><span>Los Angeles Best Electrical</span></h2>
+  <p class="claim-sub">Your business name, your phone, your real 4.8-star rating — all built into a professional site that's ready to go live in 24 hours and start generating calls.</p>
+  <div class="price">$497 — One Time</div>
+  <div class="perks">
+    <span class="perk">✓ No monthly fees</span>
+    <span class="perk">✓ Yours forever</span>
+    <span class="perk">✓ We handle hosting</span>
+    <span class="perk">✓ Live in 24 hours</span>
+    <span class="perk">✓ Mobile-optimized</span>
+    <span class="perk">✓ SEO-ready</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497 →</a>
+</section>
+<footer>
+  <p>© 2024 Los Angeles Best Electrical Service · East Los Angeles, CA · Licensed Electricians</p>
+  <a href="tel:4243206182">(424) 320-6182</a>
+</footer>
+</body>
+</html>

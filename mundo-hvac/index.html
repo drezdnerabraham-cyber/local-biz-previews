@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundo HVAC LLC | McAllen, TX — Perfect 5.0 Stars</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--red:#c1121f;--red-lt:#e5192a;--dark:#111318;--charcoal:#1c1f26;--card:#242731;--cream:#fafafa;--gold:#fbbf24}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1c1f26;background:#fff}
+/* NAV — white with red accent */
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:4px solid var(--red);height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;box-shadow:0 2px 16px rgba(0,0,0,.08)}
+.nav-left{display:flex;align-items:center;gap:14px}
+.nav-badge{width:46px;height:46px;background:var(--red);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.nav-title{font-weight:900;font-size:1.05rem;color:var(--dark);line-height:1.2;letter-spacing:-.3px}
+.nav-title span{display:block;font-size:.75rem;font-weight:500;color:#6b7280;letter-spacing:.02em}
+.nav-ph a{background:var(--red);color:#fff;font-weight:800;font-size:1rem;padding:11px 24px;border-radius:7px;text-decoration:none;transition:background .2s}
+.nav-ph a:hover{background:var(--red-lt)}
+/* HERO — full red impact */
+.hero{background:var(--red);padding:76px 5% 86px;position:relative;overflow:hidden}
+.hero::after{content:"MUNDO";position:absolute;right:-40px;bottom:-30px;font-size:10rem;font-weight:900;color:rgba(255,255,255,.05);letter-spacing:-.5rem;pointer-events:none;line-height:1}
+.hero-inner{max-width:700px;position:relative;z-index:1}
+.hero-flag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:4px;margin-bottom:24px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.5px;margin-bottom:18px}
+.hero h1 span{display:block;font-size:.75em;font-weight:500;opacity:.8;letter-spacing:0}
+.hero-desc{color:rgba(255,255,255,.82);font-size:1.05rem;line-height:1.7;margin-bottom:34px;max-width:520px}
+/* PERFECT RATING */
+.perfect-rating{display:flex;align-items:center;gap:22px;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.25);border-radius:12px;padding:20px 28px;margin-bottom:38px;width:fit-content}
+.perfect-num{font-size:4.5rem;font-weight:900;color:#fff;line-height:1}
+.perfect-right{display:flex;flex-direction:column;gap:4px}
+.perfect-stars{color:var(--gold);font-size:1.8rem;letter-spacing:2px}
+.perfect-right strong{color:#fff;font-size:1rem}
+.perfect-right span{color:rgba(255,255,255,.7);font-size:.84rem}
+.perfect-badge{display:inline-block;background:var(--gold);color:#1c1f26;font-size:.75rem;font-weight:800;padding:3px 10px;border-radius:3px;letter-spacing:.06em}
+.cta-duo{display:flex;flex-wrap:wrap;gap:12px}
+.btn-white{display:inline-block;background:#fff;color:var(--red);font-weight:900;font-size:1.05rem;padding:15px 30px;border-radius:7px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.btn-white:hover{background:#f5f5f5;transform:translateY(-2px)}
+.btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,.85);font-weight:600;font-size:.9rem;padding:14px 26px;border-radius:7px;text-decoration:none;border:2px solid rgba(255,255,255,.3);transition:all .2s}
+.btn-outline:hover{border-color:#fff;color:#fff}
+/* STRIP */
+.strip{background:var(--dark);padding:20px 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:32px}
+.strip-item{text-align:center;color:#fff}
+.strip-item strong{display:block;font-size:1.8rem;font-weight:900;color:var(--gold)}
+.strip-item span{font-size:.78rem;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af}
+/* SERVICES */
+.services{padding:76px 5%;background:var(--cream)}
+.section-flag{display:inline-block;background:var(--red);color:#fff;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:3px;margin-bottom:14px}
+.section-h{font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:900;color:var(--dark);margin-bottom:14px;letter-spacing:-.4px;line-height:1.12}
+.section-p{color:#6b7280;font-size:.97rem;line-height:1.7;max-width:600px;margin-bottom:48px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.svc{background:#fff;border-radius:10px;padding:28px;box-shadow:0 2px 14px rgba(0,0,0,.06);border-bottom:4px solid transparent;transition:all .2s}
+.svc:hover{border-bottom-color:var(--red);box-shadow:0 8px 28px rgba(0,0,0,.1);transform:translateY(-3px)}
+.svc-em{font-size:2rem;margin-bottom:14px;display:block}
+.svc h3{font-size:1rem;font-weight:800;color:var(--dark);margin-bottom:8px}
+.svc p{font-size:.88rem;color:#6b7280;line-height:1.6}
+/* REVIEWS */
+.reviews{padding:76px 5%;background:var(--dark)}
+.rev-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:40px}
+.rev{background:var(--card);border-radius:10px;padding:26px;border-top:3px solid var(--red)}
+.rev-stars{color:var(--gold);margin-bottom:10px;font-size:1rem}
+.rev-text{color:#9ca3af;font-size:.9rem;line-height:1.65;margin-bottom:14px;font-style:italic}
+.rev-by{color:#e5e7eb;font-weight:700;font-size:.85rem}
+.rev-by span{color:#4b5563;font-weight:400}
+/* PERFECT PROOF */
+.proof{padding:70px 5%;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.proof-box{background:var(--red);border-radius:16px;padding:46px 36px;text-align:center;color:#fff}
+.proof-box .huge{font-size:6rem;font-weight:900;line-height:1;display:block}
+.proof-box .huge small{font-size:2rem;vertical-align:super}
+.proof-box p{opacity:.85;font-size:.92rem;margin-top:10px;line-height:1.55}
+.proof-right h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:900;color:var(--dark);margin-bottom:18px;line-height:1.2}
+.proof-right p{color:#6b7280;font-size:.97rem;line-height:1.75;margin-bottom:16px}
+.proof-right a{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:.95rem;padding:13px 26px;border-radius:6px;text-decoration:none}
+/* CLAIM */
+.claim{background:var(--charcoal);padding:80px 5%;text-align:center;border-top:4px solid var(--red)}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:12px}
+.claim h2 span{color:var(--gold)}
+.claim-sub{color:#9ca3af;font-size:1rem;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price-tag{display:inline-block;background:var(--red);color:#fff;font-size:2.2rem;font-weight:900;padding:12px 42px;border-radius:7px;margin-bottom:28px;box-shadow:0 4px 20px rgba(193,18,31,.4)}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(255,255,255,.06);color:#e5e7eb;padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:600}
+.btn-claim{display:inline-block;background:var(--red);color:#fff;font-weight:900;font-size:1.15rem;padding:18px 46px;border-radius:7px;text-decoration:none;box-shadow:0 6px 28px rgba(193,18,31,.4);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px);background:var(--red-lt)}
+footer{background:var(--dark);padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+footer p{color:#374151;font-size:.84rem}
+footer a{color:#6b7280;font-size:.84rem;text-decoration:none}
+@media(max-width:768px){.proof{grid-template-columns:1fr}}
+@media(max-width:480px){.cta-duo{flex-direction:column}.btn-white,.btn-outline{text-align:center}.perfect-rating{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left">
+    <div class="nav-badge">❄️</div>
+    <div class="nav-title">Mundo HVAC LLC<span>McAllen, TX · 5.0 Stars on Google</span></div>
+  </div>
+  <div class="nav-ph"><a href="tel:9569949407">📞 (956) 994-9407</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">⭐ McAllen's Only 5.0-Star HVAC Company</div>
+    <h1>McAllen's HVAC Team<br>With a Perfect<br><span>5.0-Star Record</span></h1>
+    <p class="hero-desc">139 customers have reviewed us on Google. Every single one gave us 5 stars. That's not luck — that's what happens when you show up on time, fix it right the first time, and charge a fair price every single time.</p>
+    <div class="perfect-rating">
+      <div class="perfect-num">5.0</div>
+      <div class="perfect-right">
+        <div class="perfect-stars">★★★★★</div>
+        <strong>Perfect Score — 139 Google Reviews</strong>
+        <span>Not one review under 5 stars · McAllen, TX</span>
+        <span class="perfect-badge">PERFECT RATING</span>
+      </div>
+    </div>
+    <div class="cta-duo">
+      <a href="tel:9569949407" class="btn-white">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-outline">Claim This Website — $497 One Time</a>
+    </div>
+  </div>
+</section>
+<div class="strip">
+  <div class="strip-item"><strong>5.0★</strong><span>Perfect Rating</span></div>
+  <div class="strip-item"><strong>139</strong><span>5-Star Reviews</span></div>
+  <div class="strip-item"><strong>Same Day</strong><span>Service</span></div>
+  <div class="strip-item"><strong>24/7</strong><span>Emergency</span></div>
+  <div class="strip-item"><strong>100%</strong><span>Satisfaction</span></div>
+</div>
+<section class="services">
+  <div class="section-flag">HVAC Services</div>
+  <div class="section-h">Every HVAC Service McAllen<br>Homes &amp; Businesses Trust Us For</div>
+  <p class="section-p">McAllen summers are no joke — 100°+ heat for months on end. We keep your system running at peak performance so your family never has to sweat it out.</p>
+  <div class="svc-grid">
+    <div class="svc"><span class="svc-em">❄️</span><h3>AC Repair</h3><p>Fast, reliable AC repair for McAllen homes. Same-day service available for breakdowns — we don't leave you waiting in the South Texas heat.</p></div>
+    <div class="svc"><span class="svc-em">🔄</span><h3>AC Installation</h3><p>New unit installation done right — load calculation, proper sizing, clean install, full system test. We don't cut corners because our rating depends on it.</p></div>
+    <div class="svc"><span class="svc-em">🌡️</span><h3>Heating Repair</h3><p>When that rare McAllen cold front hits and your heat doesn't fire, we're on it. Same-day service, honest pricing, no upsell.</p></div>
+    <div class="svc"><span class="svc-em">🔋</span><h3>Refrigerant Services</h3><p>Leaking refrigerant isn't just bad for cooling — it's bad for the environment and your compressor. We find the leak and fix it right.</p></div>
+    <div class="svc"><span class="svc-em">🌬️</span><h3>Duct Cleaning</h3><p>In the RGV, dusty ducts are real. We deep-clean your ductwork for better air quality and better cooling efficiency throughout every room.</p></div>
+    <div class="svc"><span class="svc-em">🔧</span><h3>Preventive Maintenance</h3><p>Spring tune-ups before peak season. Our customers who do annual maintenance almost never call us for emergency repairs.</p></div>
+  </div>
+</section>
+<section class="reviews">
+  <div class="section-flag" style="background:var(--gold);color:var(--dark)">5-Star Reviews</div>
+  <div class="section-h" style="color:#fff;margin-top:10px;margin-bottom:40px">139 McAllen Customers.<br>139 Five-Star Reviews. Zero Exceptions.</div>
+  <div class="rev-wrap">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"I've used four HVAC companies in McAllen over the years. Mundo is in a completely different league. Showed up early, diagnosed a refrigerant leak in 20 minutes, fixed it same visit, and the price was more than fair. Five stars and I mean it."</p><div class="rev-by">Norma E. <span>— McAllen, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Called at 9 AM on a Monday because our AC stopped overnight. They were at my door by noon. Replaced the capacitor and had cool air flowing within 45 minutes. Fast, clean, professional — we'll never use anyone else."</p><div class="rev-by">Alejandro C. <span>— McAllen, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Got three quotes for a new AC system. Mundo's price was the best and their installation was the cleanest. They even sealed the attic entry better than the original installer. My electric bill dropped $90 the next month."</p><div class="rev-by">Isabel G. <span>— McAllen, TX</span></div></div>
+  </div>
+</section>
+<section class="proof">
+  <div class="proof-box">
+    <span class="huge">5.0<small>★</small></span>
+    <p>Perfect score across <strong>139 real Google reviews</strong> from McAllen homeowners who hired us and came back</p>
+    <br>
+    <a href="tel:9569949407" class="btn-white" style="display:inline-block">📞 (956) 994-9407</a>
+  </div>
+  <div class="proof-right">
+    <h2>Why McAllen Homeowners<br>Give Us a Perfect 5.0</h2>
+    <p>A 5.0 average across 139 reviews is almost unheard of in the HVAC business. We earn it by doing the basics obsessively well: we show up when we say we will, we give you a firm price before we start, we fix it right the first time, and we leave your home cleaner than we found it.</p>
+    <p>We're not chasing volume. We're building a reputation — one five-star review at a time. When you call Mundo HVAC, you'll understand exactly why McAllen keeps giving us perfect scores.</p>
+    <a href="tel:9569949407">Schedule a Free Estimate →</a>
+  </div>
+</section>
+<section class="claim">
+  <h2>This Website Was Built for<br><span>Mundo HVAC LLC</span></h2>
+  <p class="claim-sub">A perfect 5.0-star rating deserves a perfect website. This site was built specifically for your business — ready to launch in 24 hours.</p>
+  <div class="price-tag">$497 — One Time</div>
+  <div class="perks">
+    <span class="perk">✓ No monthly fees</span>
+    <span class="perk">✓ Yours forever</span>
+    <span class="perk">✓ We handle hosting</span>
+    <span class="perk">✓ Live in 24 hours</span>
+    <span class="perk">✓ Mobile-ready</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497 →</a>
+</section>
+<footer>
+  <p>© 2024 Mundo HVAC LLC · McAllen, TX · Perfect 5.0 Stars on Google</p>
+  <a href="tel:9569949407">(956) 994-9407</a>
+</footer>
+</body>
+</html>

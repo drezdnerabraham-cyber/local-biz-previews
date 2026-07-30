@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brownsville Heating & Air Conditioning | HVAC Repair & Installation</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0d1b2a;--orange:#e8580a;--orange-lt:#f97316;--cream:#fdf6ee;--gray:#64748b;--light:#f1f5f9}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1e293b;background:#fff}
+nav{position:sticky;top:0;z-index:100;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:66px;box-shadow:0 2px 20px rgba(0,0,0,.4)}
+.nav-logo{color:#fff;font-weight:800;font-size:1.05rem;letter-spacing:-.3px;line-height:1.2}
+.nav-logo span{color:var(--orange)}
+.nav-phone a{display:flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-weight:700;font-size:1rem;padding:10px 20px;border-radius:6px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.nav-phone a:hover{background:var(--orange-lt)}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#1a3a5c 55%,#0f2940 100%);padding:70px 5% 80px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(232,88,10,.18),transparent 70%);pointer-events:none}
+.hero::after{content:"❄️";position:absolute;right:5%;bottom:20px;font-size:8rem;opacity:.06;pointer-events:none}
+.hero-inner{max-width:700px;position:relative}
+.hero-badge{display:inline-block;background:rgba(232,88,10,.15);border:1px solid rgba(232,88,10,.4);color:var(--orange-lt);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:4px;margin-bottom:22px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero-sub{color:#94a3b8;font-size:1.1rem;line-height:1.6;margin-bottom:32px;max-width:540px}
+.rating-block{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:18px 26px;margin-bottom:36px;width:fit-content}
+.rating-stars{font-size:1.6rem;letter-spacing:2px;color:#fbbf24}
+.rating-number{font-size:3rem;font-weight:900;color:#fff;line-height:1}
+.rating-meta{display:flex;flex-direction:column}
+.rating-meta strong{color:#fff;font-size:.95rem;font-weight:700}
+.rating-meta span{color:#94a3b8;font-size:.85rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.btn-primary{display:inline-block;background:var(--orange);color:#fff;font-weight:800;font-size:1.1rem;padding:16px 30px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;box-shadow:0 4px 20px rgba(232,88,10,.4)}
+.btn-primary:hover{background:var(--orange-lt);transform:translateY(-2px)}
+.btn-secondary{display:inline-block;background:transparent;color:#fff;font-weight:700;font-size:.95rem;padding:16px 30px;border-radius:8px;text-decoration:none;border:2px solid rgba(255,255,255,.3);transition:all .2s;white-space:nowrap}
+.btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,.07)}
+.trust-bar{background:var(--orange);padding:20px 5%;display:flex;flex-wrap:wrap;justify-content:center;gap:30px}
+.trust-item{color:#fff;text-align:center}
+.trust-item strong{display:block;font-size:1.6rem;font-weight:900;line-height:1}
+.trust-item span{font-size:.8rem;font-weight:600;opacity:.9;text-transform:uppercase;letter-spacing:.05em}
+section{padding:70px 5%}
+.section-label{color:var(--orange);font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.section-title{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;margin-bottom:16px;letter-spacing:-.3px}
+.section-sub{color:var(--gray);font-size:1rem;line-height:1.7;max-width:600px;margin-bottom:48px}
+.services{background:var(--cream)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
+.service-card{background:#fff;border-radius:12px;padding:28px;border:1px solid #e2e8f0;transition:all .25s;cursor:default}
+.service-card:hover{box-shadow:0 8px 30px rgba(13,27,42,.1);transform:translateY(-4px);border-color:var(--orange)}
+.service-icon{font-size:2.2rem;margin-bottom:14px}
+.service-card h3{font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+.service-card p{font-size:.9rem;color:var(--gray);line-height:1.6}
+.reviews{background:var(--navy);padding:70px 5%}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.review-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:26px}
+.review-stars{color:#fbbf24;font-size:1rem;margin-bottom:10px}
+.review-text{color:#cbd5e1;font-size:.92rem;line-height:1.65;margin-bottom:14px;font-style:italic}
+.review-author{color:#fff;font-weight:700;font-size:.88rem}
+.review-author span{color:#64748b;font-weight:400}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.why-points{display:flex;flex-direction:column;gap:22px}
+.why-point{display:flex;gap:16px;align-items:flex-start}
+.why-icon{width:44px;height:44px;border-radius:10px;background:rgba(232,88,10,.1);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.why-point h4{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.why-point p{font-size:.88rem;color:var(--gray);line-height:1.5}
+.why-callout{background:var(--navy);border-radius:16px;padding:40px;color:#fff;text-align:center}
+.why-callout .big{font-size:4rem;font-weight:900;color:var(--orange);display:block;line-height:1}
+.why-callout p{color:#94a3b8;font-size:.95rem;margin-top:8px}
+.claim{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);padding:80px 5%;text-align:center;border-top:4px solid var(--orange)}
+.claim h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:#fff;margin-bottom:12px}
+.claim h2 span{color:var(--orange)}
+.claim-sub{color:#94a3b8;font-size:1.05rem;margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.6}
+.price-pill{display:inline-block;background:rgba(232,88,10,.15);border:2px solid var(--orange);color:var(--orange);font-size:2rem;font-weight:900;padding:10px 36px;border-radius:50px;margin-bottom:30px}
+.claim-bullets{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:36px}
+.claim-bullet{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#e2e8f0;padding:8px 18px;border-radius:20px;font-size:.88rem;font-weight:600}
+.btn-claim{display:inline-block;background:var(--orange);color:#fff;font-weight:800;font-size:1.15rem;padding:18px 44px;border-radius:8px;text-decoration:none;box-shadow:0 6px 30px rgba(232,88,10,.5);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px);box-shadow:0 10px 40px rgba(232,88,10,.6)}
+footer{background:#0a1120;padding:30px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center}
+footer p{color:#475569;font-size:.85rem}
+footer a{color:#94a3b8;text-decoration:none;font-size:.85rem}
+@media(max-width:768px){.why-grid{grid-template-columns:1fr}.trust-bar{gap:20px}.hero{padding:50px 5% 60px}}
+@media(max-width:480px){.cta-row{flex-direction:column}.btn-primary,.btn-secondary{text-align:center}.rating-block{flex-direction:column;align-items:flex-start;gap:10px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">Brownsville Heating<br><span>& Air Conditioning</span></div>
+  <div class="nav-phone"><a href="tel:9565275330">(956) 527-5330</a></div>
+</nav>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Brownsville, TX · HVAC Specialists</div>
+    <h1>Brownsville's Most Trusted<br><em>Heating &amp; Air</em> Experts</h1>
+    <p class="hero-sub">When the Rio Grande Valley heat hits 105° and your AC quits, you need someone who picks up the phone and shows up same day. That's exactly what we do — every time, no excuses.</p>
+    <div class="rating-block">
+      <div class="rating-number">4.9</div>
+      <div>
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-meta">
+          <strong>4.9 Stars — 380 Google Reviews</strong>
+          <span>Top-Rated HVAC in Brownsville, TX</span>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="tel:9565275330" class="btn-primary">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-secondary">Claim This Website — $497 One Time</a>
+    </div>
+  </div>
+</section>
+<div class="trust-bar">
+  <div class="trust-item"><strong>380</strong><span>5-Star Reviews</span></div>
+  <div class="trust-item"><strong>24/7</strong><span>Emergency Service</span></div>
+  <div class="trust-item"><strong>Same Day</strong><span>Appointments</span></div>
+  <div class="trust-item"><strong>100%</strong><span>Satisfaction Guaranteed</span></div>
+</div>
+<section class="services">
+  <div class="section-label">What We Do</div>
+  <div class="section-title">Full HVAC Service for Every<br>Brownsville Home &amp; Business</div>
+  <p class="section-sub">From emergency breakdowns at midnight to planned maintenance before peak summer hits, we handle every piece of your heating and cooling system — and we explain exactly what we did and why.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">❄️</div>
+      <h3>AC Repair &amp; Emergency Service</h3>
+      <p>Your AC broke at 3 PM on a Saturday in August. We've heard that call before — and we still show up. Fast diagnosis, transparent pricing, parts on the truck.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>AC Installation &amp; Replacement</h3>
+      <p>Old unit struggling to keep up with Valley summers? We'll size the right system for your square footage — not too small, not oversized — and install it right the first time.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🌡️</div>
+      <h3>Heating Repair &amp; Furnace Service</h3>
+      <p>Brownsville winters aren't brutal, but they catch people off guard. When the heater stops working on a cold January morning, we'll have it fixed before nightfall.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔋</div>
+      <h3>Refrigerant Recharge &amp; Leak Repair</h3>
+      <p>Low on refrigerant and blowing warm air? We locate the leak first — because just recharging without fixing the leak is money you'll spend again next season.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <h3>Duct Cleaning &amp; Airflow Balancing</h3>
+      <p>If some rooms in your Brownsville home are always hotter than others, your ductwork might be the problem. We clean, seal, and balance for even cooling throughout.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📋</div>
+      <h3>Annual Tune-Ups &amp; Maintenance Plans</h3>
+      <p>The best way to avoid a summer breakdown is a spring checkup. We catch worn parts before they fail — saving you from that panicked call in July.</p>
+    </div>
+  </div>
+</section>
+<section class="reviews">
+  <div class="section-label" style="color:#f97316">What Brownsville Customers Say</div>
+  <div class="section-title" style="color:#fff;margin-bottom:40px">380 Brownsville Families Can't Be Wrong</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Called them at 8 AM on a Sunday — our AC had died overnight and my kids were miserable. They showed up by 10, had it diagnosed by 10:30, and we had cold air again by noon. That's the kind of service you tell your neighbors about."</p>
+      <div class="review-author">Maria C. <span>— Brownsville, TX</span></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Three other companies gave me vague estimates. These guys showed up, told me exactly what was wrong, gave me a straight price, and fixed it the same day. I've been using them for every tune-up since."</p>
+      <div class="review-author">Roberto V. <span>— Brownsville, TX</span></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Had a brand new unit installed — whole process was smooth, clean, and the crew respected my home. The house is cooling way better than it did with the old unit. Worth every penny."</p>
+      <div class="review-author">Sandra L. <span>— Brownsville, TX</span></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="why-grid">
+    <div>
+      <div class="section-label">Why Choose Us</div>
+      <div class="section-title">The Brownsville HVAC Company That<br>Actually Picks Up the Phone</div>
+      <div class="why-points">
+        <div class="why-point"><div class="why-icon">⚡</div><div><h4>Same-Day Service Guarantee</h4><p>We book same-day appointments for breakdowns. Waiting two days with no AC in South Texas is not an option.</p></div></div>
+        <div class="why-point"><div class="why-icon">💬</div><div><h4>Upfront Pricing — No Surprises</h4><p>We quote you the price before we touch anything. No "diagnostic fee" that doubles once we open the unit.</p></div></div>
+        <div class="why-point"><div class="why-icon">🛡️</div><div><h4>Licensed, Insured, Background-Checked</h4><p>Every tech on our team is certified. You'll never wonder who you're letting into your home.</p></div></div>
+        <div class="why-point"><div class="why-icon">🌡️</div><div><h4>Valley Expertise — We Know This Climate</h4><p>We live here too. We know what systems hold up in RGV humidity and what brands fail in our heat.</p></div></div>
+      </div>
+    </div>
+    <div class="why-callout">
+      <span class="big">4.9★</span>
+      <p>Average rating across<br><strong style="color:#fff">380 real Google reviews</strong><br>from Brownsville homeowners</p>
+      <br>
+      <a href="tel:9565275330" class="btn-primary" style="display:inline-block;margin-top:10px">📞 (956) 527-5330</a>
+    </div>
+  </div>
+</section>
+<section class="claim">
+  <h2>This Website Was Built for<br><span>Brownsville Heating &amp; Air</span></h2>
+  <p class="claim-sub">We built this site specifically for your business — the copy, the design, the phone number. It's ready to go live and start converting visitors into paying customers today.</p>
+  <div class="price-pill">$497 — One Time</div>
+  <div class="claim-bullets">
+    <span class="claim-bullet">✓ No monthly fees</span>
+    <span class="claim-bullet">✓ Yours forever</span>
+    <span class="claim-bullet">✓ We handle hosting</span>
+    <span class="claim-bullet">✓ Live in 24 hours</span>
+    <span class="claim-bullet">✓ Mobile-optimized</span>
+    <span class="claim-bullet">✓ SEO-ready</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website Now — $497</a>
+</section>
+<footer>
+  <p>© 2024 Brownsville Heating & Air Conditioning · Brownsville, TX 78520</p>
+  <a href="tel:9565275330">(956) 527-5330</a>
+</footer>
+</body>
+</html>

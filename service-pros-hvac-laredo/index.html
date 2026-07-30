@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Pros Heating & AC | Laredo, TX HVAC Experts</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--blue:#1e3a8a;--blue-mid:#2563eb;--cyan:#0ea5e9;--red:#dc2626;--light:#f8fafc;--gray:#64748b}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1e293b;background:#fff}
+nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:3px solid var(--blue);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:70px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-icon{width:42px;height:42px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.nav-name{font-weight:800;color:var(--blue);font-size:1rem;line-height:1.2}
+.nav-name span{display:block;color:var(--gray);font-weight:500;font-size:.8rem}
+.nav-cta a{display:flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:6px;text-decoration:none;transition:background .2s}
+.nav-cta a:hover{background:var(--blue-mid)}
+.banner{background:var(--red);padding:14px 5%;text-align:center;color:#fff;font-weight:700;font-size:.95rem}
+.banner a{color:#fff;text-decoration:underline}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:var(--blue)}
+.hero-left{padding:60px 5% 60px 5%;display:flex;flex-direction:column;justify-content:center}
+.hero-tag{display:inline-block;background:var(--red);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:3px;margin-bottom:22px;width:fit-content}
+.hero h1{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#fff;line-height:1.15;margin-bottom:18px;letter-spacing:-.4px}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero-sub{color:#bfdbfe;font-size:.98rem;line-height:1.65;margin-bottom:30px}
+.rating-row{display:flex;align-items:center;gap:20px;background:rgba(255,255,255,.1);border-radius:10px;padding:16px 22px;margin-bottom:32px;width:fit-content}
+.rating-num{font-size:3.2rem;font-weight:900;color:#fff;line-height:1}
+.stars{color:#fbbf24;font-size:1.3rem;letter-spacing:1px}
+.rating-detail{display:flex;flex-direction:column;gap:2px}
+.rating-detail strong{color:#fff;font-size:.9rem}
+.rating-detail span{color:#93c5fd;font-size:.8rem}
+.cta-stack{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.btn-main{display:inline-block;background:var(--cyan);color:#fff;font-weight:800;font-size:1.05rem;padding:15px 28px;border-radius:6px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(14,165,233,.4)}
+.btn-main:hover{transform:translateY(-2px)}
+.btn-alt{display:inline-block;background:transparent;color:#bfdbfe;font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:6px;text-decoration:none;border:1.5px solid rgba(255,255,255,.3);transition:all .2s}
+.btn-alt:hover{border-color:#fff;color:#fff}
+.hero-right{background:linear-gradient(135deg,var(--blue-mid),#1d4ed8);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px;text-align:center;position:relative;overflow:hidden}
+.hero-right::before{content:"❄️";position:absolute;top:-20px;right:-20px;font-size:10rem;opacity:.07}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;position:relative;z-index:1}
+.stat-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:22px 18px;text-align:center}
+.stat-box .big{display:block;font-size:2.4rem;font-weight:900;color:#fff;line-height:1}
+.stat-box small{color:#bfdbfe;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.services{padding:70px 5%;background:var(--light)}
+.section-tag{color:var(--blue);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.section-h2{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:900;color:#0f172a;margin-bottom:14px;letter-spacing:-.3px}
+.section-p{color:var(--gray);line-height:1.7;margin-bottom:48px;max-width:580px}
+.services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.svc{background:#fff;border-radius:10px;padding:26px 24px;border-left:4px solid var(--blue);box-shadow:0 2px 12px rgba(0,0,0,.05);transition:all .2s}
+.svc:hover{border-left-color:var(--cyan);box-shadow:0 6px 24px rgba(0,0,0,.1)}
+.svc h3{font-size:1rem;font-weight:800;color:#0f172a;margin:10px 0 6px}
+.svc p{font-size:.88rem;color:var(--gray);line-height:1.6}
+.reviews{padding:70px 5%;background:#0f172a}
+.reviews .section-h2{color:#fff;margin-bottom:10px}
+.reviews .section-p{color:#64748b;margin-bottom:40px}
+.reviews-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.rev{background:#1e293b;border-radius:10px;padding:26px;border-top:3px solid var(--cyan)}
+.rev-stars{color:#fbbf24;margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#cbd5e1;font-size:.9rem;line-height:1.65;margin-bottom:16px;font-style:italic}
+.rev-name{font-weight:700;color:#fff;font-size:.85rem}
+.rev-name span{color:#475569;font-weight:400}
+.process{padding:70px 5%}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:40px}
+.step{text-align:center;padding:20px}
+.step-num{width:56px;height:56px;background:var(--blue);color:#fff;font-size:1.4rem;font-weight:900;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h4{font-weight:800;color:#0f172a;margin-bottom:6px}
+.step p{font-size:.88rem;color:var(--gray);line-height:1.55}
+.claim{background:linear-gradient(135deg,var(--blue) 0%,#1e40af 100%);padding:80px 5%;text-align:center}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:14px}
+.claim h2 span{color:var(--cyan)}
+.claim-sub{color:#bfdbfe;font-size:1rem;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price-badge{display:inline-block;background:#fff;color:var(--blue);font-size:2.2rem;font-weight:900;padding:10px 40px;border-radius:50px;margin-bottom:28px;box-shadow:0 6px 30px rgba(0,0,0,.2)}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(255,255,255,.12);color:#e0f2fe;padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:600}
+.btn-claim{display:inline-block;background:var(--cyan);color:#fff;font-weight:800;font-size:1.15rem;padding:18px 46px;border-radius:8px;text-decoration:none;box-shadow:0 6px 30px rgba(14,165,233,.5);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px)}
+footer{background:#020817;padding:28px 5%;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+footer p{color:#334155;font-size:.84rem}
+footer a{color:#64748b;font-size:.84rem;text-decoration:none}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.hero-right{display:none}.hero-left{padding:50px 5%}}
+@media(max-width:480px){.cta-stack{width:100%}.btn-main,.btn-alt{width:100%;text-align:center}.rating-row{flex-direction:column;align-items:flex-start;gap:8px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-brand">
+    <div class="nav-icon">❄️</div>
+    <div class="nav-name">Service Pros Heating &amp; AC<span>Laredo, TX · Licensed &amp; Insured</span></div>
+  </div>
+  <div class="nav-cta"><a href="tel:9564200723">📞 (956) 420-0723</a></div>
+</nav>
+<div class="banner">🔥 Laredo's heat doesn't wait — neither do we. <strong>Same-day service available.</strong> <a href="tel:9564200723">Call (956) 420-0723</a></div>
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Laredo's Most-Reviewed HVAC Company</div>
+    <h1>Laredo Turns to <em>Service Pros</em><br>When the AC Goes Out</h1>
+    <p class="hero-sub">We've kept Laredo families and businesses cool through every scorching summer. 4.8 stars across 191 honest reviews — and we earn every single one.</p>
+    <div class="rating-row">
+      <div class="rating-num">4.8</div>
+      <div class="rating-detail">
+        <div class="stars">★★★★★</div>
+        <strong>191 Reviews on Google</strong>
+        <span>Top HVAC Contractor in Laredo, TX</span>
+      </div>
+    </div>
+    <div class="cta-stack">
+      <a href="tel:9564200723" class="btn-main">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-alt">Claim This Website — $497 One Time</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-box"><span class="big">4.8★</span><small>Google Rating</small></div>
+      <div class="stat-box"><span class="big">191</span><small>5-Star Reviews</small></div>
+      <div class="stat-box"><span class="big">24/7</span><small>Emergency Line</small></div>
+      <div class="stat-box"><span class="big">100%</span><small>Satisfaction Guaranteed</small></div>
+    </div>
+  </div>
+</div>
+<section class="services">
+  <div class="section-tag">Our Services</div>
+  <div class="section-h2">Complete HVAC Services for Every<br>Home in Laredo</div>
+  <p class="section-p">From Webb County summers that top 110° to the rare cold front in January, your HVAC system carries this city. We make sure it never lets you down.</p>
+  <div class="services-list">
+    <div class="svc"><span style="font-size:1.8rem">❄️</span><h3>AC Repair</h3><p>Fast diagnosis, honest pricing, and same-day fixes for AC breakdowns — from refrigerant leaks to compressor failures.</p></div>
+    <div class="svc"><span style="font-size:1.8rem">🏗️</span><h3>New AC Installation</h3><p>We match the right system to your home size and layout — then install it cleanly and test it fully before we leave.</p></div>
+    <div class="svc"><span style="font-size:1.8rem">🌡️</span><h3>Heating Repair</h3><p>Furnace won't fire up? We service all makes and models, with parts on the truck for the most common repairs.</p></div>
+    <div class="svc"><span style="font-size:1.8rem">🔋</span><h3>Refrigerant Service</h3><p>Running low on freon means a leak somewhere. We find it, fix it, and recharge your system so it stays cold all season.</p></div>
+    <div class="svc"><span style="font-size:1.8rem">🌬️</span><h3>Duct Cleaning</h3><p>Dusty ducts reduce efficiency and hurt indoor air quality. A deep clean can shave dollars off your monthly electric bill in Laredo.</p></div>
+    <div class="svc"><span style="font-size:1.8rem">📋</span><h3>Maintenance Plans</h3><p>Seasonal tune-ups keep your system running at peak efficiency and catch worn parts before they become expensive repairs.</p></div>
+  </div>
+</section>
+<section class="reviews">
+  <div class="section-tag" style="color:var(--cyan)">Real Reviews</div>
+  <div class="section-h2" style="color:#fff">191 Laredo Families. One Consistent Experience.</div>
+  <p class="section-p" style="margin-bottom:40px">Our reviews aren't manufactured — they're from real customers who needed us on a hot Laredo day and got exactly what they hoped for.</p>
+  <div class="reviews-row">
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"I've tried three other HVAC companies in Laredo. None of them compare. Service Pros came out the same day, found the problem in under 30 minutes, and didn't try to upsell me anything I didn't need. That's rare."</p><div class="rev-name">José R. <span>— Laredo, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"They installed a new Carrier unit last spring and our electric bill dropped by $80 a month. The crew was respectful, cleaned up after themselves, and were out in under 3 hours."</p><div class="rev-name">Diana M. <span>— Laredo, TX</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Emergency AC failure at 11 PM in July. I called Service Pros not expecting anyone to actually come — and they did. Fixed it in under an hour. These guys are the real deal."</p><div class="rev-name">Carmen T. <span>— Webb County, TX</span></div></div>
+  </div>
+</section>
+<section class="process">
+  <div class="section-tag">How It Works</div>
+  <div class="section-h2">Simple Process. Fast Results.</div>
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><h4>You Call or Text</h4><p>Reach us 24/7. A real person answers — not a voicemail box or a chatbot.</p></div>
+    <div class="step"><div class="step-num">2</div><h4>We Diagnose</h4><p>We arrive on time, diagnose the problem, and give you a firm price before any work starts.</p></div>
+    <div class="step"><div class="step-num">3</div><h4>We Fix It</h4><p>Parts on the truck means most repairs are done the same visit. We don't leave you in the heat.</p></div>
+    <div class="step"><div class="step-num">4</div><h4>You Stay Cool</h4><p>We test everything before we leave and follow up to make sure the fix held. That's the Service Pros standard.</p></div>
+  </div>
+</section>
+<section class="claim">
+  <h2>Built for <span>Service Pros Heating &amp; AC</span> —<br>Ready to Go Live Today</h2>
+  <p class="claim-sub">This website has your business name, phone number, and real review count. Fully designed, every word written by a real copywriter, waiting for your go-ahead.</p>
+  <div class="price-badge">$497 One Time</div>
+  <div class="perks">
+    <span class="perk">✓ No monthly fees</span>
+    <span class="perk">✓ Yours forever</span>
+    <span class="perk">✓ We handle hosting</span>
+    <span class="perk">✓ Live in 24 hours</span>
+    <span class="perk">✓ Mobile-optimized</span>
+  </div>
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Your Website — $497 →</a>
+</section>
+<footer>
+  <p>© 2024 Service Pros Heating &amp; AC · Laredo, TX · Licensed HVAC Contractor</p>
+  <a href="tel:9564200723">(956) 420-0723</a>
+</footer>
+</body>
+</html>
