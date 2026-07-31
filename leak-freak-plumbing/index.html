@@ -1,230 +1,215 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leak Freak Plumbing | Jackson, MS Licensed Plumber</title>
+<title>Leak Freak Plumbing | Jackson, MS — Perfect 5-Star Plumbers</title>
 <style>
-:root{--ocean:#0369A1;--ocean2:#075985;--aqua:#06B6D4;--aqua2:#0891B2;--sky:#E0F7FA;--sky2:#B3EEF8;--white:#FFFFFF;--offwhite:#F0FBFF;--text:#0C2D3F;--mid:#4B6070;--slate:#708090}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--white);color:var(--text);line-height:1.65}
-nav{position:sticky;top:0;z-index:100;background:var(--ocean2);color:var(--white);display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:64px;box-shadow:0 3px 16px rgba(7,89,133,0.4)}
-.nav-logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:900;letter-spacing:-0.3px}
-.drop-ic{font-size:1.4rem}
-.nav-links{display:flex;gap:24px;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
-.nav-links a:hover{color:var(--aqua)}
-.nav-cta a{background:var(--aqua);color:var(--white);text-decoration:none;font-weight:800;font-size:0.95rem;padding:9px 20px;border-radius:8px;display:flex;align-items:center;gap:7px;transition:background 0.2s}
-.nav-cta a:hover{background:var(--aqua2)}
-.hero{background:linear-gradient(145deg,var(--ocean2) 0%,var(--ocean) 50%,#0A7DA8 100%);color:var(--white);position:relative;overflow:hidden}
-.hero-waves-top{width:100%;display:block;height:8px;background:linear-gradient(90deg,var(--aqua),var(--ocean),var(--aqua),var(--ocean));opacity:0.5}
-.hero-inner{padding:76px 6% 0;max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center}
-.hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.35);border-radius:100px;padding:6px 16px;font-size:0.8rem;color:var(--aqua);font-weight:700;margin-bottom:20px}
-.hero h1{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;letter-spacing:-1.5px;line-height:1.08;margin-bottom:16px}
-.hero h1 .drop{color:var(--aqua)}
-.hero-sub{font-size:1rem;color:rgba(255,255,255,0.72);max-width:440px;margin-bottom:34px;line-height:1.75}
-.btn-aqua{background:var(--aqua);color:var(--white);text-decoration:none;font-weight:800;font-size:1.1rem;padding:15px 36px;border-radius:10px;display:inline-flex;align-items:center;gap:10px;box-shadow:0 4px 20px rgba(6,182,212,0.4);transition:all 0.2s}
-.btn-aqua:hover{background:var(--aqua2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(6,182,212,0.5)}
-.hero-trust{margin-top:16px;display:flex;flex-wrap:wrap;gap:14px}
-.ht{font-size:0.83rem;color:rgba(255,255,255,0.62)}
-.ht strong{color:rgba(255,255,255,0.9)}
-.hero-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:18px;padding:36px 28px;text-align:center;backdrop-filter:blur(8px)}
-.hc-drop{font-size:2.8rem;margin-bottom:4px}
-.hc-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--aqua);margin-bottom:6px}
-.hc-rating{font-size:3rem;font-weight:900;color:var(--white);line-height:1}
-.hc-stars{font-size:1.4rem;color:#FCD34D;margin:4px 0}
-.hc-rev{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-bottom:16px}
-.hc-div{height:1px;background:rgba(255,255,255,0.12);margin:14px 0}
-.hc-phone a{display:block;color:var(--white);text-decoration:none;font-size:1.7rem;font-weight:800;letter-spacing:-0.5px;transition:color 0.2s}
-.hc-phone a:hover{color:var(--aqua)}
-.hc-btn{display:block;margin-top:12px;background:var(--aqua);color:var(--white);text-decoration:none;font-weight:700;padding:12px;border-radius:8px;font-size:0.92rem;transition:background 0.2s}
-.hc-btn:hover{background:var(--aqua2)}
-.hc-badge{margin-top:12px;font-size:0.76rem;color:rgba(255,255,255,0.5)}
-.hero-wave-bottom{display:block;width:100%}
-.services{background:var(--offwhite);padding:76px 6%}
-.sec-ey{font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--aqua2)}
-.sec-h{font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:900;color:var(--ocean2);margin-top:7px;letter-spacing:-0.3px;margin-bottom:8px}
-.sec-sub{color:var(--mid);font-size:0.92rem;max-width:500px;margin-bottom:44px}
-.svcs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1100px;margin:0 auto}
-.svc{background:var(--white);border-radius:14px;padding:26px 22px;box-shadow:0 1px 6px rgba(3,105,161,0.06);border-bottom:4px solid var(--aqua);transition:transform 0.2s,box-shadow 0.2s}
-.svc:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(3,105,161,0.1)}
-.svc-ic{font-size:2rem;margin-bottom:10px}
-.svc h3{font-size:0.97rem;font-weight:700;color:var(--ocean2);margin-bottom:6px}
-.svc p{font-size:0.84rem;color:var(--mid);line-height:1.65}
-.trust-band{background:var(--ocean2);color:var(--white);padding:36px 6%}
-.tbi{display:flex;flex-wrap:wrap;justify-content:center;gap:36px;max-width:950px;margin:0 auto}
-.tb-it{display:flex;align-items:center;gap:12px}
-.tb-ic{font-size:1.8rem;color:var(--aqua)}
-.tb-strong{font-weight:700;display:block}
-.tb-sub{font-size:0.78rem;color:rgba(255,255,255,0.55)}
-.why{padding:76px 6%;background:var(--white)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1100px;margin:0 auto;align-items:center}
-.why-list{display:flex;flex-direction:column;gap:18px;margin-top:28px}
-.wi{display:flex;gap:13px}
-.wi-ic{color:var(--aqua2);font-size:1.1rem;flex-shrink:0;margin-top:2px}
-.wi strong{display:block;font-weight:700;color:var(--ocean2);font-size:0.93rem;margin-bottom:2px}
-.wi p{font-size:0.84rem;color:var(--mid);margin:0}
-.why-visual{background:linear-gradient(145deg,var(--ocean2),var(--ocean));border-radius:18px;padding:44px 32px;text-align:center;color:var(--white)}
-.wv-big{font-size:5rem;font-weight:900;color:var(--aqua);line-height:1}
-.wv-stars{font-size:1.8rem;color:#FCD34D;margin:6px 0}
-.wv-sub{font-size:0.82rem;color:rgba(255,255,255,0.55)}
-.wv-div{height:1px;background:rgba(255,255,255,0.12);margin:18px 0}
-.wv-count{font-size:1.8rem;font-weight:800}
-.wv-cl{font-size:0.8rem;color:rgba(255,255,255,0.5)}
-.wv-badge{margin-top:18px;background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3);border-radius:8px;padding:10px;color:var(--aqua);font-weight:700;font-size:0.86rem}
-.reviews{background:var(--sky);padding:76px 6%}
-.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;max-width:1100px;margin:44px auto 0}
-.rev{background:var(--white);border-radius:12px;padding:24px;box-shadow:0 1px 4px rgba(3,105,161,0.07)}
-.rev-stars{color:#0891B2;margin-bottom:10px}
-.rev-text{font-size:0.87rem;color:var(--mid);font-style:italic;line-height:1.7;margin-bottom:12px}
-.rev-by{font-size:0.82rem;font-weight:700;color:var(--ocean2)}
-.rev-by span{font-weight:400;color:var(--slate)}
-.cta-sec{background:linear-gradient(145deg,var(--ocean2),var(--ocean));color:var(--white);padding:76px 6%;text-align:center}
-.cta-sec h2{font-size:clamp(1.8rem,3.5vw,2.7rem);font-weight:900;margin-bottom:10px;letter-spacing:-0.5px}
-.cta-sec p{color:rgba(255,255,255,0.7);margin-bottom:26px}
-.cta-phone a{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;color:var(--aqua);text-decoration:none;letter-spacing:-0.5px;transition:color 0.2s}
-.cta-phone a:hover{color:var(--white)}
-.cta-note{margin-top:8px;font-size:0.82rem;color:rgba(255,255,255,0.45)}
-footer{background:#041D2E;color:rgba(255,255,255,0.38);padding:26px 6%}
-.fi{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;max-width:1100px;margin:0 auto;font-size:0.81rem}
-.fi strong{color:rgba(255,255,255,0.7)}
-.fi a{color:var(--aqua);text-decoration:none}
-@media(max-width:768px){.nav-links{display:none}.hero-inner{grid-template-columns:1fr;padding-bottom:40px}.hero-card{display:none}.why-grid{grid-template-columns:1fr}}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#007a7a;--teal-lt:#00a3a3;--yellow:#f5c518;--dark:#0d1f1f;--mid:#1a3333;--gray:#6b7280;--light:#f7fdfd}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:var(--dark);background:#fff}
+nav{position:sticky;top:0;z-index:100;background:var(--dark);height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:3px solid var(--teal-lt)}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.brand-name{color:#fff;font-weight:900;font-size:1.05rem;letter-spacing:-.3px}
+.brand-name small{display:block;color:#64748b;font-size:.75rem;font-weight:400}
+.nav-ph a{background:var(--teal-lt);color:#fff;font-weight:800;font-size:.95rem;padding:11px 22px;border-radius:7px;text-decoration:none;transition:background .2s;white-space:nowrap}
+.nav-ph a:hover{background:var(--teal)}
+.hero{background:linear-gradient(145deg,var(--dark) 0%,var(--mid) 50%,#0e2828 100%);padding:76px 5% 88px;position:relative;overflow:hidden}
+.hero::before{content:"💧";position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:12rem;opacity:.07;pointer-events:none}
+.hero-inner{max-width:680px;position:relative;z-index:1}
+.brand-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,163,163,.15);border:1px solid rgba(0,163,163,.3);color:#5ed0d0;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px}
+.hero h1{font-size:clamp(2rem,4.5vw,3.3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:18px;letter-spacing:-.4px}
+.hero h1 em{font-style:normal;color:var(--teal-lt)}
+.hero-desc{color:#94a3b8;font-size:1rem;line-height:1.72;margin-bottom:34px;max-width:530px}
+.rating-frame{display:flex;align-items:center;gap:20px;padding:18px 26px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;margin-bottom:36px;width:fit-content}
+.r-perfect{display:flex;flex-direction:column;align-items:center;background:var(--teal);border-radius:8px;padding:12px 16px;min-width:80px}
+.r-perfect .num{font-size:2.6rem;font-weight:900;color:#fff;line-height:1}
+.r-perfect .lbl{font-size:.7rem;font-weight:700;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.06em}
+.r-detail{display:flex;flex-direction:column;gap:4px}
+.r-stars{color:var(--yellow);font-size:1.4rem;letter-spacing:2px}
+.r-detail strong{color:#fff;font-size:.92rem}
+.r-detail span{color:#64748b;font-size:.8rem}
+.cta-buttons{display:flex;flex-wrap:wrap;gap:12px}
+.btn-call{display:inline-block;background:var(--teal-lt);color:#fff;font-weight:800;font-size:1.05rem;padding:15px 30px;border-radius:7px;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(0,163,163,.35)}
+.btn-call:hover{background:var(--teal);transform:translateY(-2px)}
+.btn-ghost{display:inline-block;background:transparent;color:#94a3b8;font-weight:600;font-size:.9rem;padding:14px 26px;border-radius:7px;text-decoration:none;border:1.5px solid rgba(255,255,255,.2);transition:all .2s}
+.btn-ghost:hover{border-color:rgba(0,163,163,.5);color:#5ed0d0}
+.strip{background:var(--teal);display:flex;flex-wrap:wrap;justify-content:center}
+.s-i{flex:1;min-width:130px;text-align:center;padding:20px 16px;border-right:1px solid rgba(255,255,255,.15)}
+.s-i:last-child{border-right:none}
+.s-i strong{display:block;font-size:1.7rem;font-weight:900;color:#fff}
+.s-i span{font-size:.74rem;font-weight:600;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.07em}
+.services{padding:78px 5%;background:var(--light)}
+.s-tag{color:var(--teal);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.s-h{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:900;color:var(--dark);margin-bottom:14px;letter-spacing:-.3px;line-height:1.12}
+.s-p{color:var(--gray);font-size:.97rem;line-height:1.7;max-width:600px;margin-bottom:48px}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.svc{background:#fff;border-radius:10px;padding:28px;border:1px solid #d4eeee;transition:all .22s}
+.svc:hover{box-shadow:0 8px 28px rgba(0,122,122,.1);transform:translateY(-3px);border-color:var(--teal-lt)}
+.svc em{font-size:2rem;margin-bottom:14px;display:block;font-style:normal}
+.svc h3{font-size:1rem;font-weight:800;color:var(--dark);margin-bottom:8px}
+.svc p{font-size:.88rem;color:var(--gray);line-height:1.6}
+.urgent{background:linear-gradient(135deg,var(--dark),var(--mid));padding:60px 5%;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.urgent h2{font-size:clamp(1.5rem,3vw,2rem);color:#fff;font-weight:800;margin-bottom:10px;line-height:1.25}
+.urgent p{color:#94a3b8;font-size:.95rem;line-height:1.65}
+.urgent-ph{display:block;background:var(--teal-lt);color:#fff;font-weight:900;font-size:1.2rem;padding:16px 32px;border-radius:8px;text-decoration:none;text-align:center;white-space:nowrap}
+.urgent-ph:hover{background:var(--teal)}
+.urgent-note{color:#64748b;font-size:.8rem;text-align:center;margin-top:8px}
+.reviews{padding:78px 5%;background:var(--dark)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:38px}
+.rev{background:rgba(255,255,255,.05);border:1px solid rgba(0,163,163,.12);border-radius:10px;padding:26px}
+.rev-stars{color:var(--yellow);margin-bottom:10px;font-size:.95rem}
+.rev-text{color:#94a3b8;font-size:.9rem;line-height:1.65;margin-bottom:14px;font-style:italic}
+.rev-name{color:#e2e8f0;font-weight:700;font-size:.85rem}
+.rev-name span{color:#334155;font-weight:400}
+.process{padding:78px 5%;background:#fff}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:40px}
+.step{text-align:center;padding:24px}
+.step-n{width:58px;height:58px;border-radius:50%;background:var(--teal);color:#fff;font-size:1.4rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step h4{font-weight:800;color:var(--dark);margin-bottom:6px}
+.step p{font-size:.87rem;color:var(--gray);line-height:1.55}
+.claim{background:var(--mid);padding:80px 5%;text-align:center;border-top:4px solid var(--teal-lt)}
+.claim h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:#fff;margin-bottom:12px}
+.claim h2 span{color:var(--teal-lt)}
+.claim-sub{color:#64748b;font-size:1rem;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.65}
+.price{display:inline-block;background:rgba(0,163,163,.15);border:2px solid var(--teal-lt);color:var(--teal-lt);font-size:2.2rem;font-weight:900;padding:10px 38px;border-radius:7px;margin-bottom:28px}
+.perks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+.perk{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#cbd5e1;padding:7px 16px;border-radius:20px;font-size:.87rem;font-weight:600}
+.btn-claim{display:inline-block;background:var(--teal-lt);color:#fff;font-weight:900;font-size:1.15rem;padding:18px 46px;border-radius:7px;text-decoration:none;box-shadow:0 6px 28px rgba(0,163,163,.4);transition:all .2s}
+.btn-claim:hover{transform:translateY(-2px);background:var(--teal)}
+footer{background:var(--dark);padding:28px 5%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;border-top:1px solid rgba(0,163,163,.1)}
+footer p{color:#1e3333;font-size:.84rem}
+footer a{color:#374151;font-size:.84rem;text-decoration:none}
+@media(max-width:768px){.urgent{grid-template-columns:1fr}}
+@media(max-width:480px){.cta-buttons{flex-direction:column}.btn-call,.btn-ghost{text-align:center}.rating-frame{flex-direction:column;align-items:flex-start;gap:12px}}
+/* HORMOZI CLAIM UPGRADES */
+.excl-badge{display:inline-block;background:var(--teal-lt);color:#fff;font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;padding:8px 20px;border-radius:4px;margin-bottom:22px}
+.value-stack{width:100%;max-width:540px;margin:0 auto 30px;background:rgba(0,122,122,.15);border:1px solid rgba(0,163,163,.3);border-radius:8px;overflow:hidden}
+.vs-row{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;border-bottom:1px solid rgba(255,255,255,.06)}
+.vs-row:last-child{border-bottom:none}
+.vs-item{color:#94a3b8;font-size:.9rem}
+.vs-price{color:var(--teal-lt);font-weight:700;font-size:.9rem;white-space:nowrap;margin-left:16px}
+.vs-total .vs-item{color:#fff;font-weight:700}
+.vs-total .vs-price{color:var(--teal-lt);font-size:1.05rem}
+.vs-total{background:rgba(0,163,163,.12)}
+.price-block{margin:0 auto 24px;text-align:center}
+.price-label{color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px}
+.price-note{color:#64748b;font-size:.82rem;margin-top:6px}
+.guarantee-box{display:flex;gap:18px;align-items:flex-start;max-width:520px;margin:0 auto 30px;padding:22px 24px;background:rgba(0,122,122,.15);border:1px solid rgba(0,163,163,.35);border-radius:8px;text-align:left}
+.g-icon{font-size:1.8rem;flex-shrink:0;margin-top:2px}
+.g-text strong{color:#fff;font-size:.95rem;display:block;margin-bottom:6px}
+.g-text p{color:#94a3b8;font-size:.87rem;line-height:1.6;margin:0}
+.claim-fine{color:#374151;font-size:.78rem;margin-top:16px;opacity:.8}
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-logo"><span class="drop-ic">&#128167;</span> Leak Freak Plumbing</div>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">About</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-  </ul>
-  <div class="nav-cta"><a href="tel:6017159843">&#128222; (601) 715-9843</a></div>
+  <div class="nav-brand">
+    <div class="brand-name">Leak Freak Plumbing<small>Jackson, MS · Perfect 5.0 Stars on Google</small></div>
+  </div>
+  <div class="nav-ph"><a href="tel:6017159843">📞 (601) 715-9843</a></div>
 </nav>
-
 <section class="hero">
-  <div class="hero-waves-top"></div>
   <div class="hero-inner">
-    <div>
-      <div class="hero-chip">&#128167; Jackson, MS &mdash; 5.0 Perfect Rating</div>
-      <h1>Jackson's <span class="drop">Plumbing</span><br>Problem Solvers</h1>
-      <p class="hero-sub">Licensed plumbers serving Jackson, MS with fast leak repairs, drain cleaning, water heater service, and emergency plumbing — available when you need us most.</p>
-      <a href="tel:6017159843" class="btn-aqua">&#128222; Call Now — Free Estimate</a>
-      <div class="hero-trust">
-        <span class="ht">&#10003; <strong>Licensed &amp; Insured</strong></span>
-        <span class="ht">&#9733; <strong>5.0 Stars — 72 Reviews</strong></span>
-        <span class="ht">&#128336; <strong>Same-Day Service</strong></span>
+    <div class="brand-tag">💧 Jackson, MS · Licensed Plumbers</div>
+    <h1>Jackson's Fastest Plumber —<br>We Find Leaks <em>Others Miss</em></h1>
+    <p class="hero-desc">The name says it all. We're obsessive about finding every leak, fixing every pipe, and leaving your home dry and damage-free. 72 Jackson customers gave us a perfect 5.0 stars — because that's exactly what we deliver, every time.</p>
+    <div class="rating-frame">
+      <div class="r-perfect"><span class="num">5.0</span><span class="lbl">Perfect</span></div>
+      <div class="r-detail">
+        <div class="r-stars">★★★★★</div>
+        <strong>Perfect 5.0 — 72 Google Reviews</strong>
+        <span>Top-Rated Plumber in Jackson, MS</span>
       </div>
     </div>
-    <div class="hero-card">
-      <div class="hc-drop">&#128167;</div>
-      <div class="hc-label">Perfect Rating</div>
-      <div class="hc-rating">5.0</div>
-      <div class="hc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <div class="hc-rev">72 Verified Reviews</div>
-      <div class="hc-div"></div>
-      <div class="hc-phone"><a href="tel:6017159843">(601) 715-9843</a></div>
-      <a href="tel:6017159843" class="hc-btn">Call Now — Free Estimate</a>
-      <div class="hc-badge">&#10003; Licensed &amp; Insured &nbsp;·&nbsp; Jackson, MS</div>
+    <div class="cta-buttons">
+      <a href="tel:6017159843" class="btn-call">📞 Call Now — Free Estimate</a>
+      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-ghost">Claim This Website — $497 One Time</a>
     </div>
   </div>
-  <svg class="hero-wave-bottom" viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,52 L0,18 C240,52 720,0 1440,28 L1440,52 Z" fill="#F0FBFF"/>
-  </svg>
 </section>
-
-<section class="services" id="services">
-  <div style="max-width:1100px;margin:0 auto">
-    <div class="sec-ey">Plumbing Services — Jackson, MS</div>
-    <h2 class="sec-h">Everything Your Plumbing Needs</h2>
-    <p class="sec-sub">Full-service residential plumbing for Jackson homeowners — from the smallest drip to full pipe replacements and water heater installs.</p>
-  </div>
-  <div class="svcs-grid">
-    <div class="svc"><div class="svc-ic">&#128167;</div><h3>Leak Detection &amp; Repair</h3><p>Dripping faucets, hidden pipe leaks, slab leaks — we find them fast and fix them right. Stop wasting water and money.</p></div>
-    <div class="svc"><div class="svc-ic">&#128249;</div><h3>Drain Cleaning &amp; Unclogging</h3><p>Slow or stopped drains in sinks, tubs, or toilets cleared using professional hydro-jetting and snaking equipment.</p></div>
-    <div class="svc"><div class="svc-ic">&#128293;</div><h3>Water Heater Service</h3><p>Water heater repairs, replacements, and new tankless installations. We carry leading brands and warranty the work.</p></div>
-    <div class="svc"><div class="svc-ic">&#128268;</div><h3>Pipe Repair &amp; Replacement</h3><p>Burst pipes, corroded lines, and aging galvanized replaced with durable copper or PEX — done cleanly and to code.</p></div>
-    <div class="svc"><div class="svc-ic">&#128680;</div><h3>24/7 Emergency Plumbing</h3><p>Burst pipe or sewage backup at 2 AM? We're the Jackson plumbers who actually answer and respond fast.</p></div>
-    <div class="svc"><div class="svc-ic">&#128295;</div><h3>Fixture Installation</h3><p>Toilets, faucets, garbage disposals, and dishwasher hookups installed correctly the first time, with full cleanup after.</p></div>
+<div class="strip">
+  <div class="s-i"><strong>5.0★</strong><span>Perfect Rating</span></div>
+  <div class="s-i"><strong>72</strong><span>5-Star Reviews</span></div>
+  <div class="s-i"><strong>Same Day</strong><span>Emergency</span></div>
+  <div class="s-i"><strong>24/7</strong><span>Available</span></div>
+  <div class="s-i"><strong>Licensed</strong><span>Jackson, MS</span></div>
+</div>
+<section class="services">
+  <div class="s-tag">Plumbing Services</div>
+  <div class="s-h">Every Plumbing Problem Jackson<br>Homeowners Face — We Fix It</div>
+  <p class="s-p">From a slow drain that's been bothering you for months to a pipe that burst at 2 AM — Leak Freak handles it all, fast, clean, and with the transparency Jackson homeowners deserve.</p>
+  <div class="svc-grid">
+    <div class="svc"><em>🔍</em><h3>Leak Detection</h3><p>This is what we're known for. We find leaks hidden behind walls, under slabs, and inside ceilings — before they become catastrophic water damage in your Jackson home.</p></div>
+    <div class="svc"><em>🚿</em><h3>Drain Cleaning</h3><p>Slow drains, clogged sinks, backed-up showers — we clear every blockage completely, not just enough to get water moving temporarily.</p></div>
+    <div class="svc"><em>🔩</em><h3>Pipe Repair &amp; Replacement</h3><p>Burst pipes, corroded lines, pinhole leaks — we repair or replace with quality materials and full pressure testing before we pack up and leave.</p></div>
+    <div class="svc"><em>🌡️</em><h3>Water Heater Install</h3><p>Old water heater giving you cold showers? We install traditional and tankless units — same day in most cases — with full permit and inspection.</p></div>
+    <div class="svc"><em>🌊</em><h3>Sewer Line Service</h3><p>Sewer backups, root intrusion, collapsed lines — we camera-inspect before digging so you know exactly what we're fixing and why.</p></div>
+    <div class="svc"><em>🚨</em><h3>Emergency Plumbing</h3><p>A burst pipe or overflowing toilet at midnight in Jackson is a crisis. We're available around the clock — real people, real fast, real solutions.</p></div>
   </div>
 </section>
-
-<div class="trust-band">
-  <div class="tbi">
-    <div class="tb-it"><div class="tb-ic">&#128167;</div><div><span class="tb-strong">Licensed &amp; Insured</span><span class="tb-sub">MS Plumbing License</span></div></div>
-    <div class="tb-it"><div class="tb-ic">&#11088;</div><div><span class="tb-strong">5.0 Perfect Rating</span><span class="tb-sub">72 Verified Reviews</span></div></div>
-    <div class="tb-it"><div class="tb-ic">&#128336;</div><div><span class="tb-strong">Same-Day Service</span><span class="tb-sub">Jackson &amp; Surrounding Areas</span></div></div>
-    <div class="tb-it"><div class="tb-ic">&#128181;</div><div><span class="tb-strong">Free Estimates</span><span class="tb-sub">No Obligation</span></div></div>
+<div class="urgent">
+  <div>
+    <h2>Plumbing Emergency in Jackson?<br>Don't Wait — Every Minute Counts.</h2>
+    <p>Water damage spreads fast. A burst pipe left for two hours can ruin floors, walls, and cabinets costing thousands. Call us now — we respond immediately.</p>
+  </div>
+  <div>
+    <a href="tel:6017159843" class="urgent-ph">📞 (601) 715-9843</a>
+    <div class="urgent-note">24/7 Emergency Line · Jackson, MS</div>
   </div>
 </div>
-
-<section class="why" id="why">
-  <div class="why-grid">
-    <div>
-      <div class="sec-ey">Why Leak Freak</div>
-      <h2 class="sec-h" style="color:var(--ocean2)">Jackson Plumbing Done Right — Every Time</h2>
-      <div class="why-list">
-        <div class="wi"><div class="wi-ic">&#128167;</div><div><strong>A Perfect 5.0 Rating</strong><p>72 reviews, every single one a 5-star. We've never had a customer unhappy enough to leave a bad review because we don't leave until the job is right.</p></div></div>
-        <div class="wi"><div class="wi-ic">&#128167;</div><div><strong>Licensed Mississippi Plumbers</strong><p>Every technician holds a valid Mississippi plumbing license. We follow code, pull permits when required, and protect your home's value.</p></div></div>
-        <div class="wi"><div class="wi-ic">&#128167;</div><div><strong>Honest, Upfront Quotes</strong><p>We diagnose thoroughly and give you a complete price in writing before work starts. The number you approve is the number on your invoice.</p></div></div>
-        <div class="wi"><div class="wi-ic">&#128167;</div><div><strong>Emergency Response</strong><p>Plumbing emergencies don't wait for business hours. We're available 24/7 and treat after-hours calls with the same urgency you do.</p></div></div>
-      </div>
-    </div>
-    <div class="why-visual">
-      <div class="wv-big">5.0</div>
-      <div class="wv-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <div class="wv-sub">Perfect Google Rating</div>
-      <div class="wv-div"></div>
-      <div class="wv-count">72</div>
-      <div class="wv-cl">Verified Customer Reviews</div>
-      <div class="wv-div"></div>
-      <div class="wv-badge">&#128167; Licensed &amp; Insured &mdash; Mississippi</div>
-    </div>
-  </div>
-</section>
-
-<section class="reviews" id="reviews">
-  <div style="max-width:1100px;margin:0 auto">
-    <div class="sec-ey">Customer Reviews</div>
-    <h2 class="sec-h" style="margin-bottom:0">72 Five-Star Reviews in Jackson, MS</h2>
-  </div>
+<section class="reviews">
+  <div class="s-tag" style="color:#5ed0d0">What Jackson Customers Say</div>
+  <div class="s-h" style="color:#fff">72 Reviews. 5.0 Stars. Zero Exceptions.</div>
   <div class="rev-grid">
-    <div class="rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text">"Burst pipe at 11 PM on a Sunday. Called Leak Freak and they were here within 90 minutes. Fixed it cleanly, cleaned up after themselves, and charged a fair price. Absolute lifesavers."</p><div class="rev-by">Darnell W. <span>— Jackson, MS</span></div></div>
-    <div class="rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text">"My water heater died on a Tuesday. They came out Wednesday, quoted me clearly, and had the new unit installed by Thursday afternoon. Super professional from first call to final cleanup."</p><div class="rev-by">Teresa J. <span>— Jackson, MS</span></div></div>
-    <div class="rev"><div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="rev-text">"Fixed a slab leak that two other plumbers said would cost twice as much. Leak Freak found a smarter approach, did cleaner work, and saved me a lot of money. Five stars is not enough."</p><div class="rev-by">Kevin B. <span>— Brandon, MS</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"We had a slab leak that two other plumbers couldn't find. Leak Freak found it in 45 minutes with their detection equipment, gave us a clear repair plan, and fixed it the next day. Jackson's best plumber — hands down."</p><div class="rev-name">Donna R. <span>— Jackson, MS</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Pipe burst in my utility room at 6 AM on a Thursday. Called Leak Freak, they picked up immediately, had someone at my house by 7:15. Pipe was repaired and dry by 9 AM. I couldn't believe how fast and professional."</p><div class="rev-name">James P. <span>— Jackson, MS</span></div></div>
+    <div class="rev"><div class="rev-stars">★★★★★</div><p class="rev-text">"Got a tankless water heater installed — they pulled the permit, scheduled the gas company, and had hot water running by 3 PM on the same day I called. Pricing was exactly what they quoted. Perfect service."</p><div class="rev-name">Tamara W. <span>— Jackson, MS</span></div></div>
   </div>
 </section>
-
-<section class="cta-sec">
-  <h2>&#128167; Call for a Free Plumbing Estimate</h2>
-  <p>Licensed plumbers in Jackson, MS — same-day service, perfect 5.0 rating.</p>
-  <div class="cta-phone"><a href="tel:6017159843">(601) 715-9843</a></div>
-  <div class="cta-note">Jackson, MS &nbsp;·&nbsp; Licensed &amp; Insured &nbsp;·&nbsp; 5.0&#9733; / 72 Reviews</div>
+<section class="process">
+  <div class="s-tag">Our Process</div>
+  <div class="s-h">How We Handle Every Job in Jackson</div>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><h4>You Call — We Answer</h4><p>Real person, no voicemail. We hear you out, understand the problem, and give you a same-day or next-day window.</p></div>
+    <div class="step"><div class="step-n">2</div><h4>We Diagnose Accurately</h4><p>We find the actual problem — no guessing, no unnecessary digging, no wasted repair attempts on the wrong source.</p></div>
+    <div class="step"><div class="step-n">3</div><h4>You Approve the Price</h4><p>We give you a firm written estimate before touching anything. What you agree to is exactly what you pay.</p></div>
+    <div class="step"><div class="step-n">4</div><h4>Clean Fix, Zero Mess</h4><p>We repair, pressure-test, clean up completely, and walk you through what we did. Your home looks better than when we arrived.</p></div>
+  </div>
 </section>
+<section class="claim">
+  <div class="excl-badge">💧 Jackson Plumbers — 1 Spot Only</div>
+  <h2>The Only Premium Plumber<br>Website Built for <span>Jackson, MS</span></h2>
+  <p class="claim-sub">We build one website per trade per city. The moment this is sold, no other plumber in Jackson gets one from us — ever. A perfect 5.0 rating deserves a site that matches it.</p>
 
-<section style="background:linear-gradient(135deg,#1a1a2e 0%,#0f3460 100%);color:#fff;padding:80px 24px;text-align:center">
-  <div style="max-width:760px;margin:0 auto">
-    <div style="display:inline-block;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.5);color:#f97316;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 18px;border-radius:100px;margin-bottom:24px">Limited Time Offer</div>
-    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px;line-height:1.2">This Website Is Built<br>and Ready for You</h2>
-    <p style="font-size:1.15rem;opacity:0.85;max-width:580px;margin:0 auto 12px">A professional, mobile-ready website for your business — already live, already ranking. One HVAC job pays for this site 10× over.</p>
-    <p style="font-size:1rem;opacity:0.65;margin-bottom:40px">One-time payment. You own it forever. No monthly fees, no contracts.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-bottom:40px">
-      <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" style="display:inline-flex;align-items:center;gap:10px;background:#f97316;color:#fff;text-decoration:none;font-size:1.2rem;font-weight:800;padding:20px 44px;border-radius:10px;box-shadow:0 6px 32px rgba(249,115,22,0.5);transition:all 0.2s">Claim This Website — $497</a>
-    </div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;font-size:0.9rem;opacity:0.7">
-      <span>✅ Secure checkout via Stripe</span>
-      <span>✅ Instant transfer — site is yours today</span>
-      <span>✅ 30-day money-back guarantee</span>
+  <div class="value-stack">
+    <div class="vs-row"><span class="vs-item">Professional design + sales copywriting</span><span class="vs-price">$1,500 value</span></div>
+    <div class="vs-row"><span class="vs-item">Local SEO schema + Google signals setup</span><span class="vs-price">$800 value</span></div>
+    <div class="vs-row"><span class="vs-item">Fast CDN hosting — 12 full months included</span><span class="vs-price">$150 value</span></div>
+    <div class="vs-row"><span class="vs-item">Mobile-optimized (72% of searches are mobile)</span><span class="vs-price">$500 value</span></div>
+    <div class="vs-row vs-total"><span class="vs-item">Total value</span><span class="vs-price">$2,950+</span></div>
+  </div>
+
+  <div class="price-block">
+    <div class="price-label">Your price today</div>
+    <div class="price">$497</div>
+    <div class="price-note">One-time payment. No monthly fees. No subscriptions. Ever.</div>
+  </div>
+
+  <div class="guarantee-box">
+    <div class="g-icon">🛡️</div>
+    <div class="g-text">
+      <strong>30-Day No-Risk Guarantee</strong>
+      <p>If you're not 100% satisfied with the website within 30 days of going live, we'll redesign it for free — or refund every penny. No forms, no hoops, no questions asked.</p>
     </div>
   </div>
-</section><footer>
-  <div class="fi">
-    <strong>Leak Freak Plumbing</strong>
-    <span>Jackson, MS &nbsp;|&nbsp; Licensed Plumbing Contractor &nbsp;|&nbsp; 5.0&#9733; Rating</span>
-    <a href="tel:6017159843">(601) 715-9843</a>
-  </div>
+
+  <a href="https://buy.stripe.com/5kQ8wO5hkckR0QYgL96g802" class="btn-claim">Claim Before a Competitor Does →</a>
+  <p class="claim-fine">Jackson, MS · Licensed Plumbing Contractors Only · One website per city policy</p>
+</section>
+<footer>
+  <p>© 2024 Leak Freak Plumbing · Jackson, MS · Licensed Plumbing Contractor</p>
+  <a href="tel:6017159843">(601) 715-9843</a>
 </footer>
 </body>
 </html>
