@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Rooter | Licensed Plumber in Los Angeles, CA</title>
+<meta name="description" content="Speed Rooter — Los Angeles, CA's trusted 24/7 emergency plumber. Licensed, bonded, upfront pricing. Call (000) 000-0000.">
+<style>
+/* ── Reset & Variables ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+:root{
+  --blue:#0ea5e9;--blue2:#0284c7;--dark:#0c1a2e;--dark2:#0f2340;
+  --mid:#64748b;--light:#f0f9ff;--white:#ffffff;
+  --border:#bae6fd;--gold:#f59e0b;--radius:12px;--nav-h:72px
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--dark);background:var(--white);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+
+/* ── Announcement Bar ── */
+.ann{background:var(--dark2);color:var(--blue);text-align:center;padding:10px 5%;font-size:.82rem;font-weight:700;letter-spacing:.04em}
+.ann a{color:var(--blue);font-weight:900;transition:color .2s}
+.ann a:hover{color:var(--white)}
+
+/* ── Nav ── */
+nav{
+  position:sticky;top:0;z-index:150;height:var(--nav-h);
+  background:transparent;transition:background .3s,box-shadow .3s;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;--ntc:var(--white)
+}
+nav.scrolled{background:var(--white);box-shadow:0 2px 20px rgba(0,0,0,.1);--ntc:var(--dark)}
+.nav-logo{font-size:1.18rem;font-weight:900;color:var(--ntc);transition:color .3s;display:flex;align-items:center;gap:2px}
+.nav-logo span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-size:.88rem;font-weight:600;color:var(--ntc);transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-ph{display:flex;align-items:center;gap:6px;font-size:.92rem;font-weight:700;color:var(--ntc);transition:color .3s}
+.nav-ph a{color:inherit}
+.nav-ph svg{flex-shrink:0}
+.nav-cta a{
+  background:var(--blue);color:var(--white);padding:10px 24px;
+  border-radius:8px;font-weight:800;font-size:.88rem;
+  transition:background .2s,transform .15s
+}
+.nav-cta a:hover{background:var(--blue2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:var(--ntc);border-radius:2px;transition:background .3s}
+.mob-menu{
+  display:none;position:fixed;inset:0;background:var(--dark);z-index:200;
+  flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:40px
+}
+.mob-menu.open{display:flex}
+.mob-menu a{color:var(--white);font-size:1.3rem;font-weight:800}
+.mob-menu a:hover{color:var(--blue)}
+.mob-menu .mob-call{color:var(--blue) !important}
+.mob-close{position:absolute;top:20px;right:22px;background:none;border:none;color:var(--white);font-size:2rem;cursor:pointer;line-height:1}
+
+/* ── Hero ── */
+.hero{background:var(--dark);color:var(--white);min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 5% 80px}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80&fit=crop') center/cover no-repeat;opacity:.15;pointer-events:none}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(12,26,46,.94) 40%,rgba(15,35,64,.72) 100%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;max-width:720px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(14,165,233,.15);border:1px solid rgba(14,165,233,.35);
+  color:var(--blue);border-radius:100px;padding:8px 20px;
+  font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:26px;animation:pulse 2.5s ease-in-out infinite
+}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(14,165,233,.35)}50%{box-shadow:0 0 0 8px rgba(14,165,233,0)}}
+.hero h1{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:900;line-height:1.08;letter-spacing:-.5px;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--blue);display:block}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.72);margin-bottom:38px;max-width:520px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:52px}
+.btn-primary{
+  background:var(--blue);color:var(--white);padding:16px 34px;border-radius:10px;
+  font-weight:800;font-size:1rem;display:inline-flex;align-items:center;gap:8px;
+  transition:background .2s,transform .15s;box-shadow:0 4px 20px rgba(14,165,233,.4)
+}
+.btn-primary:hover{background:var(--blue2);transform:translateY(-2px)}
+.btn-outline{
+  background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.35);
+  padding:14px 30px;border-radius:10px;font-weight:700;font-size:1rem;
+  display:inline-flex;align-items:center;gap:8px;transition:border-color .2s,background .2s
+}
+.btn-outline:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.05)}
+.hero-trust{display:flex;gap:32px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+.trust-it{display:flex;align-items:center;gap:10px;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.8)}
+.trust-it svg{color:var(--blue);flex-shrink:0}
+
+/* ── Why Strip ── */
+.why{background:var(--blue);padding:0}
+.why-inner{display:flex;flex-wrap:wrap}
+.why-item{
+  flex:1;min-width:180px;display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:28px 20px;border-right:1px solid rgba(255,255,255,.2);color:var(--white);gap:10px
+}
+.why-item:last-child{border-right:none}
+.why-item svg{flex-shrink:0}
+.why-item strong{font-size:1rem;font-weight:800;display:block}
+.why-item span{font-size:.8rem;opacity:.85;line-height:1.4}
+
+/* ── Shared Section Styles ── */
+.eyebrow{font-size:.73rem;font-weight:800;letter-spacing:2px;color:var(--blue2);text-transform:uppercase;margin-bottom:10px;display:block}
+.sec-title{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:900;line-height:1.12;letter-spacing:-.3px;margin-bottom:14px}
+.sec-sub{font-size:1rem;color:var(--mid);line-height:1.7}
+
+/* ── Services ── */
+.services{padding:88px 5%}
+.svc-hdr{margin-bottom:52px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc-card{
+  background:var(--light);border:2px solid var(--border);border-radius:var(--radius);
+  padding:32px 28px;transition:border-color .22s,box-shadow .22s,transform .22s;
+  position:relative;overflow:hidden
+}
+.svc-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:var(--blue);transform:scaleX(0);transition:transform .22s;transform-origin:left;z-index:2
+}
+.svc-card:hover{border-color:var(--blue);box-shadow:0 8px 30px rgba(14,165,233,.15);transform:translateY(-4px)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.07;transition:opacity .22s;z-index:0;pointer-events:none}
+.svc-card:hover .svc-bg{opacity:.14}
+.svc-icon{
+  width:52px;height:52px;background:rgba(14,165,233,.12);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:var(--blue2);position:relative;z-index:1
+}
+.svc-card h3{font-size:1.05rem;font-weight:800;margin-bottom:8px;color:var(--dark);position:relative;z-index:1}
+.svc-card p{font-size:.88rem;color:var(--mid);line-height:1.6;position:relative;z-index:1}
+
+/* ── Process ── */
+.process{background:var(--light);padding:88px 5%}
+.proc-hdr{text-align:center;margin-bottom:60px}
+.proc-hdr .sec-sub{max-width:520px;margin:0 auto}
+.proc-steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  position:relative;max-width:900px;margin:0 auto
+}
+.proc-steps::before{
+  content:'';position:absolute;top:40px;
+  left:calc(16.66% + 20px);right:calc(16.66% + 20px);
+  height:2px;background:linear-gradient(90deg,var(--blue),var(--blue2));z-index:0
+}
+.proc-step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 20px;position:relative;z-index:1}
+.step-num{
+  width:80px;height:80px;border-radius:50%;background:var(--blue);color:var(--white);
+  font-size:1.6rem;font-weight:900;display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;box-shadow:0 4px 20px rgba(14,165,233,.35);border:4px solid var(--light)
+}
+.proc-step h4{font-size:1.05rem;font-weight:800;color:var(--dark);margin-bottom:8px}
+.proc-step p{font-size:.88rem;color:var(--mid);line-height:1.6}
+
+/* ── About ── */
+.about{background:var(--dark2);color:var(--white);padding:88px 5%}
+.about-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-wrap img{width:100%;height:440px;object-fit:cover;border-radius:var(--radius)}
+.cred-badge{
+  position:absolute;bottom:-20px;right:-20px;background:var(--blue);color:var(--white);
+  padding:16px 22px;border-radius:12px;text-align:center;box-shadow:0 8px 30px rgba(14,165,233,.4)
+}
+.cred-badge strong{display:block;font-size:1.6rem;font-weight:900;line-height:1}
+.cred-badge span{font-size:.72rem;font-weight:700;opacity:.85;text-transform:uppercase;letter-spacing:.05em}
+.about-text .eyebrow{color:var(--blue)}
+.about-text h2{font-size:clamp(1.7rem,2.8vw,2.2rem);font-weight:900;margin-bottom:20px}
+.about-text p{color:rgba(255,255,255,.72);margin-bottom:16px;font-size:.97rem;line-height:1.75}
+.about-stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.a-stat strong{display:block;font-size:2.2rem;font-weight:900;color:var(--blue);line-height:1}
+.a-stat span{font-size:.78rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.04em;font-weight:600}
+
+/* ── Reviews ── */
+.reviews{padding:88px 5%}
+.rev-inner{max-width:1100px;margin:0 auto}
+.g-badge{
+  display:inline-flex;align-items:center;gap:20px;padding:22px 28px;
+  border:1px solid var(--border);border-radius:14px;background:var(--light);margin-bottom:48px
+}
+.g-score{font-size:3.8rem;font-weight:900;color:var(--dark);line-height:1}
+.g-info{display:flex;flex-direction:column;gap:5px}
+.g-stars{display:flex;gap:2px}
+.g-stars svg{color:var(--gold)}
+.g-count{font-size:.82rem;color:var(--mid);font-weight:600}
+.g-logo{display:flex;align-items:center;gap:5px;margin-top:2px}
+.g-logo span{font-size:.78rem;color:var(--mid)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rev-card{border:1px solid var(--border);border-radius:14px;padding:28px;background:var(--white);box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.rev-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.rev-user{display:flex;align-items:center;gap:12px}
+.rev-av{
+  width:44px;height:44px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--blue2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1rem;color:var(--white);flex-shrink:0
+}
+.rev-name{font-weight:700;font-size:.92rem;color:var(--dark)}
+.rev-date{font-size:.78rem;color:var(--mid)}
+.rev-stars{display:flex;gap:2px;margin-bottom:12px}
+.rev-stars svg{color:var(--gold)}
+.rev-text{font-size:.9rem;color:var(--mid);line-height:1.65;font-style:italic}
+
+/* ── Guarantees ── */
+.guar{background:var(--dark);padding:88px 5%;color:var(--white)}
+.guar-inner{max-width:1100px;margin:0 auto}
+.guar-hdr{text-align:center;margin-bottom:56px}
+.guar-hdr .eyebrow{color:var(--blue)}
+.guar-hdr .sec-title{color:var(--white)}
+.guar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.guar-card{
+  background:rgba(255,255,255,.04);border:1px solid rgba(14,165,233,.15);
+  border-radius:var(--radius);padding:36px 28px;text-align:center;
+  transition:border-color .2s,background .2s
+}
+.guar-card:hover{background:rgba(14,165,233,.07);border-color:rgba(14,165,233,.35)}
+.guar-icon{
+  width:64px;height:64px;border-radius:50%;background:rgba(14,165,233,.15);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--blue)
+}
+.guar-card h3{font-size:1.1rem;font-weight:800;margin-bottom:10px}
+.guar-card p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+
+/* ── FAQ ── */
+.faq{background:var(--light);padding:88px 5%}
+.faq-inner{max-width:760px;margin:0 auto}
+.faq-hdr{text-align:center;margin-bottom:52px}
+.faq-hdr .sec-sub{max-width:520px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.faq-item.open{border-color:var(--blue);box-shadow:0 4px 20px rgba(14,165,233,.1)}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 24px;cursor:pointer;font-weight:700;font-size:.98rem;color:var(--dark);
+  background:none;border:none;width:100%;text-align:left;transition:color .2s
+}
+.faq-q:hover{color:var(--blue2)}
+.faq-arrow{flex-shrink:0;color:var(--blue);transition:transform .25s}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-ans{padding:0 24px 20px;font-size:.92rem;color:var(--mid);line-height:1.7;display:none}
+.faq-item.open .faq-ans{display:block}
+
+/* ── Final CTA ── */
+.final-cta{
+  background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 50%,#081426 100%);
+  padding:100px 5%;text-align:center;color:var(--white)
+}
+.final-cta h2{font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:16px;letter-spacing:-.3px}
+.final-cta h2 span{color:var(--blue)}
+.final-cta .cta-sub{color:rgba(255,255,255,.65);font-size:1.05rem;margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto}
+.ph-cta{
+  display:inline-flex;align-items:center;gap:12px;background:var(--blue);color:var(--white);
+  padding:20px 48px;border-radius:12px;font-weight:900;font-size:1.4rem;
+  box-shadow:0 8px 36px rgba(14,165,233,.45);transition:background .2s,transform .15s;margin-bottom:18px
+}
+.ph-cta:hover{background:var(--blue2);transform:translateY(-2px)}
+.cta-note{font-size:.82rem;color:rgba(255,255,255,.4);letter-spacing:.03em}
+
+/* ── Footer ── */
+footer{background:#060f1c;color:rgba(255,255,255,.45);padding:60px 5% 32px}
+.foot-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:48px;margin-bottom:40px}
+.foot-brand .logo{font-size:1.15rem;font-weight:900;color:var(--white);margin-bottom:12px}
+.foot-brand .logo span{color:var(--blue)}
+.foot-brand p{font-size:.85rem;line-height:1.7;margin-bottom:16px}
+.foot-brand .fp a{color:var(--blue);font-weight:800;font-size:1.05rem}
+.foot-col h4{color:var(--white);font-size:.85rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col ul li a{font-size:.85rem;color:rgba(255,255,255,.45);transition:color .2s}
+.foot-col ul li a:hover{color:var(--blue)}
+.foot-col address{font-style:normal;font-size:.85rem;line-height:1.75}
+.foot-col address a{color:rgba(255,255,255,.45);transition:color .2s}
+.foot-col address a:hover{color:var(--blue)}
+.foot-bar{
+  border-top:1px solid rgba(255,255,255,.07);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+  gap:12px;font-size:.8rem;max-width:1100px;margin:0 auto
+}
+
+/* ── Scroll Reveal ── */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── Responsive ── */
+@media(max-width:1024px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-inner{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:768px){
+  .nav-links,.nav-ph{display:none}
+  .hamburger{display:flex}
+  .hero{min-height:75vh;padding:80px 5% 60px}
+  .hero-trust{gap:16px}
+  .why-inner{flex-direction:column}
+  .why-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.2);flex-direction:row;justify-content:center;gap:14px;text-align:left;padding:18px}
+  .why-item:last-child{border-bottom:none}
+  .svc-grid{grid-template-columns:1fr}
+  .proc-steps{grid-template-columns:1fr;gap:32px}
+  .proc-steps::before{display:none}
+  .about-inner{grid-template-columns:1fr;gap:40px}
+  .cred-badge{bottom:-14px;right:10px}
+  .rev-grid{grid-template-columns:1fr}
+  .guar-grid{grid-template-columns:1fr}
+  .foot-inner{grid-template-columns:1fr;gap:28px}
+  .foot-bar{flex-direction:column;text-align:center}
+  .ph-cta{font-size:1.1rem;padding:16px 32px}
+}
+@media(max-width:480px){
+  .hero-actions{flex-direction:column}
+  .btn-primary,.btn-outline{width:100%;justify-content:center}
+  .g-badge{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="ann">
+  24/7 Emergency Plumbing &mdash; Call <a href="tel:0000000000">(000) 000-0000</a> &mdash; We're On The Way
+</div>
+
+<!-- Nav -->
+<nav id="main-nav">
+  <div class="nav-logo">Speed Rooter<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-ph">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <a href="tel:0000000000">(000) 000-0000</a>
+    </div>
+    <div class="nav-cta"><a href="tel:0000000000">Get Free Quote</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mob-menu" role="dialog" aria-modal="true">
+  <button class="mob-close" id="mob-close" aria-label="Close menu">&times;</button>
+  <a href="#services" class="mob-link">Services</a>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#reviews" class="mob-link">Reviews</a>
+  <a href="#faq" class="mob-link">FAQ</a>
+  <a href="tel:0000000000" class="mob-call">(000) 000-0000</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="currentColor"><circle cx="4" cy="4" r="4"/></svg>
+      Licensed &amp; Available 24/7 &mdash; Los Angeles, CA
+    </div>
+    <h1>We Fix It Right<em>The First Time</em></h1>
+    <p class="hero-sub">Dependable plumbing service across Los Angeles, CA. Available nights and weekends. Upfront pricing always.</p>
+    <div class="hero-actions">
+      <a href="tel:0000000000" class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (000) 000-0000
+      </a>
+      <a href="#services" class="btn-outline">
+        View Our Services
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-it">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Bonded
+      </div>
+      <div class="trust-it">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        24/7 Emergency
+      </div>
+      <div class="trust-it">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Upfront Pricing
+      </div>
+      <div class="trust-it">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Highly Rated Rating &mdash; 150+ Reviews
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Strip -->
+<div class="why">
+  <div class="why-inner">
+    <div class="why-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div><strong>24/7 Emergency</strong><span>We answer every call, day or night</span></div>
+    </div>
+    <div class="why-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <div><strong>Licensed &amp; Bonded</strong><span>Fully credentialed — your home is protected</span></div>
+    </div>
+    <div class="why-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <div><strong>Upfront Pricing</strong><span>You approve the price before we start</span></div>
+    </div>
+    <div class="why-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      <div><strong>1-Year Warranty</strong><span>Parts and labor guaranteed for 12 months</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="svc-hdr reveal">
+    <span class="eyebrow">What We Fix</span>
+    <h2 class="sec-title">Plumbing Services in Los Angeles, CA</h2>
+    <p class="sec-sub">Every job is done right the first time. We show up on time, explain the fix, and quote you a price before we touch a wrench.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop')"></div>
+      <div class="svc-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+      </div>
+      <h3>Leak Repair</h3>
+      <p>We locate and fix leaks behind walls, under slabs, and in supply lines — fast, with minimal disruption to your home.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop')"></div>
+      <div class="svc-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      </div>
+      <h3>Drain Cleaning</h3>
+      <p>Slow drains, clogged pipes, backed-up toilets. We clear the blockage completely — not just push it further down.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&h=400&fit=crop')"></div>
+      <div class="svc-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+      </div>
+      <h3>Water Heater</h3>
+      <p>Repair or replacement for any brand — traditional tank and tankless systems. Same-day service in most cases.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop')"></div>
+      <div class="svc-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </div>
+      <h3>Repiping</h3>
+      <p>Old galvanized or polybutylene pipes? We repipe your entire home cleanly and efficiently with minimal drywall impact.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1558618047-f4cdc25d5b3e?w=600&h=400&fit=crop')"></div>
+      <div class="svc-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <h3>Fixture Installation</h3>
+      <p>Sinks, faucets, toilets, showers, garbage disposals — installed correctly with manufacturer warranties honored.</p>
+    </div>
+    <div class="svc-card reveal">
+      <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=400&fit=crop')"></div>
+      <div class="svc-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <h3>Emergency Plumbing</h3>
+      <p>Burst pipe? Flooding? Sewer backup? We're on call around the clock — a real plumber answers when you call.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="process" id="process">
+  <div class="proc-hdr reveal">
+    <span class="eyebrow">How It Works</span>
+    <h2 class="sec-title">Simple. Fast. Done Right.</h2>
+    <p class="sec-sub">No complicated scheduling, no runaround. Three steps from your call to a clean, fixed home.</p>
+  </div>
+  <div class="proc-steps">
+    <div class="proc-step reveal">
+      <div class="step-num">1</div>
+      <h4>Call &amp; Describe</h4>
+      <p>Tell us what's happening. We ask the right questions so our plumber arrives fully prepared — no diagnostic surprises.</p>
+    </div>
+    <div class="proc-step reveal">
+      <div class="step-num">2</div>
+      <h4>We Diagnose</h4>
+      <p>Our plumber inspects the issue and gives you a flat, written price. You approve every penny before any work begins.</p>
+    </div>
+    <div class="proc-step reveal">
+      <div class="step-num">3</div>
+      <h4>Fixed &amp; Cleaned Up</h4>
+      <p>We complete the repair, test everything thoroughly, and leave your home cleaner than we found it. Guaranteed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80&fit=crop" alt="Speed Rooter plumber at work in Los Angeles, CA" loading="lazy">
+      <div class="cred-badge">
+        <strong>3800+</strong>
+        <span>Jobs Completed</span>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">About Speed Rooter</span>
+      <h2>Plumbing Done the Right Way</h2>
+      <p>At Speed Rooter, we don't believe in temporary fixes. Every repair is done to last, every installation is done to code, and every customer leaves knowing exactly what was done and why.</p>
+      <p>We've served homeowners and businesses throughout Los Angeles, CA for years. Our reviews speak for themselves — and our repeat customers speak even louder.</p>
+      <div class="about-stats">
+        <div class="a-stat">
+          <strong>24/7</strong>
+          <span>Emergency Service</span>
+        </div>
+        <div class="a-stat">
+          <strong>98%</strong>
+          <span>First-Visit Fix Rate</span>
+        </div>
+        <div class="a-stat">
+          <strong>Highly Rated</strong>
+          <span>Google Rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Reviews -->
+<section class="reviews" id="reviews">
+  <div class="rev-inner">
+    <div class="reveal">
+      <span class="eyebrow">Customer Reviews</span>
+      <h2 class="sec-title">What Los Angeles, CA Homeowners Say</h2>
+    </div>
+    <div class="reveal" style="margin-top:32px">
+      <div class="g-badge">
+        <div class="g-score">Highly Rated</div>
+        <div class="g-info">
+          <div class="g-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <strong class="g-count">150+ Google Reviews</strong>
+          <div class="g-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <span>Google</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card reveal">
+        <div class="rev-hd">
+          <div class="rev-user">
+            <div class="rev-av">SK</div>
+            <div><div class="rev-name">Sandra K.</div><div class="rev-date">Los Angeles, CA &mdash; 2 weeks ago</div></div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="rev-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text">"Pipe burst at 11pm on a Sunday. Called and they were here within the hour. Fixed it fast and the price was exactly what they quoted — not a penny more."</p>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rev-hd">
+          <div class="rev-user">
+            <div class="rev-av" style="background:linear-gradient(135deg,#0284c7,#0369a1)">RL</div>
+            <div><div class="rev-name">Robert L.</div><div class="rev-date">Los Angeles, CA &mdash; 1 month ago</div></div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="rev-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text">"Finally found a plumber who gives you the price upfront and actually sticks to it. No upselling, no surprises. The work was excellent and they cleaned up completely."</p>
+      </div>
+      <div class="rev-card reveal">
+        <div class="rev-hd">
+          <div class="rev-user">
+            <div class="rev-av" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">AP</div>
+            <div><div class="rev-name">Angela P.</div><div class="rev-date">Los Angeles, CA &mdash; 3 weeks ago</div></div>
+          </div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <div class="rev-stars">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="rev-text">"Replaced our water heater same day we called. In and out in under 3 hours. Professional, clean, and exactly what I was quoted. Worth every penny."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantees -->
+<section class="guar">
+  <div class="guar-inner">
+    <div class="guar-hdr reveal">
+      <span class="eyebrow">Our Promise</span>
+      <h2 class="sec-title">We Stand Behind Every Job</h2>
+    </div>
+    <div class="guar-grid">
+      <div class="guar-card reveal">
+        <div class="guar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>On-Time Promise</h3>
+        <p>We arrive within the agreed window — every time. If we're late, we make it right. Your schedule is as important as the repair.</p>
+      </div>
+      <div class="guar-card reveal">
+        <div class="guar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Upfront Pricing</h3>
+        <p>You receive the full price in writing before we start. No hourly surprises, no hidden fees tacked on after the job is done.</p>
+      </div>
+      <div class="guar-card reveal">
+        <div class="guar-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Parts &amp; Labor Warranty</h3>
+        <p>Every repair is backed by a 1-year parts and labor warranty. If it comes back within that window, so do we — at no charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-hdr reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="sec-title">Common Questions</h2>
+      <p class="sec-sub">Still not sure? Here are the questions Los Angeles, CA homeowners ask most before booking.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you charge extra for emergency or after-hours calls?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-ans">We are transparent about all pricing upfront. When you call, we tell you exactly what to expect before any work begins — day or night, weekend or holiday.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How quickly can you arrive for an emergency?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-ans">For true emergencies like burst pipes or active flooding, we dispatch immediately. Most Los Angeles, CA customers see us within 60 minutes of their call.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Are you licensed and insured in Los Angeles, CA?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-ans">Yes. We are fully licensed, bonded, and insured. We will gladly provide our license number before the job, and you can verify it with the state licensing board at any time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What if the problem comes back after you fix it?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-ans">Every repair includes a 1-year parts and labor warranty. If the same issue returns within that window, we come back and fix it at zero additional cost — no questions asked.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do I need to be home for the appointment?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-ans">Yes, someone 18 or older should be present to review and approve the written quote before work starts. We give you a specific arrival window by call or text so you are not waiting around all day.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="reveal">
+    <h2>Plumbing Problem in <span>Los Angeles, CA</span>?</h2>
+    <p class="cta-sub">Available 24 hours a day, 7 days a week. Upfront pricing on every job. A real plumber answers the phone.</p>
+    <div>
+      <a href="tel:0000000000" class="ph-cta">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (000) 000-0000
+      </a>
+    </div>
+    <p class="cta-note">Licensed &bull; Bonded &bull; Insured &bull; Los Angeles, CA's Trusted Plumber</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <div class="logo">Speed Rooter<span>.</span></div>
+      <p>Serving Los Angeles, CA and surrounding areas. Licensed, bonded, and insured plumbing professionals available 24/7 for emergencies and scheduled service.</p>
+      <div class="fp"><a href="tel:0000000000">(000) 000-0000</a></div>
+    </div>
+    <div class="foot-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Leak Repair</a></li>
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Water Heater</a></li>
+        <li><a href="#services">Repiping</a></li>
+        <li><a href="#services">Fixture Installation</a></li>
+        <li><a href="#services">Emergency Plumbing</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <address>
+        <a href="tel:0000000000">(000) 000-0000</a><br>
+        Los Angeles, CA<br>
+        Los Angeles, CA
+      </address>
+    </div>
+  </div>
+  <div class="foot-bar">
+    <span>&copy; 2025 Speed Rooter. All rights reserved.</span>
+    <span>Licensed &bull; Bonded &bull; Insured</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Sticky Nav: transparent -> white */
+  var nav = document.getElementById('main-nav');
+  function onScroll(){nav.classList.toggle('scrolled', window.scrollY > 60);}
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* Hamburger / Mobile Menu */
+  var ham = document.getElementById('hamburger');
+  var mob = document.getElementById('mob-menu');
+  var cls = document.getElementById('mob-close');
+  function openMob(){mob.classList.add('open');document.body.style.overflow='hidden';}
+  function closeMob(){mob.classList.remove('open');document.body.style.overflow='';}
+  if(ham) ham.addEventListener('click', openMob);
+  if(cls) cls.addEventListener('click', closeMob);
+  mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click', closeMob);});
+
+  /* FAQ Accordion */
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(fi){
+        fi.classList.remove('open');
+        fi.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* Scroll Reveal */
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+      });
+    }, {threshold:0.1});
+    els.forEach(function(el){io.observe(el);});
+  } else {
+    els.forEach(function(el){el.classList.add('visible');});
+  }
+})();
+</script>
+</body>
+</html>
