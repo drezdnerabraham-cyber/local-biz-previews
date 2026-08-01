@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Mechanical Group Inc | HVAC Services in Columbus, OH</title>
+<meta name="description" content="American Mechanical Group Inc provides professional HVAC repair, installation, and maintenance in Columbus, OH. Licensed, insured, available 24/7. Call (000) 000-0000.">
+<style>
+:root{
+  --orange:#f97316;
+  --orange2:#ea6c0a;
+  --navy:#0f1f3d;
+  --navy2:#162645;
+  --sky:#38bdf8;
+  --white:#ffffff;
+  --light:#f8fafc;
+  --mid:#64748b;
+  --border:#e2e8f0;
+  --text:#1e293b;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Helvetica Neue',Arial,sans-serif;background:var(--white);color:var(--text);line-height:1.6}
+
+/* ── ANNOUNCE BAR ── */
+.announce-bar{
+  background:var(--orange);color:var(--white);
+  text-align:center;padding:0 16px;
+  font-size:.85rem;font-weight:700;letter-spacing:.2px;
+  overflow:hidden;height:42px;display:flex;align-items:center;justify-content:center;
+  transition:height .35s ease,padding .35s ease;
+  position:relative;z-index:1;
+}
+.announce-bar a{color:var(--white);text-decoration:none;font-weight:800}
+.site-header.scrolled .announce-bar{height:0;padding-top:0;padding-bottom:0}
+
+/* ── SITE HEADER ── */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:200}
+
+/* ── NAV ── */
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5%;height:72px;max-width:1360px;margin:0 auto;
+}
+.nav-bg{
+  background:transparent;
+  transition:background .35s,box-shadow .35s;
+}
+.site-header.scrolled .nav-bg{
+  background:var(--white);
+  box-shadow:0 2px 20px rgba(0,0,0,.1);
+}
+.nav-logo{
+  font-size:1.15rem;font-weight:900;letter-spacing:-.3px;
+  text-decoration:none;color:var(--white);flex-shrink:0;
+  transition:color .3s;
+}
+.site-header.scrolled .nav-logo{color:var(--navy)}
+.nav-logo span{color:var(--orange)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{
+  font-size:.9rem;font-weight:600;text-decoration:none;
+  color:rgba(255,255,255,.88);transition:color .2s;
+}
+.nav-links a:hover{color:var(--white)}
+.site-header.scrolled .nav-links a{color:var(--navy)}
+.site-header.scrolled .nav-links a:hover{color:var(--orange)}
+.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-phone{
+  font-weight:800;font-size:.95rem;text-decoration:none;
+  color:var(--white);transition:color .3s;
+}
+.site-header.scrolled .nav-phone{color:var(--navy)}
+.nav-cta{
+  background:var(--orange);color:var(--white);
+  padding:10px 22px;border-radius:8px;
+  font-weight:800;font-size:.88rem;text-decoration:none;
+  transition:background .2s;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--orange2)}
+.hamburger{
+  display:none;background:none;border:none;cursor:pointer;
+  padding:6px;flex-direction:column;gap:5px;
+}
+.hamburger span{
+  display:block;width:24px;height:2px;border-radius:2px;
+  background:var(--white);transition:transform .3s,opacity .3s;
+}
+.site-header.scrolled .hamburger span{background:var(--navy)}
+.mobile-menu{
+  display:none;background:var(--white);
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  padding:16px 5% 24px;
+}
+.mobile-menu.open{display:block}
+.mobile-menu ul{list-style:none}
+.mobile-menu li{border-bottom:1px solid var(--border)}
+.mobile-menu a{
+  display:block;padding:14px 0;font-weight:600;
+  font-size:1rem;color:var(--navy);text-decoration:none;
+}
+.mobile-menu a:hover{color:var(--orange)}
+.mobile-cta{margin-top:16px}
+.mobile-cta a{
+  background:var(--orange);color:var(--white);
+  text-align:center;border-radius:8px;
+  padding:14px;display:block;font-weight:800;font-size:1rem;
+}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;background:var(--navy);color:var(--white);
+  display:flex;align-items:center;position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=80&fit=crop');
+  background-size:cover;background-position:center;
+  opacity:.18;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  max-width:1360px;margin:0 auto;
+  padding:160px 5% 100px;width:100%;
+}
+.hero-content{max-width:700px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(249,115,22,.15);
+  border:1px solid rgba(249,115,22,.5);
+  color:var(--orange);border-radius:100px;
+  padding:8px 18px;font-size:.78rem;font-weight:800;
+  letter-spacing:.5px;text-transform:uppercase;margin-bottom:26px;
+}
+.hero h1{
+  font-size:clamp(2.5rem,5.5vw,4rem);font-weight:900;
+  line-height:1.05;letter-spacing:-.6px;margin-bottom:22px;
+}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero-sub{
+  font-size:1.1rem;color:rgba(255,255,255,.72);
+  margin-bottom:42px;max-width:540px;line-height:1.68;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px}
+.btn-primary{
+  background:var(--orange);color:var(--white);
+  padding:16px 36px;border-radius:10px;font-weight:800;font-size:1rem;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:background .2s,transform .15s;
+}
+.btn-primary:hover{background:var(--orange2);transform:translateY(-1px)}
+.btn-ghost{
+  background:transparent;color:var(--white);
+  border:2px solid rgba(255,255,255,.4);
+  padding:14px 30px;border-radius:10px;font-weight:700;font-size:1rem;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  transition:border-color .2s,background .2s;
+}
+.btn-ghost:hover{border-color:rgba(255,255,255,.9);background:rgba(255,255,255,.06)}
+.hero-trust{display:grid;grid-template-columns:repeat(4,auto);gap:10px 28px}
+.trust-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:.88rem;font-weight:600;color:rgba(255,255,255,.88);
+}
+.chk{
+  width:20px;height:20px;background:var(--orange);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+
+/* ── WHY STRIP ── */
+.why-strip{background:var(--orange);padding:44px 5%}
+.why-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+}
+.why-item{
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:14px;padding:18px 12px;color:var(--white);
+}
+.why-icon{
+  width:54px;height:54px;background:rgba(255,255,255,.18);
+  border-radius:14px;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.why-item h3{font-size:.97rem;font-weight:800}
+.why-item p{font-size:.8rem;opacity:.88;line-height:1.45}
+
+/* ── SHARED SECTION LABELS ── */
+.eyebrow{
+  font-size:.72rem;font-weight:800;letter-spacing:2.5px;
+  color:var(--orange);text-transform:uppercase;margin-bottom:10px;
+}
+.sec-title{
+  font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;
+  letter-spacing:-.4px;margin-bottom:14px;color:var(--navy);
+}
+.sec-sub{font-size:1rem;color:var(--mid);max-width:520px;margin-bottom:56px}
+
+/* ── SERVICES ── */
+.services{padding:100px 5%}
+.services-inner{max-width:1200px;margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{
+  border:2px solid var(--border);border-radius:18px;padding:34px 28px;
+  transition:border-color .25s,box-shadow .25s,transform .25s;
+  position:relative;overflow:hidden;cursor:default;
+}
+.svc-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:var(--orange);transform:scaleX(0);
+  transition:transform .3s;transform-origin:left;z-index:2;
+}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card:hover{border-color:var(--orange);box-shadow:0 12px 40px rgba(249,115,22,.1);transform:translateY(-3px)}
+.svc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.07;transition:opacity .25s;z-index:0;pointer-events:none}
+.svc-card:hover .svc-bg{opacity:.14}
+.svc-icon{
+  width:56px;height:56px;background:rgba(249,115,22,.1);
+  border-radius:16px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;position:relative;z-index:1;
+}
+.svc-card h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:8px;position:relative;z-index:1}
+.svc-card p{font-size:.88rem;color:var(--mid);line-height:1.65;position:relative;z-index:1}
+
+/* ── PROCESS ── */
+.process{background:var(--light);padding:100px 5%}
+.process-inner{max-width:1100px;margin:0 auto}
+.process-steps{
+  display:grid;
+  grid-template-columns:1fr 72px 1fr 72px 1fr;
+  align-items:start;margin-top:64px;
+}
+.step{text-align:center}
+.step-num{
+  width:74px;height:74px;background:var(--orange);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.7rem;font-weight:900;color:var(--white);
+  margin:0 auto 22px;
+}
+.step h3{font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:10px}
+.step p{font-size:.9rem;color:var(--mid);line-height:1.65;max-width:220px;margin:0 auto}
+.step-conn{
+  display:flex;align-items:flex-start;justify-content:center;padding-top:37px;
+}
+.step-conn-line{
+  height:3px;width:100%;
+  background:linear-gradient(90deg,var(--orange),var(--orange2));
+  border-radius:2px;
+}
+
+/* ── ABOUT ── */
+.about{padding:100px 5%}
+.about-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.about-img-wrap{position:relative}
+.about-img-wrap img{
+  width:100%;height:500px;object-fit:cover;
+  border-radius:20px;display:block;
+}
+.about-badge{
+  position:absolute;bottom:-20px;right:-20px;
+  background:var(--orange);color:var(--white);
+  border-radius:16px;padding:22px 26px;text-align:center;
+  box-shadow:0 12px 36px rgba(249,115,22,.38);
+}
+.ab-num{font-size:2.2rem;font-weight:900;line-height:1}
+.ab-lbl{font-size:.78rem;font-weight:700;opacity:.9;margin-top:4px}
+.about-text .sec-title{margin-bottom:20px}
+.about-text p{color:var(--mid);margin-bottom:18px;font-size:.97rem;line-height:1.72}
+.about-feats{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.about-feat{
+  display:flex;align-items:center;gap:12px;
+  font-size:.92rem;font-weight:600;color:var(--navy);
+}
+.ab-chk{
+  width:22px;height:22px;background:rgba(249,115,22,.12);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+
+/* ── STATS ── */
+.stats{background:var(--navy2);padding:70px 5%}
+.stats-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center;
+}
+.stat-num{font-size:3.4rem;font-weight:900;color:var(--orange);line-height:1}
+.stat-suf{font-size:2rem;font-weight:900}
+.stat-lbl{
+  font-size:.82rem;font-weight:600;color:rgba(255,255,255,.55);
+  margin-top:8px;text-transform:uppercase;letter-spacing:1.2px;
+}
+
+/* ── REVIEWS ── */
+.reviews{background:var(--light);padding:100px 5%}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-head{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  flex-wrap:wrap;gap:32px;margin-bottom:60px;
+}
+.score-wrap{display:flex;align-items:center;gap:20px}
+.score-big{font-size:5rem;font-weight:900;color:var(--navy);line-height:1}
+.score-stars{color:#f59e0b;font-size:1.6rem;letter-spacing:2px}
+.score-count{font-size:.88rem;color:var(--mid);margin-top:5px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev-card{
+  background:var(--white);border-radius:18px;padding:30px;
+  box-shadow:0 2px 20px rgba(0,0,0,.07);
+}
+.rev-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.rev-stars{color:#f59e0b;font-size:.95rem;letter-spacing:2px}
+.rev-text{
+  font-size:.92rem;color:var(--mid);line-height:1.68;
+  margin-bottom:18px;font-style:italic;
+}
+.rev-author{display:flex;align-items:center;gap:10px}
+.rev-av{
+  width:38px;height:38px;border-radius:50%;background:var(--navy);
+  color:var(--white);font-weight:800;font-size:.85rem;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.rev-name{font-weight:700;font-size:.88rem;color:var(--navy)}
+.rev-loc{font-size:.78rem;color:var(--mid)}
+
+/* ── GUARANTEE ── */
+.guarantee{background:var(--navy);padding:100px 5%;color:var(--white)}
+.guarantee-inner{max-width:1200px;margin:0 auto}
+.guarantee-inner .eyebrow{color:var(--sky)}
+.guarantee-inner .sec-title{color:var(--white)}
+.guarantee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.guar-card{
+  background:var(--navy2);border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;padding:42px 32px;text-align:center;
+}
+.guar-icon{
+  width:66px;height:66px;background:rgba(249,115,22,.15);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 22px;
+}
+.guar-card h3{font-size:1.12rem;font-weight:800;margin-bottom:12px}
+.guar-card p{font-size:.9rem;color:rgba(255,255,255,.62);line-height:1.68}
+
+/* ── FAQ ── */
+.faq{padding:100px 5%}
+.faq-inner{max-width:820px;margin:0 auto}
+.faq-inner .sec-title{text-align:center;margin-bottom:8px}
+.faq-inner .sec-sub{text-align:center;margin:0 auto 56px}
+.faq-list{display:flex;flex-direction:column;gap:12px}
+.faq-item{border:2px solid var(--border);border-radius:14px;overflow:hidden}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;
+  padding:22px 26px;display:flex;align-items:center;
+  justify-content:space-between;gap:16px;text-align:left;
+  font-size:1rem;font-weight:700;color:var(--navy);
+  transition:background .2s;
+}
+.faq-q:hover{background:var(--light)}
+.faq-q svg{flex-shrink:0;color:var(--orange);transition:transform .3s}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-item.open .faq-q{color:var(--orange)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .38s ease}
+.faq-a-inner{padding:0 26px 22px;font-size:.95rem;color:var(--mid);line-height:1.72}
+.faq-item.open .faq-a{max-height:320px}
+
+/* ── FINAL CTA ── */
+.final-cta{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);
+  color:var(--white);padding:120px 5%;text-align:center;
+}
+.final-cta .eyebrow{color:var(--sky);text-align:center}
+.final-cta h2{
+  font-size:clamp(2rem,4vw,3.2rem);font-weight:900;margin-bottom:18px;
+}
+.cta-phone{
+  font-size:clamp(2.6rem,6vw,4.8rem);font-weight:900;
+  color:var(--orange);text-decoration:none;
+  display:block;margin:22px 0 12px;letter-spacing:-.5px;
+  transition:opacity .2s;
+}
+.cta-phone:hover{opacity:.88}
+.final-cta p{
+  color:rgba(255,255,255,.62);max-width:500px;
+  margin:0 auto 44px;font-size:1.05rem;
+}
+.cta-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:#080f1e;color:rgba(255,255,255,.45);padding:70px 5% 30px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:48px;margin-bottom:52px;
+}
+.foot-col h4{
+  color:var(--white);font-size:.9rem;font-weight:800;
+  margin-bottom:18px;
+}
+.foot-col p{font-size:.85rem;line-height:1.72}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.foot-col ul a{
+  color:rgba(255,255,255,.45);text-decoration:none;
+  font-size:.85rem;transition:color .2s;
+}
+.foot-col ul a:hover{color:var(--orange)}
+.foot-logo{font-size:1.12rem;font-weight:900;color:var(--white);margin-bottom:14px}
+.foot-logo span{color:var(--orange)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding-top:26px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;font-size:.82rem;
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .step-conn{display:none}
+}
+@media(max-width:768px){
+  .nav-links,.nav-phone{display:none}
+  .hamburger{display:flex}
+  .hero-trust{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .about-inner{grid-template-columns:1fr}
+  .about-badge{right:12px;bottom:-16px}
+  .reviews-grid,.guarantee-grid{grid-template-columns:1fr}
+  .reviews-head{flex-direction:column}
+  .stats-inner{grid-template-columns:1fr;gap:28px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .about-img-wrap img{height:320px}
+}
+@media(max-width:480px){
+  .why-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-trust{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ SITE HEADER ═══ -->
+<header class="site-header" id="siteHeader">
+
+  <!-- Announcement Bar -->
+  <div class="announce-bar">
+    24/7 Emergency HVAC &mdash; Call <a href="tel:0000000000">(000) 000-0000</a> &mdash; We Answer Every Call
+  </div>
+
+  <!-- Nav -->
+  <div class="nav-bg">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">American Mechanical Group Inc<span>.</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="tel:0000000000" class="nav-phone">(000) 000-0000</a>
+        <a href="tel:0000000000" class="nav-cta">Free Estimate</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="#services" class="mob-link">Services</a></li>
+        <li><a href="#about" class="mob-link">About</a></li>
+        <li><a href="#reviews" class="mob-link">Reviews</a></li>
+        <li><a href="#faq" class="mob-link">FAQ</a></li>
+      </ul>
+      <div class="mobile-cta"><a href="tel:0000000000">Call (000) 000-0000</a></div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+
+      <!-- Trust badge -->
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Trusted HVAC Professionals in Columbus, OH
+      </div>
+
+      <h1>Your Comfort Is<br><em>Our Emergency</em></h1>
+      <p class="hero-sub">Fast HVAC repair and installation across Columbus, OH. We answer 24/7 and show up on time — guaranteed.</p>
+
+      <div class="hero-actions">
+        <a href="tel:0000000000" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.05 1.18 2 2 0 012 .02h3A2 2 0 017 1.72c.28 1.69.76 3.35 1.44 4.93a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.58.68 3.24 1.16 4.93 1.44a2 2 0 011.72 2.02z"/></svg>
+          Call (000) 000-0000
+        </a>
+        <a href="#services" class="btn-ghost">
+          View Services
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+      <!-- 4 trust items -->
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="chk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-item">
+          <div class="chk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          24/7 Emergency Service
+        </div>
+        <div class="trust-item">
+          <div class="chk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Same-Day Availability
+        </div>
+        <div class="trust-item">
+          <div class="chk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Upfront Flat-Rate Pricing
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ WHY US STRIP ═══ -->
+<div class="why-strip">
+  <div class="why-grid">
+
+    <div class="why-item">
+      <div class="why-icon" aria-hidden="true">
+        <!-- Shield + check -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <h3>Licensed &amp; Insured</h3>
+      <p>Fully licensed, bonded, and insured so you are always protected.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="why-icon" aria-hidden="true">
+        <!-- Clock -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>24/7 Emergency</h3>
+      <p>Real people answer around the clock, nights and weekends included.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="why-icon" aria-hidden="true">
+        <!-- Lightning bolt -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <h3>Same-Day Service</h3>
+      <p>We dispatch quickly and arrive the same day for most service calls.</p>
+    </div>
+
+    <div class="why-item">
+      <div class="why-icon" aria-hidden="true">
+        <!-- Price tag -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      </div>
+      <h3>Upfront Pricing</h3>
+      <p>Know the exact price before we start. No hidden fees, ever.</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="eyebrow">What We Do</div>
+    <h2 class="sec-title">Complete HVAC Services in Columbus, OH</h2>
+    <p class="sec-sub">From emergency repairs to full system replacements — we handle every heating and cooling need, same day.</p>
+
+    <div class="services-grid">
+
+      <div class="svc-card reveal">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop')"></div>
+        <div class="svc-icon" aria-hidden="true">
+          <!-- Snowflake / AC -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5l-5 5-5-5"/><path d="M17 19l-5-5-5 5"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M5 7l5 5-5 5"/><path d="M19 7l-5 5 5 5"/></svg>
+        </div>
+        <h3>AC Repair</h3>
+        <p>Fast, accurate diagnosis on every brand. We repair refrigerant leaks, compressor issues, fan failures, and more — most repairs completed in a single visit.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1580610447943-1bfbef5efe07?w=600&h=400&fit=crop')"></div>
+        <div class="svc-icon" aria-hidden="true">
+          <!-- Flame -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-4 4-4 6 0 8s4 4 0 8c0 0-6-3-6-9a6 6 0 0112 0c0 6-6 9-6 9z"/></svg>
+        </div>
+        <h3>Heating &amp; Furnace</h3>
+        <p>Furnace repair, tune-ups, and full replacements. We work on gas, electric, and heat pump systems across all makes and models.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop')"></div>
+        <div class="svc-icon" aria-hidden="true">
+          <!-- House -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>New Installation</h3>
+        <p>Right-sized systems, correctly installed. We provide honest quotes with no upsells and handle everything from equipment removal to system startup.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1581092921461-39c6f9fd4d2d?w=600&h=400&fit=crop')"></div>
+        <div class="svc-icon" aria-hidden="true">
+          <!-- Calendar -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Maintenance Plans</h3>
+        <p>Bi-annual tune-ups that extend equipment life, reduce energy bills, and catch problems before they become costly breakdowns.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600&h=400&fit=crop')"></div>
+        <div class="svc-icon" aria-hidden="true">
+          <!-- Wind / duct -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg>
+        </div>
+        <h3>Duct Cleaning</h3>
+        <p>Remove allergens, dust, and debris from your ductwork. Breathe cleaner air and run a more efficient, quieter system all year long.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop')"></div>
+        <div class="svc-icon" aria-hidden="true">
+          <!-- Alert circle -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>Emergency Service</h3>
+        <p>AC out in summer? Heat gone in winter? We answer 24/7 and dispatch immediately. No extra charge to call after hours or on weekends.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ PROCESS ═══ -->
+<section class="process">
+  <div class="process-inner">
+    <div class="eyebrow" style="text-align:center">How It Works</div>
+    <h2 class="sec-title" style="text-align:center;color:var(--navy)">Service in 3 Simple Steps</h2>
+    <p class="sec-sub" style="text-align:center;margin:0 auto 64px">No runaround. No guessing. Here is exactly what happens when you call us.</p>
+
+    <div class="process-steps">
+
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Schedule</h3>
+        <p>Call or text anytime. A real person answers and books your appointment — often same day, always on your schedule.</p>
+      </div>
+
+      <div class="step-conn" aria-hidden="true"><div class="step-conn-line"></div></div>
+
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Diagnose</h3>
+        <p>Our licensed tech arrives on time, identifies the issue, and gives you an exact upfront price before any work starts.</p>
+      </div>
+
+      <div class="step-conn" aria-hidden="true"><div class="step-conn-line"></div></div>
+
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Fixed</h3>
+        <p>We complete the repair or install correctly, clean up thoroughly, and back every job with a full written warranty.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ ABOUT ═══ -->
+<section class="about" id="about">
+  <div class="about-inner">
+
+    <div class="about-img-wrap reveal">
+      <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80&fit=crop" alt="American Mechanical Group Inc HVAC technician at work" loading="lazy">
+      <div class="about-badge">
+        <div class="ab-num">5400+</div>
+        <div class="ab-lbl">Jobs Completed</div>
+      </div>
+    </div>
+
+    <div class="about-text reveal">
+      <div class="eyebrow">About American Mechanical Group Inc</div>
+      <h2 class="sec-title">The HVAC Team Columbus, OH Counts On</h2>
+      <p>American Mechanical Group Inc was built on a simple idea: show up fast, fix it right, charge a fair price. Every technician on our team is licensed, background-checked, and trained on every major brand.</p>
+      <p>We don't do high-pressure sales. If your system needs a repair, we'll tell you. If it needs a replacement, we'll tell you that too — and we'll give you options that fit your budget.</p>
+      <div class="about-feats">
+        <div class="about-feat">
+          <div class="ab-chk" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          State-licensed HVAC contractor
+        </div>
+        <div class="about-feat">
+          <div class="ab-chk" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Background-checked, uniformed technicians
+        </div>
+        <div class="about-feat">
+          <div class="ab-chk" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          All work backed by written warranty
+        </div>
+        <div class="about-feat">
+          <div class="ab-chk" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          Locally owned and operated in Columbus, OH
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ STATS ═══ -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="reveal">
+      <div class="stat-num">5400<span class="stat-suf">+</span></div>
+      <div class="stat-lbl">Jobs Completed</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">12<span class="stat-suf">+</span></div>
+      <div class="stat-lbl">Years in Business</div>
+    </div>
+    <div class="reveal">
+      <div class="stat-num">97<span class="stat-suf">%</span></div>
+      <div class="stat-lbl">Same-Day Resolution</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+
+    <div class="reviews-head">
+      <div>
+        <div class="eyebrow">What Customers Say</div>
+        <h2 class="sec-title">Columbus, OH Homeowners Trust Us</h2>
+      </div>
+      <div class="score-wrap">
+        <div class="score-big">Highly Rated</div>
+        <div>
+          <div class="score-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="score-count">Based on 150+ Google Reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <!-- Google SVG logo (reused inline) -->
+      <!-- Review 1 -->
+      <div class="rev-card reveal">
+        <div class="rev-top">
+          <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google review" role="img"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <p class="rev-text">"AC died on a Saturday afternoon. Called at noon, they were at my house by 3 PM. Fixed it the same day and the price matched the quote exactly. No surprises. Incredible service."</p>
+        <div class="rev-author">
+          <div class="rev-av" aria-hidden="true">DR</div>
+          <div>
+            <div class="rev-name">David R.</div>
+            <div class="rev-loc">Columbus, OH</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="rev-card reveal">
+        <div class="rev-top">
+          <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google review" role="img"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <p class="rev-text">"Best HVAC experience I have ever had. Professional, on time, and they did not try to sell me a new unit when a simple repair was all I needed. That kind of honesty earns loyalty."</p>
+        <div class="rev-author">
+          <div class="rev-av" aria-hidden="true">LM</div>
+          <div>
+            <div class="rev-name">Lisa M.</div>
+            <div class="rev-loc">Columbus, OH</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="rev-card reveal">
+        <div class="rev-top">
+          <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Google review" role="img"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        </div>
+        <p class="rev-text">"Had a full new system installed. Arrived on time, finished in one day, left everything cleaner than they found it, and even registered the warranty for me. Top-tier company."</p>
+        <div class="rev-author">
+          <div class="rev-av" aria-hidden="true">CV</div>
+          <div>
+            <div class="rev-name">Carlos V.</div>
+            <div class="rev-loc">Columbus, OH</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ COMFORT GUARANTEE ═══ -->
+<section class="guarantee">
+  <div class="guarantee-inner">
+    <div class="eyebrow">Our Promise</div>
+    <h2 class="sec-title">The American Mechanical Group Inc Comfort Guarantee</h2>
+
+    <div class="guarantee-grid">
+
+      <div class="guar-card reveal">
+        <div class="guar-icon" aria-hidden="true">
+          <!-- Clock + check -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>On-Time Guarantee</h3>
+        <p>We arrive within your scheduled window, every time. If we are late without notice, your service call is on us — no charge.</p>
+      </div>
+
+      <div class="guar-card reveal">
+        <div class="guar-icon" aria-hidden="true">
+          <!-- Price tag -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <h3>Upfront Pricing</h3>
+        <p>You receive a written quote before we touch anything. The price you approve is the price you pay — zero surprise charges at the end.</p>
+      </div>
+
+      <div class="guar-card reveal">
+        <div class="guar-icon" aria-hidden="true">
+          <!-- Shield check -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>1-Year Parts &amp; Labor</h3>
+        <p>Every repair and installation is covered by a full 1-year parts and labor warranty. If it fails, we fix it at no cost to you.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="eyebrow" style="text-align:center">FAQ</div>
+    <h2 class="sec-title">Common Questions</h2>
+    <p class="sec-sub">Quick answers about our service area, pricing, and what to expect when you call.</p>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you charge extra for after-hours or weekend calls?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">No. Our 24/7 emergency line is always available and we do not add a surcharge for evenings, weekends, or holidays. The price you are quoted is the price you pay — period.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How quickly can you get to my home?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">Most calls in Columbus, OH are served the same day. For true emergencies — no AC in extreme heat or no heat in winter — we dispatch immediately and typically arrive within 1 to 2 hours.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What HVAC brands do you service and install?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">We service all major brands including Carrier, Trane, Lennox, Goodman, Rheem, York, Daikin, and more. For new installs we recommend systems based on your home size and budget — not on brand margins.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How much does a typical HVAC repair cost?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">Costs vary by issue and system type. Minor repairs such as capacitors, contactors, and thermostats typically run $150 to $400. Major repairs are higher. We give you the exact written price before any work begins — always.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Are your technicians licensed and background-checked?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a" role="region">
+          <div class="faq-a-inner">Yes. Every technician is state-licensed, background-checked, and drug-tested before they enter your home. You will always see a uniformed professional arrive in a marked vehicle, and you can verify their license number on request.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="final-cta">
+  <div class="eyebrow">Ready to Get Started?</div>
+  <h2>Get Comfortable Today</h2>
+  <p>Available around the clock. Call now and a real person answers — no voicemail, no callback queue.</p>
+  <a href="tel:0000000000" class="cta-phone">(000) 000-0000</a>
+  <div class="cta-btns">
+    <a href="tel:0000000000" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.05 1.18 2 2 0 012 .02h3A2 2 0 017 1.72c.28 1.69.76 3.35 1.44 4.93a2 2 0 01-.45 2.11l-1.27 1.27a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c1.58.68 3.24 1.16 4.93 1.44a2 2 0 011.72 2.02z"/></svg>
+      Call Now &mdash; Free Estimate
+    </a>
+    <a href="#services" class="btn-ghost">View All Services</a>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+
+      <div class="foot-col">
+        <div class="foot-logo">American Mechanical Group Inc<span>.</span></div>
+        <p>Professional HVAC services in Columbus, OH and surrounding areas. Licensed, insured, and available 24/7 for your comfort and safety.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">AC Repair</a></li>
+          <li><a href="#services">Heating &amp; Furnace</a></li>
+          <li><a href="#services">New Installation</a></li>
+          <li><a href="#services">Maintenance Plans</a></li>
+          <li><a href="#services">Duct Cleaning</a></li>
+          <li><a href="#services">Emergency Service</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="tel:0000000000">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0000000000">(000) 000-0000</a></li>
+          <li><a href="#">Columbus, OH</a></li>
+          <li><a href="#">Columbus, OH</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2025 American Mechanical Group Inc. All rights reserved.</span>
+      <span>Licensed HVAC Contractor &mdash; Columbus, OH</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  'use strict';
+
+  /* ── Sticky nav: transparent → white ── */
+  var header = document.getElementById('siteHeader');
+  var bar = header.querySelector('.announce-bar');
+
+  function onScroll(){
+    if(window.scrollY > 10){
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ── Hamburger / mobile menu ── */
+  var btn  = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-hidden', String(!open));
+  });
+
+  document.querySelectorAll('.mob-link').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-q').forEach(function(qBtn){
+    qBtn.addEventListener('click', function(){
+      var item = qBtn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+
+      /* Close all */
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+
+      /* Open clicked if it was closed */
+      if(!isOpen){
+        item.classList.add('open');
+        qBtn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* ── Scroll reveal ── */
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    /* Fallback for old browsers */
+    revealEls.forEach(function(el){ el.classList.add('visible'); });
+  }
+
+})();
+</script>
+</body>
+</html>
