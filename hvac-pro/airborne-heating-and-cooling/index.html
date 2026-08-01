@@ -745,22 +745,22 @@ footer{background:#06101d;color:rgba(255,255,255,.45);padding:70px 5% 30px}
 
 
 <!-- ═══ STATS ═══ -->
-<div class="stats">
+<div class="stats" id="stats-section">
   <div class="stats-inner">
     <div class="reveal">
-      <div class="stat-num">20<span class="stat-suf">+</span></div>
+      <div class="stat-num"><span class="counter" data-target="20">0</span><span class="stat-suf">+</span></div>
       <div class="stat-lbl">Years in Business</div>
     </div>
     <div class="reveal">
-      <div class="stat-num">5<span class="stat-suf">K+</span></div>
+      <div class="stat-num"><span class="counter" data-target="5">0</span><span class="stat-suf">K+</span></div>
       <div class="stat-lbl">Jobs Completed</div>
     </div>
     <div class="reveal">
-      <div class="stat-num">100<span class="stat-suf">%</span></div>
+      <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suf">%</span></div>
       <div class="stat-lbl">Satisfaction Guarantee</div>
     </div>
     <div class="reveal">
-      <div class="stat-num">24<span class="stat-suf">/7</span></div>
+      <div class="stat-num"><span class="counter" data-target="24">0</span><span class="stat-suf">/7</span></div>
       <div class="stat-lbl">Emergency Availability</div>
     </div>
   </div>
@@ -1058,6 +1058,37 @@ footer{background:#06101d;color:rgba(255,255,255,.45);padding:70px 5% 30px}
     revealEls.forEach(function(el){ io.observe(el); });
   } else {
     revealEls.forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  // ── NUMBER COUNTERS ──
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var duration = 1800;
+    var start = null;
+    function ease(t){ return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+    function step(ts){
+      if(!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      el.textContent = Math.floor(ease(progress) * target);
+      if(progress < 1){ requestAnimationFrame(step); }
+      else { el.textContent = target; }
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counterEls = document.querySelectorAll('.counter');
+  if('IntersectionObserver' in window){
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          animateCounter(e.target);
+          cio.unobserve(e.target);
+        }
+      });
+    },{threshold:0.3});
+    counterEls.forEach(function(el){ cio.observe(el); });
+  } else {
+    counterEls.forEach(function(el){ el.textContent = el.getAttribute('data-target'); });
   }
 })();
 </script>
