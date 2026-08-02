@@ -113,5 +113,25 @@
   document.querySelectorAll('.stat-card').forEach(function(c){io.observe(c);});
 })();
 </script>
+<script>
+/* Personalize from ?ref= (set by the outreach email link). */
+(function () {
+  try {
+    var ref = new URLSearchParams(location.search).get("ref");
+    if (!ref) return;
+    ref = ref.replace(/[<>]/g, "").trim().slice(0, 60);
+    if (!ref) return;
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var n;
+    while ((n = walker.nextNode())) {
+      if (n.nodeValue.indexOf("Your Company") !== -1) {
+        n.nodeValue = n.nodeValue.split("Your Company").join(ref);
+      }
+    }
+    document.title = document.title.split("Your Company").join(ref);
+    if (document.title.indexOf(ref) === -1) document.title = ref + " | " + document.title;
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

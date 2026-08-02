@@ -9,4 +9,24 @@
 <div class="cta-section" id="cta"><h2>Ready to Go Live?</h2><p>This site is built and ready for your business. One reply away from being yours.</p><div class="cta-price">$497 &mdash; Starter Site</div><br><a href="#cta" class="hero-btn">Reply &ldquo;yes&rdquo; to Confirm &rarr;</a><p style="margin-top:20px;font-size:.85rem;opacity:.8;">Includes setup, custom domain, and 1-year hosting.</p></div>
 <footer><strong id="footer-name">Your Company</strong> &nbsp;&middot;&nbsp; Cleaning Services &nbsp;&middot;&nbsp; Built by <a href="https://acquireclientsfaster.com" target="_blank">AcquireClientsFaster.com</a></footer>
 <script>(function(){var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');document.getElementById('nav-name').textContent=co;document.getElementById('footer-name').textContent=co;document.getElementById('hero-title').textContent=co+' \u2014 Cleaning Services You Can Trust';var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(!e.isIntersecting)return;var c=e.target;io.unobserve(c);c.classList.add('visible');var t=c.getAttribute('data-target'),el=c.querySelector('.stat-value'),n=parseInt(t.replace(/[^0-9]/g,''),10);if(!isNaN(n)&&n>0){var dur=1200,st=null,suf=t.replace(/^[^0-9]*/,'').replace(/^[0-9,]*/,'');function step(ts){if(!st)st=ts;var p=Math.min((ts-st)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.round(ease*n).toLocaleString()+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}else{el.textContent=t;}});},{threshold:0.2});document.querySelectorAll('.stat-card').forEach(function(c){io.observe(c);});})();</script>
+<script>
+/* Personalize from ?ref= (set by the outreach email link). */
+(function () {
+  try {
+    var ref = new URLSearchParams(location.search).get("ref");
+    if (!ref) return;
+    ref = ref.replace(/[<>]/g, "").trim().slice(0, 60);
+    if (!ref) return;
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var n;
+    while ((n = walker.nextNode())) {
+      if (n.nodeValue.indexOf("Your Company") !== -1) {
+        n.nodeValue = n.nodeValue.split("Your Company").join(ref);
+      }
+    }
+    document.title = document.title.split("Your Company").join(ref);
+    if (document.title.indexOf(ref) === -1) document.title = ref + " | " + document.title;
+  } catch (e) {}
+})();
+</script>
 </body></html>
