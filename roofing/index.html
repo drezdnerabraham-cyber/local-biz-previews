@@ -97,7 +97,7 @@
 <script>
 (function(){
   var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');
-  var TIERS={starter:['$497','Starter Site'],growth:['var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');,499','Growth Site'],enterprise:['var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');,797','Premium Site']};
+  var TIERS={starter:['$497','Starter Site'],growth:['$1,499','Growth Site'],enterprise:['$1,797','Premium Site']};
   var tier=(new URLSearchParams(location.search).get('tier')||'starter').toLowerCase();
   var t=TIERS[tier]||TIERS.starter;
   var priceEl=document.getElementById('cta-price');
