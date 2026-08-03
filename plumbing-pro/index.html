@@ -52,7 +52,7 @@
 <div style="background:#1e293b;color:#f1f5f9;font-family:Arial,sans-serif;font-size:13px;line-height:1.5;padding:10px 16px;text-align:center">
 <strong>Design preview</strong> — layout mockup. Reviews, stats and contact details are placeholders and get replaced with your real information.
 </div>
-<div class="preview-banner">Preview Site &nbsp;&middot;&nbsp; Not Live Yet &nbsp;&middot;&nbsp; Reply to get yours live</div>
+<div class="preview-banner">Design preview &nbsp;&middot;&nbsp; Not live yet &nbsp;&middot;&nbsp; Built from your public listing &mdash; every word, photo and detail is yours to change</div>
 <nav>
   <span class="nav-logo" id="nav-name">Your Company</span>
   <a href="#cta" class="nav-cta">Call Us</a>
@@ -92,7 +92,7 @@
 <div class="cta-section" id="cta">
   <h2>Ready to Go Live?</h2>
   <p>This site is built and ready for your business. One reply away from being yours.</p>
-  <div class="cta-price">$497 &mdash; Starter Site</div><br>
+  <div class="cta-price" id="cta-price">$497 &mdash; Starter Site</div><br>
   <a href="#cta" class="hero-btn">Reply &ldquo;yes&rdquo; to Confirm &rarr;</a>
   <p style="margin-top:20px;font-size:.85rem;opacity:.8;">Includes setup, custom domain, and 1-year hosting.</p>
 </div>
@@ -103,6 +103,12 @@
 <script>
 (function(){
   var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');
+  var TIERS={starter:['$497','Starter Site'],growth:['var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');,499','Growth Site'],enterprise:['var co=decodeURIComponent(new URLSearchParams(location.search).get('ref')||'Your Company');,797','Premium Site']};
+  var tier=(new URLSearchParams(location.search).get('tier')||'starter').toLowerCase();
+  var t=TIERS[tier]||TIERS.starter;
+  var priceEl=document.getElementById('cta-price');
+  if(priceEl){priceEl.innerHTML=t[0]+' \u2014 '+t[1];}
+
   document.getElementById('nav-name').textContent=co;
   document.getElementById('footer-name').textContent=co;
   document.getElementById('hero-title').textContent=co+' \u2014 Plumbing You Can Trust';
