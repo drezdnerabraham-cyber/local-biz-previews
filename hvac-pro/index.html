@@ -293,6 +293,12 @@
 <script>
 (function() {
   var company = decodeURIComponent(new URLSearchParams(location.search).get('ref') || 'Your Company');
+  var TIERS={starter:['$497','Starter Site'],growth:['$1,499','Growth Site'],enterprise:['$1,797','Premium Site']};
+  var tier=(new URLSearchParams(location.search).get('tier')||'starter').toLowerCase();
+  var t=TIERS[tier]||TIERS.starter;
+  var priceEl=document.getElementById('cta-price');
+  if(priceEl){priceEl.innerHTML=t[0]+' \u2014 '+t[1];}
+
   document.getElementById('nav-name').textContent = company;
   document.getElementById('footer-name').textContent = company;
   document.getElementById('hero-title').textContent = company + ' \u2014 HVAC / Heating & Cooling You Can Trust';
